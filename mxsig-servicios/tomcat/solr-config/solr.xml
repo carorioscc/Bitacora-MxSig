@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<solr persistent="true">
+	<cores adminPath="/admin/cores" defaultCoreName="busq-entidades">		
+		<core name="busq-entidades" instanceDir="mdm61/estados" properties="../../common-settings/solr.properties"/>
+		<core name="busq-municipal" instanceDir="mdm61/municipios" properties="../../common-settings/solr.properties"/>
+		<core name="busq-centrosinfinegi" instanceDir="mdm61/centrosinfinegi" properties="../../common-settings/solr.properties"/>
+		<core name="busq-poerteo" instanceDir="mdm61/poerteo" properties="../../common-settings/solr.properties"/>
+		<core name="busq-rios" instanceDir="mdm61/rios" properties="../../common-settings/solr.properties"/>
+		<core name="busq-tututepec" instanceDir="mdm61/tututepec" properties="../../common-settings/solr.properties"/>
+		<core name="busq-tonameca" instanceDir="mdm61/tonameca" properties="../../common-settings/solr.properties"/>
+	</cores>
+</solr>

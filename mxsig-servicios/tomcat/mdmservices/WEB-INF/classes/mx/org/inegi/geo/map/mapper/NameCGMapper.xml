@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.map.mapper.NameCGMapper">
+
+	<select id="nameCG" resultType="NameCvegeo">
+		SELECT cvegeo,
+		<if test="cvegeo=='00'">
+			nom_ent AS nombre,
+			true AS childs
+		</if>
+		<if test="cvegeo!='00'">
+			nom_mun AS nombre, 
+			false AS childs
+		</if>
+		FROM ${tabla}
+		<if test="cvegeo!='00'">
+			WHERE cve_ent=#{cvegeo}
+		</if>
+	</select>
+
+	<select id="extent" resultType="String">
+		select st_astext (ST_Envelope
+		(the_geom)) from ${tabla} where
+		cve_ent=#{cvegeo};
+	</select>
+
+	<select id="nameCvegeo" resultType="String">
+		SELECT 
+		<if test="cvegeo=='00'">
+			nom_ent AS nombre
+		</if>
+		<if test="cvegeo!='00'">
+			nom_mun AS nombre
+		</if> 
+		FROM ${tabla} WHERE cve_ent=#{cvegeo} LIMIT 1;
+	</select>
+
+	<select id="entCount" resultType="int">
+		SELECT count(*) FROM ${tabla}
+		<if test="cvegeo!='00'">
+			where cve_ent=#{cvegeo}
+		</if>
+	</select>
+
+</mapper>

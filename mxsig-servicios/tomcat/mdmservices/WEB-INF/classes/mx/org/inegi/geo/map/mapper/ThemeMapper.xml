@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.map.mapper.ThemeMapper">
+
+	<select id="themeExists" resultType="boolean">
+		select case when count(*) >
+		0 then true else false end
+		from temas.temamat
+		where id = #{id}
+	</select>
+
+	<select id="findType" resultType="int">
+		select id_tipo from
+		ce2014.cat_ce
+		where id = #{sector}
+	</select>
+
+	<select id="findIndicator" resultType="double">
+		select 
+		<if test=" promedio == false">
+		round(SUM(${theme.variable}::numeric),2)
+		</if>
+		<if test=" promedio == true">
+		round(AVG(${theme.variable}::numeric),2)
+		</if>
+		<if test="theme.ent == '00' and theme.level != 'zm'">
+			from ce2014.${table} where sector = #{theme.sector}
+		</if>
+		<if test="theme.ent != '00' and theme.level != 'zm'">
+			from ce2014.${table} where sector = #{theme.sector} and cve_ent IN
+			<foreach collection="theme.cvegeo" item="cv" index="index"
+				open="(" separator="," close=")">
+				#{cv}
+			</foreach>
+		</if>
+		<if test="theme.level == 'zm' and theme.ent=='9000'">
+			from ${table} where sector = #{theme.sector} and
+			cve_zm is not null
+		</if>
+		<if test="theme.level == 'zm' and theme.ent!='9000'">
+			from ${table} where sector = #{theme.sector} and cve_zm IN
+			<foreach collection="theme.cvegeo" item="cv" index="index"
+				open="(" separator="," close=")">
+				#{cv}
+			</foreach>
+		</if>
+
+	</select>
+
+	<select id="findIndicator4Loc" resultType="double">
+		select
+		<if test=" promedio == false">
+		round(SUM(${theme.variable})::numeric,2)
+		</if>
+		<if test=" promedio == true">
+		round(AVG(${theme.variable})::numeric,2)
+		</if>
+		from ce2014.${table} where sector =
+		#{theme.sector} and cve_ent =
+		#{theme.cveEnt} and cve_mun =
+		#{theme.cveMun}
+
+	</select>
+
+	<select id="findIndicator4Ageb" resultType="double">
+		select
+		<if test=" promedio == false">
+		round(SUM(${theme.variable})::numeric,2)
+		</if>
+		<if test=" promedio == true">
+		round(AVG(${theme.variable})::numeric,2)
+		</if>
+		from ce2014.${table} where sector =
+		#{theme.sector} and cve_ent =
+		#{theme.cveEnt} and cve_mun =
+		#{theme.cveMun} and loc =
+		#{theme.cveLoc}
+
+	</select>
+
+	<select id="findCevegeo" resultType="mx.org.inegi.geo.map.stratification.domain.ThemeCvegeo">
+		SELECT cvegeo, nombre,
+		${param4} AS indicador FROM ${param3} WHERE ${param4}
+		BETWEEN
+		#{0}::numeric AND #{1}::numeric AND sector=#{4}
+	</select>
+
+	<select id="findCevegeoMun" resultType="mx.org.inegi.geo.map.stratification.domain.ThemeCvegeo">
+		SELECT cvegeo, nombre, ${param4} AS indicador FROM ${param3} WHERE
+		${param4} BETWEEN #{0}::numeric AND #{1}::numeric AND sector=#{4} AND
+		cve_ent in
+		<foreach collection="cvegeo" item="cv" index="index" open="("
+			separator="," close=")">
+			#{cv}
+		</foreach>
+
+	</select>
+
+	<select id="findCevegeoLoc" resultType="mx.org.inegi.geo.map.stratification.domain.ThemeCvegeo">
+		SELECT cvegeo, nombre,
+		${param4} AS indicador FROM ${param3} WHERE ${param4}
+		BETWEEN
+		#{0}::numeric AND #{1}::numeric AND sector=#{4} AND
+		cve_ent=#{5} AND
+		cve_mun=#{6}
+	</select>
+
+	<select id="findCevegeoAgeb" resultType="mx.org.inegi.geo.map.stratification.domain.ThemeCvegeo">
+		SELECT cvegeo, nombre,
+		${param4} AS indicador FROM ${param3} WHERE ${param4}
+		BETWEEN
+		#{0}::numeric AND #{1}::numeric AND sector=#{4} AND
+		cve_ent=#{5} AND
+		cve_mun=#{6} AND loc=#{7}
+	</select>
+
+	<select id="findMinAndMax" resultType="map">
+		${value}
+	</select>
+
+	<select id="nei" resultType="String"><!-- N.E.I. -->
+		<!-- select daleniushodge2r_ce2014(#{0}, #{1}, #{2}) -->
+		select neir_temporal2(#{0}, #{1}, #{2})
+	</select>
+
+	<select id="c2r" resultType="String"><!-- Cuantiles -->
+		<!-- select daleniushodge2r_ce2014(#{0}, #{1}, #{2}) -->
+		select cuantiles2r_ce2014(#{0}, #{1}, #{2})
+	</select>
+
+	<select id="d2r" resultType="String"><!-- Dalenius -->
+		<!-- select daleniushodge2r_ce2014(#{0}, #{1}, #{2}) -->
+		select daleniushodge2r_ce2014(#{0}, #{1}, #{2})
+	</select>
+
+	<select id="cre" resultType="String"><!-- Cuantiles Relativos -->
+		<!-- select daleniushodge2r_ce2014(#{0}, #{1}, #{2}) -->
+		select cuantilesrelativosr_ce2014(#{0}, #{1}, #{2})
+	</select>
+
+
+
+	<insert id="add" parameterType="Theme" useGeneratedKeys="true"
+		keyProperty="id" keyColumn = "id">
+		insert into temas.temamat(definicion, clausulawhen,
+		filtro, signature,
+		tabla, proy,variable)
+		values(#{definition}, #{when},
+		#{filter}, #{signature}, #{table}, 'mdm',#{info.variable})
+	</insert>
+
+	<update id="updateColors">
+		update temas.temamat
+		set clausulawhen = #{1}
+		where id =
+		#{0}
+	</update>
+
+	<select id="cvName" resultType="String">
+		SELECT nombre FROM
+		ce2014.${param1} WHERE cvegeo=#{1} LIMIT 1;
+	</select>
+
+	<select id="cvTheme" resultType="mx.org.inegi.geo.map.stratification.domain.ThemeCvegeo">
+		SELECT cvegeo, nombre, round(${param1}::numeric,2)
+		AS indicador FROM ${param2} WHERE
+		cvegeo IN (${param3}) AND
+		sector=#{3};
+	</select>
+
+</mapper>

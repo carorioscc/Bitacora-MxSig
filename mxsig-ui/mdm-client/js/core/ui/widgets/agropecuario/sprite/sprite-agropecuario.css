@@ -1,0 +1,526 @@
+@charset "utf-8";
+	.sprite-agropecuario-activity-7
+{
+	background-image : url(sprite-agropecuario-activity-7.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-8
+{
+	background-image : url(sprite-agropecuario-activity-8.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-99
+{
+	background-image : url(sprite-agropecuario-activity-99.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-dagua-t
+{
+	background-image : url(sprite-agropecuario-dagua-t.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-graph
+{
+	background-image : url(sprite-agropecuario-graph.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-grid
+{
+	background-image : url(sprite-agropecuario-grid.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-logo
+{
+	background-image : url(sprite-agropecuario-logo.png);
+	background-repeat : no-repeat;
+	width : 280px;
+	height : 120px;
+}
+.sprite-agropecuario-grid:hover
+{
+	background-image : url(sprite-agropecuario-grid--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-babout
+{
+	background-image : url(sprite-agropecuario-babout.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-doc-pdf:hover
+{
+	background-image : url(sprite-agropecuario-doc-pdf--hover.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-activity-99-off
+{
+	background-image : url(sprite-agropecuario-activity-99-off.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-babout:hover
+{
+	background-image : url(sprite-agropecuario-babout--hover.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-graph:hover
+{
+	background-image : url(sprite-agropecuario-graph--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-activity-3-off
+{
+	background-image : url(sprite-agropecuario-activity-3-off.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-2-off
+{
+	background-image : url(sprite-agropecuario-activity-2-off.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-6-off
+{
+	background-image : url(sprite-agropecuario-activity-6-off.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-7-off
+{
+	background-image : url(sprite-agropecuario-activity-7-off.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-binfo:hover
+{
+	background-image : url(sprite-agropecuario-binfo--hover.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-sclose:hover
+{
+	background-image : url(sprite-agropecuario-sclose--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-agropecuario-sdown:hover
+{
+	background-image : url(sprite-agropecuario-sdown--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-agropecuario-sright:hover
+{
+	background-image : url(sprite-agropecuario-sright--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-agropecuario-circle:hover
+{
+	background-image : url(sprite-agropecuario-circle--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-info-right:hover
+{
+	background-image : url(sprite-agropecuario-info-right--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-info-left:hover
+{
+	background-image : url(sprite-agropecuario-info-left--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-bback:hover
+{
+	background-image : url(sprite-agropecuario-bback--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-agropecuario-forward:hover
+{
+	background-image : url(sprite-agropecuario-forward--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-expand-limit
+{
+	background-image : url(sprite-agropecuario-expand-limit.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-expand-limit:hover
+{
+	background-image : url(sprite-agropecuario-expand-limit--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-collapse-limit
+{
+	background-image : url(sprite-agropecuario-collapse-limit.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-dagua-r
+{
+	background-image : url(sprite-agropecuario-dagua-r.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-sdown
+{
+	background-image : url(sprite-agropecuario-sdown.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-agropecuario-sclose
+{
+	background-image : url(sprite-agropecuario-sclose.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-agropecuario-sright
+{
+	background-image : url(sprite-agropecuario-sright.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-agropecuario-circle
+{
+	background-image : url(sprite-agropecuario-circle.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-ok:hover
+{
+	background-image : url(sprite-agropecuario-ok--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-ok
+{
+	background-image : url(sprite-agropecuario-ok.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-info
+{
+	background-image : url(sprite-agropecuario-info.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-info:hover
+{
+	background-image : url(sprite-agropecuario-info--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-info-right
+{
+	background-image : url(sprite-agropecuario-info-right.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-info-left
+{
+	background-image : url(sprite-agropecuario-info-left.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-bback
+{
+	background-image : url(sprite-agropecuario-bback.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-agropecuario-forward
+{
+	background-image : url(sprite-agropecuario-forward.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-bdown
+{
+	background-image : url(sprite-agropecuario-bdown.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-agropecuario-bup
+{
+	background-image : url(sprite-agropecuario-bup.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-agropecuario-bup:hover
+{
+	background-image : url(sprite-agropecuario-bup--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-agropecuario-modify
+{
+	background-image : url(sprite-agropecuario-modify.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-agropecuario-doc-xls
+{
+	background-image : url(sprite-agropecuario-doc-xls.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-doc-csv
+{
+	background-image : url(sprite-agropecuario-doc-csv.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-down
+{
+	background-image : url(sprite-agropecuario-down.png);
+	background-repeat : no-repeat;
+	width : 25px;
+	height : 40px;
+}
+.sprite-agropecuario-down:hover
+{
+	background-image : url(sprite-agropecuario-down--hover.png);
+	background-repeat : no-repeat;
+	width : 25px;
+	height : 40px;
+}
+.sprite-agropecuario-doc-pdf
+{
+	background-image : url(sprite-agropecuario-doc-pdf.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-doc-pdf-27
+{
+	background-image : url(sprite-agropecuario-doc-pdf-27.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-bactividad
+{
+	background-image : url(sprite-agropecuario-bactividad.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-btenencia
+{
+	background-image : url(sprite-agropecuario-btenencia.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-geo
+{
+	background-image : url(sprite-agropecuario-geo.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-geo:hover
+{
+	background-image : url(sprite-agropecuario-geo--hover.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-binfo
+{
+	background-image : url(sprite-agropecuario-binfo.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-activity-2
+{
+	background-image : url(sprite-agropecuario-activity-2.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-3
+{
+	background-image : url(sprite-agropecuario-activity-3.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-1
+{
+	background-image : url(sprite-agropecuario-activity-1.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-4
+{
+	background-image : url(sprite-agropecuario-activity-4.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-5
+{
+	background-image : url(sprite-agropecuario-activity-5.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-6
+{
+	background-image : url(sprite-agropecuario-activity-6.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-5-off
+{
+	background-image : url(sprite-agropecuario-activity-5-off.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-4-off
+{
+	background-image : url(sprite-agropecuario-activity-4-off.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-1-off
+{
+	background-image : url(sprite-agropecuario-activity-1-off.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-activity-8-off
+{
+	background-image : url(sprite-agropecuario-activity-8-off.png);
+	background-repeat : no-repeat;
+	width : 85px;
+	height : 85px;
+}
+.sprite-agropecuario-collapse-limit:hover
+{
+	background-image : url(sprite-agropecuario-collapse-limit--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-bdown:hover
+{
+	background-image : url(sprite-agropecuario-bdown--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-agropecuario-modify:hover
+{
+	background-image : url(sprite-agropecuario-modify--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-agropecuario-doc-xls:hover
+{
+	background-image : url(sprite-agropecuario-doc-xls--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-doc-csv:hover
+{
+	background-image : url(sprite-agropecuario-doc-csv--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-doc-pdf-27:hover
+{
+	background-image : url(sprite-agropecuario-doc-pdf-27--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-agropecuario-bactividad:hover
+{
+	background-image : url(sprite-agropecuario-bactividad--hover.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}
+.sprite-agropecuario-btenencia:hover
+{
+	background-image : url(sprite-agropecuario-btenencia--hover.png);
+	background-repeat : no-repeat;
+	width : 60px;
+	height : 60px;
+}

@@ -1,0 +1,1512 @@
+@import url('sprite/sprite-agropecuario.css');
+/* CSS Document */
+.custom-agropecuario {
+	font-family: Arial, Helvetica, sans-serif; 
+	width: 387px;
+	height: auto;
+	border: 1px solid #EEE;
+	z-index: 1900;
+	position: absolute;
+	bottom: 55px;
+	left: 11px;
+	overflow: hidden;
+	display: block;
+	background-color: #FFF;
+	-webkit-box-shadow: 1px 1px 2px 0px #555;
+	box-shadow: 1px 1px 2px 0px #555;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-animated {
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+/* Spinner  ---------------------*/
+.agropecuario-logo-left {
+	background: url("logo.png") top left no-repeat;
+	float: left;
+	width: 85px;
+	height: 85px;
+}
+.agropecuario-spinner-panel {
+	position: absolute;
+	z-index: 100;
+}
+.agropecuario-spinner-image {
+	background-image: url(spinner_points.GIF);
+	background-repeat: no-repeat;
+	width: 99px;
+	height: 9px;
+}
+.agropecuario-block-overlay {
+	position: absolute;
+}
+.agropecuario-spinner-image-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.agropecuario-spinner-image {
+	float: left;
+	margin-left: -50%;
+}
+/*Slider de información----------------------*/
+
+.agopecuario-header-switch .sprite-agropecuario-info-left{
+	display: none;
+}
+.agopecuario-header-switch[card="detail"] .sprite-agropecuario-info-left{
+	display: block;
+}
+.agopecuario-header-switch[card="detail"] .sprite-agropecuario-info-right{
+	display: none;
+}
+
+
+/*****************************/
+
+.agropecuario-header {
+	float: left;
+	float: left;
+	min-height: 68px;
+	width: 100%;
+	border-bottom: 1px solid #DDD;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.custom-agropecuario[collapsed=true] .agropecuario-header {
+	cursor: pointer;
+}
+.custom-agropecuario[collapsed=false] #agropecuario_header_colors {
+	display:none;
+}
+.custom-agropecuario[collapsed=false][expandwidth=true][seltab=info]{
+	width: 70%;
+}
+.agopecuario-header-total-value-container{
+	width: 75px;
+    float: left;
+}
+
+
+
+#agropecuario_header_title {
+	float: left;
+	padding: 4px 55px 4px 75px;
+	width: 100%;
+	height: 62px;
+	overflow: hidden;
+	margin-left: -70px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#agropecuario_header_logoLeft {
+	float: left;
+	background-color: #EFEFEF;
+}
+#agropecuario_var_title {
+	font-size: 14px;
+	font-weight: bold;
+}
+#agropecuario_subvar_title {
+	font-size: 11px;
+	max-height: 30px;
+}
+.agropecuario-truncate-text {
+	padding: 4px;
+	font-size: 13px;
+}
+.agropecuario-truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.agropecuario-header-btn {
+	float: right;
+	cursor: pointer;
+}
+.agropecuario-header-btns {
+	width: 41px;
+    float: right;
+    cursor: pointer;
+    margin-left: -42px;
+}
+.sprite-agropecuario-info{
+	cursor: pointer;
+}
+.custom-agropecuario[collapsed=false] .agropecuario-header-btns{
+	width: 28px;
+    float: right;
+    cursor: pointer;
+    margin-left: -28px;
+}
+
+.agropecuario-header-colors {
+	float: right;
+	width: 100%;
+	height: 25px;
+	padding: 4px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-colors-ramp{
+	width: 251px;
+    border: 1px solid #e0af46;
+    height: 16px;
+	float: left;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-colors-ramp div:first-of-type{
+	-webkit-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+}
+.agropecuario-colors-ramp div:last-of-type{
+	-webkit-border-radius: 0 5px 5px 0;
+	border-radius: 0 5px 5px 0;
+}
+
+
+.agropecuario-header-colors div {
+	float: left;
+	height: 15px;
+}
+#agropecuario_header_btnRight_modify {
+	display: none;
+}
+#agropecuario_header_btnRight_ok_nm {
+	display: none;
+}
+#agropecuario_header_btnRight_ok_n {
+	display: none;
+}
+.agropecuario-header-btnRight-close {
+	display: none;
+}
+.custom-agropecuario[collapsed=true] #agropecuario_header_btnRight_modify {
+	display: block;
+}
+.custom-agropecuario[collapsed=false] .agropecuario-header-btnRight-close {
+	display: block;
+	float: right;
+	cursor: pointer;
+}
+.agropecuario-container {
+	float: right;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-geo-container {
+	float: right;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-info-content {
+	float: right;
+	width: 100%;
+	display: none;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-info-content-graph{
+	float: right;
+	width: 100%;
+	height: 366px;
+	display: none;
+	padding: 4px;
+	overflow: hidden;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.agropecuario-bk-btn {
+	width: 100%px;
+	height: 349px;
+	background: #DFDFDF;
+	float: left;
+	cursor: pointer;
+	overflow: hidden;
+}
+.agropecuario-bk-btn-icon {
+	float: left;
+	margin-top: 146px;
+	cursor: pointer;
+}
+.agropecuario-content {
+	width: 100%;
+	height: 330px;
+	padding: 4px;
+	float: right;
+	overflow-y: auto;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-panels-container {
+	float: right;
+	width: 100%;
+	margin-left: -86px;
+	padding-left: 86px;
+	height: 398px;
+	overflow: hidden;
+	/*	float: left;
+	width: 100%;
+	height: 350px;
+*/	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-toolbar-container {
+	float: left;
+	width: 85px;
+	height: 398px;
+	background-color: #EFEFEF;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-list-item {
+	width: 100%;
+	padding: 5px;
+	float: left;
+	font-size: 13px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-bottom: 1px solid #999;
+}
+.agropecuario-list-item label {
+	width: 100%;
+	padding-right: 56px;
+	float: left;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-item-check {
+	float: left;
+	margin-left: -54px;
+	cursor: pointer;
+}
+/*Geo ----------------------*/
+.agropecuario-geo-content {
+	width: 100%;
+	height: 398px;
+	padding: 4px;
+	float: right;
+	overflow-y: auto;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-tenencia-content{
+	width: 100%;
+	height: 320px;
+	padding: 4px;
+	float: right;
+	overflow-y: auto;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-geo-type {
+	float: left;
+	width: 100%;
+	height: 25px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: none;
+}
+.agropecuario-geo-bk-btn {
+	width: 0px;
+	height: 349px;
+	background: #DFDFDF;
+	float: left;
+	cursor: pointer;
+	overflow: hidden;
+}
+.agropecuario-geo-bk-btn {
+	width: 0px;
+	height: 349px;
+	background: #DFDFDF;
+	float: left;
+	cursor: pointer;
+	overflow: hidden;
+}
+.agropecuario-geoEdo-item {
+	width: 100%;
+	float: left;
+	padding: 3px;
+	font-size: 14px;
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-geoEdo-icon {
+	width: auto;
+	height: auto;
+	float: right;
+	margin-left: -60px;
+}
+.agropecuario-geoEdo-icon-sel {
+	display: block;
+}
+.agropecuario-geoEdo-icon-unsel {
+	display: none;
+}
+.agropecuario-geoEdo-item[selected=selected] .agropecuario-geoEdo-icon-unsel {
+	display: block;
+}
+.agropecuario-geoEdo-item[selected=selected] .agropecuario-geoEdo-icon-sel {
+	display: none;
+}
+.agropecuario-geoEdo-item-label {
+	float: left;
+	width: 100%;
+	padding: 6px 60px 6px 4px;
+	/*margin-left: -29px;*/
+	box-sizing: border-box;
+}
+.agropecuario-geo-seemore {
+	float: right;
+	padding-right: 5px;
+	margin-left: -35px;
+}
+.agropecuario-geo-bk-btn-icon {
+	float: left;
+	margin-top: 146px;
+	cursor: pointer;
+}
+.agropecuario-geo-container[parent=true] .agropecuario-geo-bk-btn {
+	width: 25px;
+}
+.agropecuario-geo-container[parent=true] .agropecuario-geo-content {
+	margin-left: -27px;
+	padding-left: 34px;
+}
+/* Fin Geo list */
+
+
+.agropecuario-item-forward {
+	float: left;
+	margin-left: -30px;
+	cursor: pointer;
+}
+.agropecuario-strat-method {
+	float: left;
+	width: 100%;
+	height: 38px;
+	padding: 5px;
+	font-size: 12px;
+	overflow: hidden;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-strat-method .agropecuario-strat-item {
+	float: left;
+	width: 32%;
+	text-align: center;
+	background: #F0F0F0;
+	padding: 4px;
+	margin: 2px 2px 2px 2px;
+	cursor: pointer;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-strat-item:hover {
+	background: #C6DFD1;
+}
+.agropecuario-strat-item.selected {
+	background: #C6DFD1;
+}
+.agropecuario-years {
+	float: left;
+	width: 100%;
+	height: 37px;
+	padding: 5px;
+	font-size: 12px;
+	overflow: hidden;
+	border-bottom: 1px solid #999;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-years div {
+	float: left;
+	width: 24%;
+	text-align: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-years-item {
+	text-align: center;
+	background: #F0F0F0;
+	padding: 4px;
+	margin: 2px 2px 2px 2px;
+	cursor: pointer;
+}
+.agropecuario-years-item:hover {
+	background: #C6DFD1;
+}
+.agropecuario-years-item.selected {
+	background: #C6DFD1;
+}
+/* Control de visualización de paneles -------------------------*/
+.custom-agropecuario[collapsed=true] .agropecuario-panels-container {
+	height: 0px;
+	overflow: hidden;
+}
+.custom-agropecuario[collapsed=true] .agropecuario-toolbar-container {
+	height: 0px;
+	overflow: hidden;
+}
+.custom-agropecuario[collapsed=true] .agropecuario-container {
+	height: 0px;
+	overflow: hidden;
+}
+/*.custom-agropecuario[collapsed=true] .agropecuario-strat-method{
+	height:0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+}
+.custom-agropecuario[collapsed=true] .agropecuario-years{
+	height:0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+}
+*/
+
+.custom-agropecuario[collapsed=false] .agropecuario-header-colors {
+	display: none;
+}
+/* animacion de boton back  -----------------------------------*/
+.agropecuario-container[parent=true] .agropecuario-bk-btn {
+	width: 25px;
+}
+.agropecuario-container[parent=true] .agropecuario-content {
+	margin-left: -27px;
+	padding-left: 34px;
+}
+/*Logo --------------------------------------------------------*/
+
+/* Tabs    */
+.agropecuario-tab {
+	cursor: pointer;
+	background-position: 14px 0px;
+	margin: 4px 0px 4px 0px;
+	width: 100% !important;
+}
+.agropecuario-tab:hover {
+	background-color: #C6DFD1;
+}
+.agropecuario-info-container {
+	width: 100%;
+	height: 398px;
+	overflow: hidden;
+	padding: 0px 2px 0px 2px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-info-content{
+	width: 100%;
+	height: 366px;
+	overflow: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-info-content-graph{
+	width: 100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-about-container {
+	width: 100%;
+	height: 366px;
+	overflow: hidden;
+	padding: 8px 11px 0px 11px;
+	font-size: 12px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.agropecuario-info-export-btns{
+	width: 100%;
+	height: 28px;
+	overflow: hidden;
+}
+.agropecuario-info-export-btns div{
+	float: left;
+	cursor: pointer;
+}
+.agropecuario-btn-window-size{
+	float: right !important;
+	display: none;
+	cursor: pointer;
+}
+.custom-agropecuario[expandwidth=false] .sprite-agropecuario-expand-limit{
+	display: block;
+}
+.custom-agropecuario[expandwidth=true] .sprite-agropecuario-collapse-limit{
+	display: block;
+}
+
+.custom-agropecuario[seltab=var] #agropecuario_tab_vars {
+	background-color: #A9CDB9;
+}
+.custom-agropecuario[seltab=geo] #agropecuario_tab_geo {
+	background-color: #A9CDB9;
+}
+.custom-agropecuario[seltab=graph] #agropecuario_tab_graph {
+	background-color: #A9CDB9;
+}
+.custom-agropecuario[seltab=activity] #agropecuario_tab_activity {
+	background-color: #A9CDB9;
+}
+.custom-agropecuario[seltab=type] #agropecuario_tab_type {
+	background-color: #A9CDB9;
+}
+.custom-agropecuario[seltab=info] #agropecuario_tab_info {
+	background-color: #A9CDB9;
+}
+.custom-agropecuario[seltab=about] #agropecuario_tab_about {
+	background-color: #A9CDB9;
+}
+
+.agropecuario-tab-container {
+	display: none;
+}
+.custom-agropecuario[seltab=var] .agropecuario-container {
+	display: block;
+}
+.custom-agropecuario[seltab=geo] .agropecuario-geo-container {
+	display: block;
+}
+.custom-agropecuario[seltab=graph] .agropecuario-conf-container {
+	display: block;
+}
+.custom-agropecuario[seltab=activity] .agropecuario-activity-container {
+	display: block;
+}
+.custom-agropecuario[seltab=type] .agropecuario-type-container {
+	display: block;
+}
+.custom-agropecuario[seltab=info] .agropecuario-info-container {
+	display: block;
+}
+.custom-agropecuario[seltab=about] .agropecuario-about-container {
+	display: block;
+}
+.agropecuario-geo-type .agropecuario-geoType-item.selected {
+	background: #C6DFD1;
+	border: 2px solid #57867B;
+}
+.agropecuario-strat-item-selector {
+	float: left;
+	height: auto;
+	padding: 2px 2px 2px 2px;
+	margin-right: 2px;
+	border: 1px solid #CFCFCF;
+	cursor: pointer;
+	text-align: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-strat-item-selector.selected {
+	background: #C6DFD1;
+	border: 1px solid #CFCFCF;
+	border-bottom: 2px solid #4E4E4E;
+}
+.agropecuario-strat-item-selector label {
+	width: 100%;
+	text-align: center;
+	float: left;
+}
+.agropecuario-strat-selector-color {
+	width: 100%;
+	height: 5px;
+	float: left;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-strat-table {
+	width: 100%;
+	font-size: 11px;
+}
+.agropecuario-strat-table tr:nth-child(even) {
+	background: #E4E4E4;
+}
+.agropecuario-strat-table tr {
+	display: none;
+}
+.agropecuario-strat-table[strat=e1] tr[idstrat=e1] {
+	display: block;
+	width: 100%;
+}
+.agropecuario-strat-table[strat=e2] tr[idstrat=e2] {
+	display: block;
+	width: 100%;
+}
+.agropecuario-strat-table[strat=e3] tr[idstrat=e3] {
+	display: block;
+	width: 100%;
+}
+.agropecuario-strat-table[strat=e4] tr[idstrat=e4] {
+	display: block;
+	width: 100%;
+}
+.agropecuario-strat-table[strat=e5] tr[idstrat=e5] {
+	display: block;
+	width: 100%;
+}
+.agropecuario-strat-table-container {
+	width: 100%;
+	max-height: 298px;
+	overflow-y: auto;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-info-var-icon {
+	float: left;
+	cursor: pointer;
+}
+.agropecuario-geotype-item {
+	padding: 2px 4px 2px 4px;
+	margin: 3px 2px 0px 4px;
+	width: auto;
+	float: left;
+	font-size: 14px;
+	cursor: pointer;
+}
+.agropecuario-geotype-item:hover {
+	background: #eef7f2;
+}
+.agropecuario-geotype-item.selected {
+	background: #C6DFD1;
+}
+.agropecuario-header-colors-years-label {
+	float: left;
+	height: 16px !important;
+}
+.agropecuario-header-year-label-left {
+	float: left;
+	width: 51px;
+	padding-left: 2px;
+	height: 13px !important;
+	border-left: 1px solid;
+}
+.agropecuario-header-year-label-right {
+	float: right !important;
+	height: 13px !important;
+	width: 69px;
+    text-align: right;
+	
+	padding-right: 2px;
+	border-right: 1px solid;
+}
+.agropecuario-strats-currentRamps-container {
+	float: left;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario_strats_currentRamp {
+	float: left;
+	width: 100%;
+}
+.agropecuario-strats-colorRamp {
+	float: left;
+	width: 16%;
+	padding: 1px 1px 1px 1px;
+	border: 2px solid #FFF;
+	cursor: pointer;
+	margin-top: 2px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-strats-colorRamp:hover {
+	border: 3px solid #BBB;
+}
+.agropecuario-strats-currentRamps-container .agropecuario-strats-colorRamp[selected=selected] {
+	border: 3px solid #FF9900
+}
+.agropecuario-strats-ramp-color {
+	height: 16px;
+	float: left;
+}
+.agropecuario-theme-normalInfo {
+	float: left;
+	width: 48%;
+	padding: 0px 3px 10px 6px;
+	font-size: 12px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-theme-mainInfo {
+	float: right;
+	width: 48%;
+	padding: 0px 3px 10px 6px;
+	font-size: 12px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-theme-info label {
+	float: right;
+}
+.agropecuario-strats-transparency-container {
+	float: left;
+	width: 97%;
+	padding: 4px;
+	background-color: #FFF;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-export-type-item {
+	float: left;
+	cursor: pointer;
+}
+.agropecuario-metadata-frame {
+	border: none;
+}
+.agropecuario-graph-strat {
+	width: 323px;
+	height: 160px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* estrato infomacion detalle */
+.agropecuario-stratum-detail-item {
+	width: 49%;
+	height: auto;
+	float: left;
+	font-size: 12px;
+	padding: 2px;
+	border: 1px solid #EEE;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-stratum-detail-item-color {
+	width: 30px;
+	height: 30px;
+	float: left;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-stratum-detail-item-info {
+	width: 100%;
+	height: 30px;
+	float: left;
+	padding-left: 35px;
+	margin-left: -30px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-stratum-detail-item-info-vals {
+	float: left;
+	width: 100%;
+	height: 15px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-stratum-detail-item-info-label {
+	float: left;
+}
+.agropecuario-stratum-detail-item-info-value {
+	float: right;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 4px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-geo-content-options {
+	float: left;
+	height: 20px;
+	font-size: 13px;
+	display: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-geo-content-options div {
+	cursor: pointer;
+	padding: 2px 4px 2px 4px;
+	float: left;
+	margin: 0px 2px 0px 2px;
+	border-right: 1px solid #DDD;
+}
+.agropecuario-geo-content-options div:last-child {
+	border-right: 0px solid #DDD;
+}
+.agropecuario-geo-content-options div:hover {
+	background-color: #ccf1dc;
+}
+.agropecuario-tool-option {
+	background-color: #ECECEC;
+}
+.custom-agropecuario[geotype="edo"] .agropecuario-geo-content-options {
+	display: block;
+}
+.agropecuario-container[typeselection=edomun] div[idref=edomun] {
+	background-color: #A9CDB9;
+}
+.agropecuario-container[typeselection=edo] div[idref=edo] {
+	background-color: #A9CDB9;
+}
+.agropecuario-container[typeselection=mun] div[idref=mun] {
+	background-color: #A9CDB9;
+}
+/*.custom-agropecuario[geotype="edo"] .agropecuario-geo-content{
+	height: 320px;
+}*/
+.agropecuario-tab-bottom-container {
+	position: absolute;
+	bottom: 0px;
+	width: 80px;
+	display: none;
+	opacity: 0;
+}
+.agropecuario-tab-bottom-container div {
+	cursor: pointer;
+	background-position: 9px 0px;
+	margin: 4px 0px 4px 0px;
+	width: 100% !important;
+}
+.custom-agropecuario[collapsed="false"] .agropecuario-tab-bottom-container {
+	display: block;
+	opacity: 1;
+}
+/*Control de encabezado */
+.custom-agropecuario[collapsed=true] #agropecuario_header_title {
+	padding: 4px 42px 4px 85px;
+	margin-left: -85px;
+	height: 83px;
+}
+.custom-agropecuario[collapsed=false] #agropecuario_header_title {
+	padding: 4px 28px 4px 85px;
+	margin-left: -85px;
+	height: 83px;
+}
+.agropecuario-header ul {
+	list-style: none;
+	line-height: 1em;
+	font-size: 3vw;
+}
+.agropecuario-header ul li:before {
+	content: "";
+	line-height: 1em;
+	width: .3em;
+	height: .3em;
+	background-color: #A29524;
+	float: left;
+	margin: .25em .25em 0;
+	border-radius: 50%;
+}
+/* Control de paneles de */
+/* animacion de boton back  -----------------------------------*/
+.agropecuario-activity-container {
+	width: 296px;
+	height: 398px;
+	overflow: hidden;
+}
+.agropecuario-products-bk-btn {
+	width: 0px;
+	height: 349px;
+	background: #DFDFDF;
+	float: left;
+	cursor: pointer;
+	overflow: hidden;
+}
+.agropecuario-products-bk-btn div {
+	float: left;
+	margin-top: 146px;
+	cursor: pointer;
+}
+.agropecuario-products-content {
+	width: 270px;
+	height: 398px;
+	padding: 4px;
+	float: right;
+	overflow-y: auto;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-products-container[specialtools=true] .agropecuario-products-content {
+	height: 329px;
+}
+.agropecuario-products-container[specialtools=true] .agropecuario-products-bk-btn {
+	height: 329px;
+}
+.agropecuario-activity-content {
+	position: relative;
+	width: 296px;
+	height: 398px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-activity-content {
+	padding: 0px 0px 0px 0px;
+}
+.agropecuario-activity-content[content=list] .agropecuario-products-bk-btn {
+	width: 25px;
+}
+.agropecuario-activity-content[content=list] .agropecuario-products-content {
+	/*margin-left: -27px;
+	padding-left: 29px;*/
+}
+.activity-item {
+	cursor: pointer;
+	float: left;
+	margin: 9px 7px 3px 4px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.activity-item:hover {
+	background-color: #A9CDB9;
+}
+.agropecuario-products-item {
+	width: 100%;
+	float: left;
+	padding: 3px;
+	font-size: 14px;
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-products-item-check {
+	float: right;
+}
+.agropecuario-products-item-label {
+	float: left;
+	width: 190px;
+	line-height: 26px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-products-item-check-icon {
+	display: none;
+}
+.agropecuario-products-item-check[active=true] .active {
+	display: block;
+}
+.agropecuario-products-item-check[active=false] .inactive {
+	display: block;
+}
+.agropecuario-products-type {
+	float: right;
+	width: 200px;
+}
+.agropecuario-products-type div {
+	float: right;
+	margin-left: 3px;
+	cursor: pointer;
+}
+.agropecuario-products-type div.active {
+	background-color: #A9CDB9;
+}
+/* Tenencia ------------------------------*/
+.agropecuario-tenencia-item {
+	width: 100%;
+	float: left;
+	padding: 3px;
+	font-size: 14px;
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-tenencia-item-check {
+	float: right;
+}
+.agropecuario-tenencia-item-label {
+	float: left;
+	width: 100%;
+	padding-left: 30px;
+	margin-left: -30px;
+	line-height: 26px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-tenencia-item-check-icon {
+	display: none;
+}
+.agropecuario-tenencia-item-check[active=true] .active {
+	display: block;
+}
+.agropecuario-tenencia-item-check[active=false] .inactive {
+	display: block;
+}
+/* Tenencia Graph ------------------------------*/
+.agropecuario-tenencia-graph-item {
+	width: 100%;
+	float: left;
+	padding: 3px;
+	font-size: 14px;
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-tenencia-graph-item-check {
+	float: right;
+}
+.agropecuario-tenencia-graph-item-label {
+	float: left;
+	width: 100%;
+	padding-left: 30px;
+	margin-left: -30px;
+	line-height: 26px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-tenencia-graph-item-check-icon {
+	display: none;
+}
+.agropecuario-tenencia-graph-item-check[active=true] .active {
+	display: block;
+}
+.agropecuario-tenencia-graph-item-check[active=false] .inactive {
+	display: block;
+}
+/*Encabezado control  */
+.agopecuario-header-title {
+	width: 100%;
+	height: 34px;
+	font-size: 18px;
+	float: left;
+	padding: 5px 100px 0px 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agopecuario-header-switch{
+	width: 25px;
+    height: 32px;
+    float: right;
+	
+	background-color: #d2d2d2;
+}
+.agopecuario-header-total {
+	width: 100px;
+	;
+	height: 34px;
+	float: right;
+	padding: 2px 0px 0px 0px;
+	margin-left: -100px;
+	background-color: #E3E3E3;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agopecuario-header-total-label {
+	width: 100%;
+	text-align: center;
+	height: 15px;
+	font-size: 9px;
+}
+.agopecuario-header-total-value {
+	width: 100%;
+	text-align: center;
+	height: 15px;
+	font-size: 12px;
+}
+.agropecuario-inner-header {
+	float: left;
+	width: 100%;
+	border-bottom: 1px dotted #A0A0A0;
+}
+.agopecuario-header-card-1 {
+	width: 100%;
+	padding: 3px 0px 0px 0px;
+	float: left;
+}
+.agopecuario-header-card-title {
+	width: 100%;
+	float: left;
+	font-size: 14px;
+}
+.agopecuario-header-card-subtitle {
+	width: 100%;
+	float: left;
+	font-size: 13px;
+	font-style: italic;
+}
+.agropecuario-header-swapcard {
+	float: right;
+	margin-top: 12px;
+	margin-right: 10px;
+	clear: both;
+}
+.agopecuario-header-card {
+	display: none;
+}
+.agropecuario-header-card-container[card=resume] .agopecuario-header-card-1 {
+	display: block;
+}
+.agropecuario-header-card-container[card=detail] .agopecuario-header-card-2 {
+	display: block;
+}
+.agropecuario-header-detail {
+	font-size: 11px;
+	color: #1d1d1d;
+	text-align: right;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.agropecuario-header-detail td {
+	height: 20px;
+}
+.agropecuario-header-detail tr td:last-of-type {
+	border: none;
+}
+.agropecuario-table-title {
+	padding-left: 1px;
+	font-weight: bold;
+	font-size: 10px;
+	color: #000;
+	text-align: left;
+	border-right: 0px;
+}
+.agropecuario-table-value {
+	border-right: 1px solid #444;
+	padding-right: 3px;
+	font-size: 9px;
+}
+
+.agropecuario-markerBox-container {
+    width: 275px;
+    max-height: 398px;
+    overflow-y: auto;
+}
+
+/* Estilo de Tabla en Detalle   --------------------------------------------------------*/
+.agropecuario-custom-table{
+	border-collapse: collapse;
+	text-align: left;
+	width: 100%;
+	
+}
+.agropecuario-custom-table td{
+	padding: 3px 10px;
+}
+
+.agropecuario-custom-table thead td{
+	background-color: #6e9680;
+	color: #FFF;
+	font-size: 11px;
+	font-weight: normal;
+	border-right: 1px solid #FFF;
+}
+.agropecuario-custom-table tbody tr:nth-child(even){
+	background-color: #FFF;
+}
+.agropecuario-custom-table tbody tr:nth-child(odd){
+	background-color: #D9ECE1;
+}
+
+.agropecuario-custom-table.selectable-row tbody tr:hover{
+	background-color: #A9CDB9;cursor: pointer;
+}
+.agropecuario-custom-table tbody td {
+	color: #7D7D7D;
+	border-left: 1px solid #DBDBDB;
+	font-size: 12px;
+	font-weight: normal;
+}
+.agropecuario-custom-table tbody .alt td {
+	background: #EBEBEB;
+	color: #7D7D7D;
+}
+.agropecuario-custom-table tbody td:first-child {
+	border-left: none;
+}
+.agropecuario-custom-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+
+
+/*
+
+
+.agropecuario-custom-table table {
+	border-collapse: collapse;
+	text-align: left;
+	width: 100%;
+}
+.agropecuario-custom-table table td, .agropecuario-custom-table table td {
+	padding: 3px 10px;
+}
+.agropecuario-custom-table table thead td {
+	background-color: #6e9680;
+	color: #FFF;
+	font-size: 11px;
+	font-weight: normal;
+	border-right: 1px solid #FFF;
+}
+.agropecuario-custom-table table thead td {
+	
+}
+
+
+.agropecuario-markerBox-container table tbody tr:nth-child(even){
+	background-color: #FFF;
+}
+.agropecuario-markerBox-container table tbody tr:nth-child(odd){
+	background-color: #D9ECE1;
+}
+
+.agropecuario-markerBox-container table tbody tr:hover{
+	background-color: #A9CDB9;cursor: pointer;
+}
+.agropecuario-markerBox-container table tbody td {
+	color: #7D7D7D;
+	border-left: 1px solid #DBDBDB;
+	font-size: 12px;
+	font-weight: normal;
+}
+.agropecuario-markerBox-container table tbody .alt td {
+	background: #EBEBEB;
+	color: #7D7D7D;
+}
+.agropecuario-markerBox-container table tbody td:first-child {
+	border-left: none;
+}
+.agropecuario-markerBox-container table tbody tr:last-child td {
+	border-bottom: none;
+}
+*/
+.agropecuario-markerBox-container .space{
+	padding-top: 8px;
+	
+}
+.agropecuario-markerBox-container label{
+	clear: both;
+    font-weight: bold;
+    font-size: 13px;
+    float: left;
+}
+
+.agropecuario-custom-table{
+	width: 100%;
+}
+.agropecuario-custom-table thead td{
+	text-transform: uppercase;
+}
+.agropecuario-btn-export-card{
+	float: left;
+	cursor: pointer;
+}
+.agropecuario-btn-view-type{
+	cursor: pointer;
+}
+.agropecuario-btn-view-type:hover{
+	background-color: #8DB8A0;
+}
+.agropecuario-info-container[type=grid] .agropecuario-btn-view-type[idref=grid]{
+	background-color: #A9CDB9;
+}
+.agropecuario-info-container[type=graph] .agropecuario-btn-view-type[idref=graph]{
+	background-color: #A9CDB9;
+}
+.agropecuario-info-container[type=grid] .agropecuario-info-content{
+	display: block;
+}
+.agropecuario-info-container[type=graph] .agropecuario-info-content-graph{
+	display: block;
+}
+.agropecuario-info-container[type=graph] .agropecuario-btn-export-info{
+	display: none;
+}
+
+
+.agropecuario-graph-list{
+	width: 100%;
+    font-size: 15px;
+    /* text-align: center; */
+    padding: 5px 0px 4px 0px;
+	text-transform: uppercase;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-graph-selector-container label{
+	font-size: 13px;
+	margin-top: 3px;
+}
+.agropecuario-btn-clean{
+	background-color: white;
+    border: 1px solid #AAA;
+    padding: 5px;
+    margin: 4px 0px 4px 0px;
+	cursor: pointer;
+}
+.agropecuario-btn-clean:hover{
+	background-color: #8DB8A0;
+}
+.agropecuario-graph-selector-container, .agropecuario-graph-container{
+	display: none;
+	overflow: auto !important;
+    height: 100%;
+}
+.agropecuario-info-content-graph[type=selectors] .agropecuario-graph-selector-container{
+	display: block;
+}
+.agropecuario-info-content-graph[type=graph] .agropecuario-graph-container{
+	display: inline-flex;
+}
+.agropecuario-graph-container{
+	width: 100%;
+    overflow-y: auto;
+    height: 366px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#agropecuario_graph{
+	height: 360px;
+    overflow: auto;
+	float: left;
+	width: 100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.agropecuario-graph-bk-btn {
+	width: 0px;
+	float: left;
+	margin-left: -2px;
+	height: 360px;
+	background: #DFDFDF;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.agropecuario-graph-bk-btn div {
+	float: left;
+	margin-top: 146px;
+	cursor: pointer;
+}
+
+#agropecuario_btn_notice{
+	cursor: pointer;
+} 
+
+.agropecuario-products-item-disable-mask{
+	position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: transparent;
+    cursor:default;
+	display: none;
+}
+
+.agropecuario-products-item[disabled=disabled]{
+	cursor: default;
+}
+.agropecuario-products-item[disabled=disabled] .agropecuario-products-item-disable-mask{
+	display: block;
+}
+.agropecuario-products-item[disabled=disabled] .agropecuario-products-item-check{
+	opacity: 0.3;
+}
+.agropecuario-products-item[disabled=disabled] .agropecuario-products-item-label{
+	color:#929292;
+}
+
+
+
+.agropecuario-products-item-info{
+	float: left;
+    margin-top: 6px;
+	cursor: pointer;
+}
+.agropecuario-products-item-edo{
+	padding: 2px 4px 2px 4px;
+}
+
+.agropecuario-tenencia-item{
+	padding: 2px 3px 2px 3px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.agropecuario-tenencia-graph-item label{
+	width: 80%;
+	font-size: 13px;
+    margin-top: 6px;
+    float: left;
+	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

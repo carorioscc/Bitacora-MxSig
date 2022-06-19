@@ -1,0 +1,203 @@
+.customPopup {
+            box-shadow: 0px 0px 6px 0 #555555;
+            background: none repeat scroll 0 0 #FFFFFF;
+            border: 2px solid #DDDDDD;
+            border-radius: 10px 10px 10px 10px;
+            color: #333333;
+            margin: 0em 0 0em;
+            padding: 15px;
+            position:absolute;
+            z-index:2000;
+            display: none;
+}
+.pruebapopup{
+            background: red;
+            z-index: 1900;
+            position: absolute;
+}
+.customPopup .close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.customPopup.Blinker {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { background: none repeat scroll 0 0 #e9eb70; }
+}
+
+.customPopup.none {
+            margin-left: 30px;
+}
+.customPopup.none:before {
+            border-color: transparent transparent;
+            border-width: 0px 0px 0px 0;
+            bottom: auto;
+            left: 0px;
+            top: 0px;
+}
+        
+.customPopup.none:after {
+            border-color: transparent transparent;
+            border-width: 0px 0px 0px 0;
+            bottom: auto;
+            left: 0px;
+            top: 0px;
+        }
+
+.customPopup:before {
+            border-color: #DDDDDD transparent;/*5A8F00*/
+            border-style: solid;
+            border-width: 20px 20px 0; /*20px 20px 0;*/
+            bottom: -20px;
+            content: "";
+            display: block;
+            left: 18px;
+            position: absolute;
+            width: 0;
+}
+.customPopup:after {
+            border-color: #FFFFFF transparent;
+            border-style: solid;
+            border-width: 13px 13px 0;
+            bottom: -13px;
+            content: "";
+            display: block;
+            left: 25px;
+            position: absolute;
+            width: 0;
+}
+	
+.customPopup.bottom-left:before {
+	    border-width: 20px 20px 0;
+	    bottom: -20px;
+	    left: 18px;
+}
+        
+.customPopup.top-left:after {
+            border-width: 13px 13px 0;
+            bottom: -13px;
+            left: 25px;
+}
+.customPopup.top-right:before {
+	    border-width: 20px 20px 0;
+	    bottom: -20px;
+	    right: 18px;
+        left: auto;
+}
+.customPopup.top-right:after {
+            border-width: 13px 13px 0;
+            bottom: -13px;
+            right: 25px;
+            left: auto;
+}
+.customPopup.bottom-left:before {
+	    border-width: 0 20px 20px;
+	    bottom: auto;
+	    left: auto;
+	    left: 18px;
+	    top: -20px;
+}
+.customPopup.bottom-left:after {
+            border-width: 0 13px 13px;
+            bottom: auto;
+            left: auto;
+            left: 25px;
+            top: -13px;
+}
+.customPopup.bottom-right:before {
+	    border-width: 0 20px 20px;
+	    bottom: auto;
+	    left: auto;
+	    right: 18px;
+	    top: -20px;
+}
+        
+.customPopup.bottom-right:after {
+            border-width: 0 13px 13px;
+            bottom: auto;
+            left: auto;
+            right: 25px;
+            top: -13px;
+}
+        
+.customPopup.right-top {
+            margin-left: 30px;
+}
+.customPopup.right-top:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 30px 15px 0;
+            bottom: auto;
+            left: -30px;
+            top: 10px;
+}
+        
+.customPopup.right-top:after {
+            border-color: transparent #FFFFFF;
+            border-width: 9px 21px 9px 0;
+            bottom: auto;
+            left: -21px;
+            top: 16px;
+}
+.customPopup.right-bottom {
+            margin-left: 30px;
+}
+.customPopup.right-bottom:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 30px 15px 0;
+            bottom: auto;
+            left: -30px;
+            bottom: 10px;
+}
+        
+.customPopup.right-bottom:after {
+            border-color: transparent #FFFFFF;
+            border-width: 9px 21px 9px 0;
+            bottom: auto;
+            left: -21px;
+            bottom: 16px;
+}
+        
+.customPopup.left-top {
+            margin-right: 30px;
+}
+.customPopup.left-top:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 0 15px 30px;
+            bottom: auto;
+            left: auto;
+            right: -30px;
+            top: 10px;
+ }
+ .customPopup.left-top:after {
+		    border-color: transparent #FFFFFF;
+		    border-width: 9px 0 9px 21px;
+		    bottom: auto;
+		    left: auto;
+		    right: -21px;
+		    top: 16px;
+}
+	
+.customPopup.left-bottom {
+            margin-right: 30px;
+}
+.customPopup.left-bottom:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 0 15px 30px;
+            bottom: auto;
+            left: auto;
+            right: -30px;
+            bottom: 10px;
+}
+.customPopup.left-bottom:after {
+		    border-color: transparent #FFFFFF;
+		    border-width: 9px 0 9px 21px;
+		    bottom: auto;
+		    left: auto;
+		    right: -21px;
+		    bottom: 16px;
+}

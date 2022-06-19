@@ -1,0 +1,1812 @@
+@import url('sprite/sprite-eod.css');
+/* CSS Document */
+.custom-eod{
+	font-family:Arial, Helvetica, sans-serif;
+	width:415px;
+	height: auto;
+	border: 1px solid #EEE;
+	z-index: 1900;
+	
+	position:absolute;
+	bottom:55px;
+	left:11px;
+	
+	overflow: hidden;
+	
+	display:block;
+	background-color:#FFF;
+	
+	-webkit-box-shadow: 1px 1px 2px 0px #555;
+	box-shadow: 1px 1px 2px 0px #555;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#eod_header_click_collapsed{
+	display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 68px;
+    width: 345px;
+}
+
+.custom-eod[collapsed=true]{
+	width:393px;
+}
+
+.custom-eod[collapsed=false][seltab=info][infopanel=graph]{
+	width:630px;
+}
+.custom-eod[collapsed=true] #eod_header_click_collapsed{
+	display: block;
+}
+.eod-animated{
+    -webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+/* Spinner  ---------------------*/
+.eod-logo-left{ 
+	background:url("logo.png") top left no-repeat; 
+	float: left;
+    width: 70px;
+    height: 60px;
+	position: relative;
+}
+.eod-spinner-panel{
+	position: absolute;
+	z-index: 100;
+}
+.eod-spinner-image{
+	background-image:url(spinner_points.GIF);
+	background-repeat: no-repeat;
+	width: 99px;
+	height: 9px;
+}
+.eod-block-overlay{
+	position: absolute;
+}
+.eod-spinner-image-container{
+	position: absolute;
+	top:50%;
+	left: 50%;
+}
+.eod-spinner-image{
+    float: left;
+    margin-left: -50%;
+}
+
+/*----------------------*/
+
+
+.eod-header{
+	float:left;	
+	float: left;
+    padding-bottom: 3px;
+	min-height: 69px;
+	width:100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.custom-eod[collapsed=true] .eod-header{
+	cursor: pointer;
+}
+.eod-info-content{
+	display: none;
+}
+.eod-info-graph{
+	display: none;
+}
+
+.custom-eod[infopanel=data] .eod-info-content{
+	display: block;
+}
+.custom-eod[infopanel=graph] .eod-info-graph{
+	display: block;
+}
+
+
+
+#eod_header_title{
+	float: left;
+	padding: 4px 39px 4px 75px;
+	width: 100%;
+	height: 66px;
+	overflow: hidden;
+	margin-left: -70px;
+	background-color: #eaeaea;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#eod_var_title{
+	font-size: 13px;
+    font-weight: bold;
+}
+#eod_subvar_title{
+	font-size: 11px;
+	max-height: 30px;
+}
+.eod-truncate-text{
+	padding:4px;
+	font-size:13px;	
+}
+.eod-header-btn{
+	float:right;
+	cursor:pointer;	
+}
+.eod-header-btns{
+	width: 55px;
+	float: right;
+    cursor: pointer;
+    margin-left: -55px;
+}
+.eod-header-colors{
+	float:right;
+    width: 100%;
+    height: 25px;
+	padding:4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.eod-header-colors div{
+	float:left;
+	height:20px;
+}
+
+#eod_header_btnRight_modify{	display: none;}
+#eod_header_btnRight_ok_nm{display: none;}
+#eod_header_btnRight_ok_n{display: none;}
+.eod-header-btnRight-close{float: right}
+
+.custom-eod[collapsed=true] #eod_header_btnRight_modify{
+	display: block;	
+}
+.custom-eod[collapsed=false][changed=false] #eod_header_btnRight_ok_nm{
+	display: block;	
+}
+.custom-eod[collapsed=false][changed=true] #eod_header_btnRight_ok_n{
+	display: block;	
+}
+.custom-eod[collapsed=false][changed=true] .eod-header-btnRight-close{
+	display: block;
+	float: right;
+	cursor: pointer;
+}
+
+
+.eod-container{
+    float:right;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-geo-container{
+	float:right;
+	width:100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-conf-container{
+	float:right;
+	width: 100%;
+    height: 351px;
+    padding: 4px;
+    float: right;
+    overflow-y: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+
+.eod-info-content{
+	float:right;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-info-graph{
+	float:right;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-info-graph-container{
+	width: 100%;
+    height: 325px;
+}
+.eod-bk-btn{
+	width:0px;
+	height:349px;
+	background:#DFDFDF;		
+	float:left;
+	cursor:pointer;
+	
+	overflow:hidden;
+}
+.eod-bk-btn-icon{
+	float: left;
+    margin-top: 146px;
+	cursor:pointer;
+}
+.eod-content{
+	width: 338px;
+	height:330px;	
+	padding:4px;
+	float:right;
+	overflow-y: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-panels-container{
+	float: right;
+    width: 100%;
+    margin-left: -60px;
+    padding-left: 60px;
+	
+	height: 350px;
+    overflow: hidden;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-toolbar-container{
+	float: left;
+	width: 60px;
+	height: 350px;
+	background-color: #92A5CF;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*Geo ----------------------*/
+.eod-geo-content{
+	width: 100%;
+    height: 352px;
+    padding: 4px;
+    float: right;
+	overflow-y: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-geo-type{
+	float: left;
+	width: 100%;
+	height: 25px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-geo-bk-btn{
+	    width: 0px;
+		height: 349px;
+		background: #DFDFDF;
+		float: left;
+		cursor: pointer;
+		overflow: hidden;
+}
+.eod-geo-bk-btn{
+	width: 0px;
+    height: 349px;
+    background: #DFDFDF;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+.eod-geoEdo-item{
+	width:100%;
+	float:left;
+  	padding: 3px;
+	font-size: 14px;
+	border-bottom: 1px solid #eee;
+	cursor:pointer;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+
+.eod-geoEdo-icon{
+	width: auto;
+	height: auto;
+	float: right;
+	margin-left: -60px;
+	
+}
+.eod-geoEdo-icon-sel{
+	display:block;	
+}
+.eod-geoEdo-icon-unsel{
+	display:none;	
+}
+
+.eod-geoEdo-item[selected=selected] .eod-geoEdo-icon-unsel{
+	display: block;
+}
+.eod-geoEdo-item[selected=selected] .eod-geoEdo-icon-sel{
+	display: none;
+}
+
+
+.eod-geoEdo-item-label{
+	float: left;
+    width: 100%;
+    padding: 6px 60px 6px 4px;
+    /*margin-left: -29px;*/
+    box-sizing: border-box;
+}
+.eod-geo-seemore{
+	float: right;
+    padding-right: 5px;
+    margin-left: -35px;
+}
+.eod-geo-bk-btn-icon {
+    float: left;
+    margin-top: 146px;
+    cursor: pointer;
+}
+
+.eod-geo-container[parent=true] .eod-geo-bk-btn {
+    width: 25px;
+}
+.eod-geo-container[parent=true] .eod-geo-content {
+    margin-left: -27px;
+    padding-left: 34px;
+}
+
+/* Fin Geo list */
+
+
+.eod-item-forward{
+	float:left;	
+	margin-left: -30px;
+	cursor:pointer;
+}
+.eod-strat-method{
+	float:left;
+	width:100%;
+	height:38px;
+	padding:5px;
+	font-size:12px;
+	overflow: hidden;
+	
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-strat-method .eod-strat-item{
+	float:left;
+	text-align:center;
+	background:#F0F0F0;
+	padding:4px;
+	margin: 2px 2px 2px 2px;
+	cursor:pointer;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.eod-strat-item:hover{
+	background:#efbad8;
+}
+.eod-strat-item.selected{
+	background:#efbad8;
+}
+
+.eod-years{
+	float:left;
+	width:100%;
+	height:37px;
+	padding:5px;
+	font-size:12px;
+	overflow: hidden;
+	
+	border-bottom:1px solid #999;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.eod-years div{
+	float:left;
+	width:24%;
+	text-align:center;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.eod-years-item{
+	text-align:center;
+	background:#F0F0F0;
+	padding:4px;
+	margin: 2px 2px 2px 2px;
+	cursor:pointer;	
+}
+.eod-years-item:hover{
+	background:##EFD5E4;	
+}
+.eod-years-item.selected{
+	background:#C6DFD1;	
+}
+
+/* Control de visualización de paneles -------------------------*/
+.custom-eod[collapsed=true] .eod-panels-container{
+	height:0px;
+	overflow: hidden;
+}
+.custom-eod[collapsed=true] .eod-toolbar-container{
+	height:0px;
+	overflow: hidden;
+}
+
+
+.custom-eod[collapsed=true] .eod-container{
+	height:0px;
+	overflow: hidden;
+}
+/*.custom-eod[collapsed=true] .eod-strat-method{
+	height:0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+}
+.custom-eod[collapsed=true] .eod-years{
+	height:0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+}
+*/
+
+.custom-eod[collapsed=false] .eod-header-colors{
+	display:none;
+}
+
+
+/* animacion de boton back  -----------------------------------*/
+.eod-container[parent=true] .eod-bk-btn{
+	width:25px;
+}
+.eod-container[parent=true] .eod-content{
+	margin-left: 0px;
+    padding-left: 0px;
+	width: 298px;
+}
+
+/*Logo --------------------------------------------------------*/
+
+/* Tabs    */
+.eod-tab{
+	cursor: pointer;
+    background-position: 9px 0px;
+	margin: 4px 0px 4px 0px;
+    width: 100% !important;
+	text-align: center;
+	color: #FFF;
+	padding: 3px 0px 6px 0px;
+}
+.eod-tab:hover{
+	background-color: #6695E1;
+}
+.eod-tab div:first-of-type{
+	margin-left: 9px;
+}
+
+.custom-eod[seltab=var] #eod_tab_vars{
+	background-color: #5078BA;
+}
+.custom-eod[seltab=geo] #eod_tab_geo{
+	background-color: #5078BA;
+}
+.custom-eod[seltab=graph] #eod_tab_graph{
+	background-color: #5078BA;
+}
+
+.custom-eod[seltab=info] #eod_tab_info{
+	background-color: #5078BA;
+}
+
+.eod-eod_card_values{
+	display: none;
+	float: right;
+}
+
+.eod-tab-container{
+	display: none;
+}
+
+.custom-eod[seltab=var] .eod-container{
+	display: block;
+}
+.custom-eod[seltab=geo] .eod-geo-container{
+	display: block;
+}
+.custom-eod[seltab=graph] .eod-conf-container{
+	display: block;
+}
+.custom-eod[seltab=info] .eod-info-container{
+	display: block;
+}
+
+/*Revisar para ajuste de visualizacioneod_geo_container*/
+
+/*
+.custom-eod[cantheme=false] .eod-tab-container{
+	display: none;
+}
+.custom-eod[cantheme=false] .eod-geo-container{
+	display: block;
+}
+
+
+.eod-disable-toolbars{
+	position: absolute;
+	left: 0px;
+    top: 121px;
+    width: 60px;
+    height: 250px;
+    background-color: rgba(255,255,255,0.4);
+	display: none;
+}
+.custom-eod[cantheme=false] .eod-disable-toolbars{
+	display: block;
+}
+*/
+
+
+
+
+.eod-geo-type .eod-geoType-item.selected{
+	background:#efbad8;
+	border: 2px solid #57867B;
+}
+.eod-strat-item-selector{
+	float: left;
+	height:auto;
+	padding: 2px 2px 2px 2px;
+	margin-right: 2px;
+	border:1px solid #CFCFCF;
+	cursor: pointer;
+	text-align: center;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.eod-strat-item-selector.selected{
+	background: #F4D5E7;
+	border:1px solid #CFCFCF;
+	border-bottom: 2px solid #4E4E4E;
+}
+.eod-strat-item-selector label{
+	width: 100%;
+	text-align: center;
+	float: left;
+}
+.eod-strat-selector-color{
+	width: 100%;
+	height: 5px;
+	float: left;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+#eod_strat_table{
+	width: 100%;
+    height: 298px;
+	overflow-y: auto;
+}
+
+.eod-strat-table{
+	width: 100%;
+	font-size: 11px;
+}
+.eod-strat-table tr:nth-child(even) {
+	background: #E4E4E4;
+}
+#eod_strat_table .eod-strat-table{
+	display: none;
+	width: 100%;
+}
+
+.eod-strat-table .eod-table-head{
+	font-size: 12px;
+    font-weight: bold;
+    background-color: #efbad9;
+}
+
+#eod_strat_table[strat=e1] .eod-strat-table[idstrat=e1]{
+	display: table;
+	width: 100%;
+}
+#eod_strat_table[strat=e2] .eod-strat-table[idstrat=e2]{
+	display: table;
+	width: 100%;
+}
+#eod_strat_table[strat=e3] .eod-strat-table[idstrat=e3]{
+	display: table;
+	width: 100%;
+}
+#eod_strat_table[strat=e4] .eod-strat-table[idstrat=e4]{
+	display: table;
+	width: 100%;
+}
+#eod_strat_table[strat=e5] .eod-strat-table[idstrat=e5]{
+	display: table;
+	width: 100%;
+}
+.eod-strat-table td{
+	padding: 5px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+
+
+
+
+.eod-strat-table-container{
+	width: 100%;
+	height: 326px;
+	overflow-y: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.eod-info-var-icon{
+	float:left;
+	cursor: pointer;
+}
+.eod-geotype-item{
+	padding: 2px 4px 2px 4px;
+	margin: 3px 2px 0px 4px;
+	width: auto;
+	float: left;
+	font-size: 14px;
+	
+	cursor: pointer;
+}
+.eod-geotype-item:hover{
+	background:#EFD5E4;
+}
+
+.eod-geotype-item.selected{
+	background:#efbad8;	
+}
+.eod-header-colors-years-label{
+	width: 100%;
+	float: left;
+	height: 16px !important;
+	
+}
+.eod-header-year-label-left{
+	float: left;
+	padding-left: 2px;
+	height: 13px !important;
+	border-left: 1px solid;
+}
+
+.eod-header-year-label-right{
+	float: right !important;
+	height: 13px !important;
+	padding-right: 2px;
+	border-right: 1px solid;
+}
+
+.eod-strats-currentRamps-container{
+	float: left;
+	width: 100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.eod_strats_currentRamp{
+	float:left;
+	width:100%;
+}
+.eod-strats-colorRamp{
+	float: left;
+    width: 16%;
+    padding: 1px 1px 1px 1px;
+	border: 2px solid #FFF;
+	cursor:pointer;
+	margin-top: 2px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-strats-colorRamp:hover{
+	border: 3px solid #BBB;
+}
+
+.eod-strats-currentRamps-container .eod-strats-colorRamp[selected=selected]{
+	border: 3px solid #efbad8}
+
+.eod-strats-ramp-color{
+	height:16px;
+	float:left;	
+}
+
+.eod-theme-normalInfo{
+	float:left;
+	width:48%;
+	padding:0px 3px 10px 6px;
+	font-size:12px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-theme-mainInfo{
+	float:right;
+	width:48%;
+	padding:0px 3px 10px 6px;
+	font-size:12px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.eod-theme-info label{
+	float: right;
+}
+.eod-strats-transparency-container{
+	float:left;
+	width:97%;
+	padding:4px;
+	background-color:#FFF;	
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-export-type-item{
+	float: left;
+	cursor: pointer;
+}
+.eod-metadata-frame{
+	border: none;
+	
+}
+.eod-graph-strat{
+	width: 323px;
+	height: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* estrato infomacion detalle */
+.eod-stratum-detail-item{
+	width: 49%;
+    height: 29px;
+    float: left;
+	font-size: 12px;
+    
+	padding: 2px;
+	border: 1px solid #EEE;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-stratum-detail-item-color{
+	width: 30px;
+	height: 23px;
+	float: left;
+	
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-stratum-detail-item-info{
+	width: 100%;
+	height: 30px;
+    float: left;
+    padding-left: 35px;
+    margin-left: -30px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-stratum-detail-item-info-vals{
+	float: left;
+	width: 100%;
+	height: 13px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-stratum-detail-item-info-label{
+	float: left;
+}
+.eod-stratum-detail-item-info-value{
+	float: right;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-geo-content-options{
+	float: left;
+	height: 20px;
+	font-size: 13px;
+	display: none;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.eod-geo-content-options div{
+	cursor: pointer;
+	padding: 2px 4px 2px 4px;
+	float: left;
+	margin: 0px 2px 0px 2px;
+	
+	border-right: 1px solid #DDD;
+}
+.eod-geo-content-options div:last-child{
+	border-right: 0px solid #DDD;
+}
+.eod-geo-content-options div:hover{
+	background-color: #EFD5E4;	
+}
+.eod-tool-option{
+	background-color: #ECECEC;
+}
+.custom-eod[geotype="edo"] .eod-geo-content-options{
+	display: block;
+}
+.eod-container[typeselection=edomun] div[idref=edomun]{
+	background-color: #efbad8;
+}
+.eod-container[typeselection=edo] div[idref=edo]{
+	background-color: #efbad8;
+}
+.eod-container[typeselection=mun] div[idref=mun]{
+	background-color: #efbad8;
+}
+
+/*.custom-eod[geotype="edo"] .eod-geo-content{
+	height: 320px;
+}*/
+.eod-tab-bottom-container{
+	position: absolute;
+    bottom: 0px;
+    width: 60px;
+	display: none;
+	opacity: 0;
+	
+}
+.eod-tab-bottom-container div{
+	cursor: pointer;
+    background-position: 9px 0px;
+    margin: 4px 0px 4px 0px;
+    width: 100% !important;
+}
+.custom-eod[collapsed="false"] .eod-tab-bottom-container{
+	display: block;
+	opacity: 1;
+}
+.eod-confiden-bg{
+	background-image: url(d_reservados.jpg);
+}
+
+
+#eod_tab_pdfdoc div{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+    color: white;
+}
+#eod_tab_bottom_container a{
+	text-decoration: none;
+	color: white;
+}
+
+.eod-strats-strat-title{
+	width:25%;
+	float:left;
+	padding:0px 0px 0px 4px;
+}
+.eod-column-title{
+	width:100%;
+	float:left;
+	padding:0px 0px 0px 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.eod-strats-data-config-strats{
+	width:100%;
+	float:left;
+	padding:4px;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-strats-strat-item{
+	width:18%;
+	height:22px;
+	margin:1%;
+	text-align:center;
+	float:left;
+	padding:3px 4px 3px 4px;
+	font-size: 13px;
+	border:1px solid #AAA;
+	cursor:pointer;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-strats-strat-item:hover{
+	background-color:#EEE;
+}
+.eod-strats-strat-item.selected{
+	background-color:#efbad8;
+}
+
+.eod-strats-data-container{
+	float:left;
+	width:100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#eod_card_header .eod-table-color tr:first-child {
+    background: #EB98C7;
+	font-weight: bold;
+}
+#eod_card_header .eod-table-color td {
+    width: 40%;
+}
+/* Card -------------------------------------------------------------------------------------------------------*/
+.eod-table-color thead{
+	background: #EB98C7;
+}
+.eod-table-color{
+	width: 100%;
+	font-size: 11.5px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-table-color td{
+	padding: 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-table-color tr:nth-child(even) {
+	background: #F4E0EB;
+}
+##eod_card_indicators{
+	overflow-y: auto;
+}
+
+#eod_card_indicators ul{
+	padding-left: 23px;
+}
+#eod_card_indicators li{
+	list-style: decimal outside;
+	padding: 2px 0px 2px 4px;
+	cursor: pointer;
+	border-left: 4px solid #FFF;
+}
+#eod_card_indicators li *{
+	cursor: pointer;
+}
+#eod_card_indicators li:hover{
+	background: #F9CBE4;
+}
+#eod_card_indicators li.active{
+	border-left: 4px solid #F00;
+}
+#eod_card_indicators li label{
+	
+}
+
+
+#eod_card_header{
+	width: 100%;
+    height: 122px;
+    float: left;
+	overflow-y: auto;
+}
+#eod_card_indicators_container{
+	height: 282px;
+    width: 269px;
+    background-color: #F4F0F0;
+	float:left;
+	overflow: hidden;
+	
+	padding: 10px;
+    font-size: 13px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#eod_card_indicators_closebtn{
+	float: right;
+	clear: both;
+	
+}
+#eod_card_indicators_closebtn *{
+	float:left;	
+}
+#eod_card_indicators{
+	height: 290px;
+    width: 259px;
+    background-color: #F4F0F0;
+	float:left;
+	
+	padding: 10px;
+    font-size: 13px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#eod_card_values{
+	width: 495px;
+    float: right;
+    height: 282px;
+    overflow-y: auto;
+	padding: 0px 4px 0px 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#eod_card_toolbar{
+	float: left;
+    clear: left;
+    padding-top: 6px;
+}
+#eod_card_toolbar div{
+	float: left;
+}
+
+.eod-card-title-indicators{
+	font-size: 14px;
+	font-weight: bold;
+	width: 100%;
+	float: left;
+}
+
+.eod-card-blockcontent{
+	float: left;
+}
+.eod-card-title{
+	font-size: 12px;
+    font-weight: bold;
+    padding: 6px 3px 3px 3px;
+	float: left;
+	clear: both;
+	width: 100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.eod-switchtograph-btn{
+	float: left;
+	cursor: pointer;
+}
+.eod-switchtodata-btn{
+	float: left;
+	cursor: pointer;
+}
+
+.eod-card-varid{
+	display: inline-block;
+	margin-top: 0px;
+    float: left;
+}
+.eod-card-blockcontent{
+	width: 100%;
+}
+.eod-card-blockcontent table{
+	width: 100%;
+}
+
+#tooleod_info_content[status=collapsed] #eod_card_indicators_container{
+	width: 48px;
+}
+#tooleod_info_content[status=collapsed] #eod_card_values{
+	width: 708px;
+}
+.sprite-eod-sright, .sprite-eod-sleft{
+	cursor: pointer;
+}
+
+#tooleod_info_content .sprite-eod-sright{
+	display: none;
+}
+#tooleod_info_content[status=collapsed] .sprite-eod-sright{
+	display: block;
+}
+#tooleod_info_content[status=collapsed] .sprite-eod-sleft{
+	display: none;
+}
+
+.geolectoral-card-table-labelcolumn{
+	min-width: 265px;
+}
+.eod-card-export-link-item{
+	float: left;
+	padding: 0px 2px 0px 5px;
+	margin-left: 3px;
+	background-color: #EEE;
+}
+.eod-card-export-link-item *{
+	float: left;
+}
+.eod-card-export-link-item label{
+	margin-top: 6px;
+}
+
+/*   Nueva UI ------------------------------------------------ */
+
+eod_table_time_play{
+	background-image: url(selection_mark.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.eod-config-title{
+	width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    float: left;
+}
+.eod-config-week-container{
+	float: left;
+    width: 100%;
+}
+
+.eod-config-week-item{
+	float: left;
+	border: 2px solid #FFF;
+	background-color: #9CBCE1;
+	padding: 6px;
+	width: 50%;
+	height: 28px;
+	
+	text-align: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	cursor: pointer;
+	
+}
+.eod-config-week-item:hover{
+	background-color: #617CAB;
+	color: #FFF;
+}
+.eod-config-selectable.active{
+	background-image: url(selection_mark.png);
+	background-position: right;
+	background-repeat: no-repeat;	
+}
+.eod-config-week-item.active{
+	background-color: #4F6792;
+	color: #FFF;
+}
+.eod-config-week-item[idref=all]{
+	width: 100%;
+}
+
+
+.eod-config-schedule-item{
+	float: left;
+	border: 2px solid #FFF;
+	background-color: #9CBCE1;
+	padding: 2px;
+	width: 50%;
+	height: 50px;
+	
+	text-align: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	cursor: pointer;
+}
+.eod-config-schedule-item:hover{
+	background-color: #617CAB;
+	color: #FFF;
+}
+.eod-config-schedule-item.active{
+	background-color: #4F6792;
+	color: #FFF;
+}
+.eod-config-schedule-item[idref=all]{
+	width: 100%;
+	height: 19px;
+}
+
+.eod-config-subtitle{
+	float: left;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+	height: 14px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.eod-config-traveltype-item{
+	float: left;
+	border: 2px solid #FFF;
+	background-color: #9CBCE1;
+	padding: 6px 0px 4px 2px;
+	width: 50%;
+	height: 28px;
+	
+	text-align: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	cursor: pointer;
+}
+.eod-config-traveltype-item:hover{
+	background-color: #617CAB;
+	color: #FFF;
+}
+.eod-config-traveltype-item.active{
+	background-color: #4F6792;
+	color: #FFF;
+}
+.eod-config-traveltype-item[idref=sel]{
+	width: 100%;
+}
+
+
+.eod-config-paths-container{
+	float: left;
+	width: 100%;
+	padding: 0px 50px 0px 0px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.eod-config-paths-righttool-container{
+	float: left;
+    margin: 14px 0px 0px -50px;
+    width: 50px;
+    height: 126px;
+    cursor: pointer;
+    border: 2px solid #FFF;
+    background-color: #9CBCE1;
+    text-align: center;
+	
+	
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.eod-config-paths-righttool-container:hover{
+	background-color: #7E9DD3;
+	color: #FFF;
+}
+
+.eod-config-paths-righttool{
+	float: left;
+    margin: 41px 0px 0px 3.3px;
+}
+
+
+.eod-config-source-container{
+	float: left;
+}
+
+.eod-config-source-item{
+	float: left;
+	border: 2px solid #FFF;
+	background-color: #9CBCE1;
+	padding: 6px 0px 4px 2px;
+	width: 33.3%;
+	height: 28px;
+	
+	text-align: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	cursor: pointer;
+}
+.eod-config-source-item:hover{
+	background-color: #617CAB;
+	color: #FFF;
+}
+.eod-config-source-item.active{
+	background-color: #4F6792;
+	color: #FFF;
+}
+.eod-config-source-item[idref=sel]{
+	width: 100%;
+}
+
+
+.eod-config-target-container{
+	float: left;
+}
+
+.eod-config-target-item{
+	float: left;
+	border: 2px solid #FFF;
+	background-color: #9CBCE1;
+	padding: 2px;
+	width: 33.3%;
+	height: 28px;
+	
+	text-align: center;
+	padding: 6px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	cursor: pointer;
+}
+.eod-config-target-item:hover{
+	background-color: #617CAB;
+	color: #FFF;
+}
+.eod-config-target-item.active{
+	background-color: #4F6792;
+	color: #FFF;
+}
+.eod-config-target-item[idref=sel]{
+	width: 100%;
+}
+
+.eod-config-edo-list{
+	padding: 0px;
+	float: left;
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	font-size: 12px;
+}
+
+.eod-config-time-list{
+	float: left;
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	font-size: 12px;
+}
+
+/* Estilo para reloj */
+.eod-watch-container{
+	position: relative;
+	background-color: rgba(255,255,255,0.7);
+}
+.eod-watch-circle{
+	background-color: #EEE;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    position: absolute;
+    left: 34px;
+    top: 42px;
+	
+}
+
+.eod-watch-display{
+	position: absolute;
+    left: 84px;
+    top: 141px;
+    width: 134px;
+    height: 35px;
+    background-color: #8BBFF7;
+    font-size: 29px;
+    padding: 7px;
+    text-align: center;
+    border-radius: 23px;
+	
+	cursor: pointer;
+}
+.eod-watch-display  *{
+	cursor: pointer;
+}
+
+#eod_config_init_time_select_container,#eod_config_end_time_select_container{
+	font-size: 28px;
+}
+
+#eod_watch_close{
+	position: absolute;
+    right: 0px;
+    padding: 5px;
+    cursor: pointer;
+}
+#eod_watch_close span{
+	float:right;	
+}
+
+
+.eod-watch-hour{
+	background-color: #cccccc;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    position: absolute;
+	font-size: 15px;
+    text-align: center;
+    line-height: 28px;
+	cursor: pointer;
+	
+	-webkit-box-shadow: 0 0 5px 2px #B8B8B8;
+	box-shadow: 0 0 5px 2px #B8B8B8;
+}
+.eod-watch-hour.active{
+	-webkit-box-shadow: 0 0 5px 2px #B8B8B8;
+	box-shadow: 0 0 5px 2px #B8B8B8;
+	background-color: #8EB3E4;
+}
+.eod-watch-hour:hover{
+	background-color: #263564;
+	color: #fff;
+}
+.eod-watch-hour-12{
+	left: 110px;
+    top: 7px;
+}
+.eod-watch-hour-6{
+	left: 110px;
+    bottom: 7px;
+}
+.eod-watch-hour-3{
+	right: 7px;
+    top: 110px;
+}
+.eod-watch-hour-9{
+	left: 7px;
+    top: 110px;
+}
+
+
+.eod-watch-hour-1{
+	left: 163px;
+    top: 23px;
+}
+.eod-watch-hour-2{
+	left: 201px;
+    top: 60px;
+}
+
+.eod-watch-hour-4{
+	left: 201px;
+    bottom: 60px;
+}
+
+.eod-watch-hour-5{
+	left: 163px;
+    bottom: 23px;
+}
+
+
+
+.eod-watch-hour-11{
+	left: 57px;
+    top: 23px;
+}
+.eod-watch-hour-10{
+	left: 21px;
+    top: 60px;
+}
+
+
+.eod-watch-hour-8{
+	left: 21px;
+    bottom: 60px;
+}
+
+.eod-watch-hour-7{
+	left: 57px;
+    bottom: 23px;
+}
+
+/* circñes mins   */
+.eod-watch-min.active{
+	-webkit-box-shadow: 0 0 5px 2px #B8B8B8;
+	box-shadow: 0 0 5px 2px #B8B8B8;
+	background-color: #8EB3E4;
+}
+.eod-watch-min:hover{
+	background-color: #263564;
+	color: #fff;
+}
+.eod-watch-min{
+	background-color: #cccccc;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    position: absolute;
+	font-size: 15px;
+    text-align: center;
+    line-height: 28px;
+	cursor: pointer;
+	
+	-webkit-box-shadow: 0 0 5px 2px #B8B8B8;
+	box-shadow: 0 0 5px 2px #B8B8B8;
+}
+.eod-watch-min-00{
+	left: 110px;
+    top: 7px;
+}
+.eod-watch-min-30{
+	left: 110px;
+    bottom: 7px;
+}
+.eod-watch-min-15{
+	right: 7px;
+    top: 110px;
+}
+.eod-watch-min-45{
+	left: 7px;
+    top: 110px;
+}
+
+.eod-weekgraph-main-container{
+	width: 536px;
+    background-color: #FFF;
+    position: absolute;
+    height: 350px;
+}
+.eod-weekgraph-hidecontrols01{
+	position: absolute;
+    width: 534px;
+    height: 37px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(237,237,237,0.5);
+	display: none;
+}
+.eod-weekgraph-main-container[playing=true] .eod-weekgraph-hidecontrols01{
+	display: block;
+}
+
+.eod-weekgraph-container{
+	width: 540px;
+	height: 250px;
+	background-color: #fff;
+	position: absolute;
+
+}
+.custom-eod[expanded=true]{
+	width: 600px;
+}
+
+.custom-eod[seltab=graph][collapsed=false]{
+	width: 600px;
+}
+
+#eod_weekgraph_close{
+	width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 4px;
+    top: 5px;
+	cursor: pointer;
+}
+#eod_weekgraph_close *{
+	float: right;
+}
+.eod-table-hours{
+	position: absolute;
+    bottom: 0px;
+    height: 93px;
+    width: 534px;
+}
+.eod-table-hours{
+	font-size: 13px;
+	text-align: center;
+}
+.eod-table-hours td{
+	background-color: #92A5CF;	
+}
+.eod-table-hour-display{
+	font-size: 18px;
+	background-color: #798EBB;	
+}
+.eod-table-hour-display:hover{
+	background-color: #263564;
+	color: #fff;
+	cursor: pointer;
+}
+
+.eod-graph-tools{
+	position: absolute;
+	top: 74px;
+	right: 25px;
+}
+.eod-graph-tools div{
+	float:right;
+	cursor: pointer;
+}
+.eod-graph-tools div:hover{
+	background-color: #69A0EC;
+}
+.eod-graph-tools div.active{
+	background-color: #A9C4E9;
+}
+.eod-sort-option[reverse=false] div[reverse=true]{
+	display: none;
+}
+.eod-sort-option[reverse=true] div[reverse=false]{
+	display: none;
+}
+
+.eod-graph-msg-container{
+	padding: 132px 0px 0px 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*    ------------- time selctors  -----------------------------*/
+.eod-config-end-time-select{
+	font-size: 17px;
+	width: 100%;
+	
+	background-color: transparent;
+    border: none;
+}
+.eod-config-end-time-select option[selected=selected]{
+	background-color: #F1BE92 !important;
+}
+.eod-config-init-time-select{
+	font-size: 17px;
+	width: 100%;
+	
+	background-color: transparent;
+    border: none;
+}
+.eod-config-init-time-select option[selected=selected]{
+	background-color: #F1BE92 !important;
+}
+
+#eod_table_time_all{
+	cursor: pointer;
+	width: 111px;
+}
+#eod_table_time_all:hover{
+	cursor: pointer;
+	background-color: #92A5CF;
+}
+#eod_table_time_play{
+	cursor: pointer;
+	background-position: center;
+}
+#eod_table_time_play:hover{
+	background-color: #92A5CF;
+}
+#eod_table_time_play div{
+	display: none;
+	float: left;
+    margin-left: 40px;
+}
+#eod_table_time_play[status=play] .sprite-eod-play{
+	display: block;
+}
+#eod_table_time_play[status=pause] .sprite-eod-pause{
+	display: block;
+}
+.eod-graph-table-control-time{
+	position: absolute;
+    left: 24px;
+    top: 0px;
+}
+.eod-graph-table-control-time div{
+	width: 19.17391304347826px;
+	padding: 3px 0px 3px 0px;
+    display: inline-block;
+	background-color: #bfcfd8;
+	border-right: 1px solid white;
+	cursor: pointer;
+}
+
+.eod-graph-table-control-time div[iscurrent=true] {
+	border-bottom: 2px solid #16475f;	
+}
+.eod-graph-table-control-time div[cached=true] {
+	font-weight: bold;
+}
+
+#eod_weekgraph_playcontrols_container{
+	height: 33px;
+    background-color: white;
+    padding-bottom: 6px;
+}
+.eod-graph-container-bottom-title{
+	float: left;
+    padding: 0px 5px 0px 10px;
+    font-size: 11px;
+}
+.eod-legend{
+	background-image: url(EOD_legend.jpg);
+	background-repeat: no-repeat;
+	width: 325px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.eod-info-table{
+	font-size: 12px;
+}
+.eod-info-table td{
+	padding: 9px 0px 7px 0px;	
+}
+

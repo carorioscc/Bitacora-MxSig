@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.map.mapper.ThemeCGLabelMapper">
+
+
+	<select id="find" resultType="java.util.LinkedHashMap">
+		<include refid="mx.org.inegi.geo.map.mapper.Common.selectFields">
+			<property name="fields" value="cvegeo ,nombre as name" />
+		</include>
+		<include refid="mx.org.inegi.geo.map.mapper.Common.from">
+			<property name="table" value="${info.level}" />
+			<property name="schema" value="censosgob" />
+		</include>
+		<include refid="mx.org.inegi.geo.map.mapper.Common.wherePointAndBuffer">
+			<property name="point" value="#{info.point}" />
+			<property name="buffer" value="5" />
+		</include>
+		<include refid="mx.org.inegi.geo.map.mapper.Common.whereCvegeos" />
+		<include refid="mx.org.inegi.geo.map.mapper.Common.limit">
+			<property name="limit" value="1" />
+		</include>
+	</select>
+
+
+	<select id="geographical" resultType="java.util.LinkedHashMap">
+		<include refid="mx.org.inegi.geo.map.mapper.Common.selectFieldsByLevel" />
+		<include refid="mx.org.inegi.geo.map.mapper.Common.from">
+			<property name="table" value="${info.level}" />
+			<property name="schema" value="censosgob" />
+		</include>
+		<include refid="mx.org.inegi.geo.map.mapper.Common.wherePointAndBuffer">
+			<property name="point" value="#{info.point}" />
+			<property name="buffer" value="#{info.buffer}" />
+		</include>
+		<include refid="mx.org.inegi.geo.map.mapper.Common.limit">
+			<property name="limit" value="1" />
+		</include>
+	</select>
+	<select id="economical" resultType="java.util.LinkedHashMap">
+		<include refid="mx.org.inegi.geo.map.mapper.Common.selectFields">
+			<property name="fields"
+
+				value="gob_rh,gob_rh_pap, gob_rh_pap_hom,
+       gob_rh_pap_hom_rc, gob_rh_pap_hom_rc_conf, gob_rh_pap_hom_rc_base, 
+       gob_rh_pap_hom_rc_even, gob_rh_pap_hom_rc_hon, gob_rh_pap_hom_rc_otro, 
+       gob_rh_pap_hom_rc_ne, gob_rh_pap_hom_iss, gob_rh_pap_hom_iss_issste, 
+       gob_rh_pap_hom_iss_issef, gob_rh_pap_hom_iss_imss, gob_rh_pap_hom_iss_otra, 
+       gob_rh_pap_hom_iss_sinss, gob_rh_pap_hom_iss_ne, gob_rh_pap_hom_edad, 
+       gob_rh_pap_hom_edad_18a24, gob_rh_pap_hom_edad_25a29, gob_rh_pap_hom_edad_30a34, 
+       gob_rh_pap_hom_edad_35a39, gob_rh_pap_hom_edad_40a44, gob_rh_pap_hom_edad_45a49, 
+       gob_rh_pap_hom_edad_50mas, gob_rh_pap_hom_edad_ne, gob_rh_pap_hom_ingreso, 
+       gob_rh_pap_hom_ingreso_sin, gob_rh_pap_hom_ingreso_menos5, gob_rh_pap_hom_ingreso_5a10, 
+       gob_rh_pap_hom_ingreso_10a15, gob_rh_pap_hom_ingreso_15a20, gob_rh_pap_hom_ingreso_20a25, 
+       gob_rh_pap_hom_ingreso_25a30, gob_rh_pap_hom_ingreso_30a35, gob_rh_pap_hom_ingreso_35a40, 
+       gob_rh_pap_hom_ingreso_40a45, gob_rh_pap_hom_ingreso_45a50, gob_rh_pap_hom_ingreso_mas50, 
+       gob_rh_pap_hom_ingreso_ne, gob_rh_pap_muj, gob_rh_pap_muj_rc, 
+       gob_rh_pap_muj_rc_conf, gob_rh_pap_muj_rc_base, gob_rh_pap_muj_rc_even, 
+       gob_rh_pap_muj_rc_hon, gob_rh_pap_muj_rc_otro, gob_rh_pap_muj_rc_ne, 
+       gob_rh_pap_muj_iss, gob_rh_pap_muj_iss_issste, gob_rh_pap_muj_iss_issef, 
+       gob_rh_pap_muj_iss_imss, gob_rh_pap_muj_iss_otra, gob_rh_pap_muj_iss_sinss, 
+       gob_rh_pap_muj_iss_ne, gob_rh_pap_muj_edad, gob_rh_pap_muj_edad_18a24, 
+       gob_rh_pap_muj_edad_25a29, gob_rh_pap_muj_edad_30a34, gob_rh_pap_muj_edad_35a39, 
+       gob_rh_pap_muj_edad_40a44, gob_rh_pap_muj_edad_45a49, gob_rh_pap_muj_edad_50mas, 
+       gob_rh_pap_muj_edad_ne, gob_rh_pap_muj_ingreso, gob_rh_pap_muj_ingreso_sin, 
+       gob_rh_pap_muj_ingreso_menos5, gob_rh_pap_muj_ingreso_5a10, gob_rh_pap_muj_ingreso_10a15, 
+       gob_rh_pap_muj_ingreso_15a20, gob_rh_pap_muj_ingreso_20a25, gob_rh_pap_muj_ingreso_25a30, 
+       gob_rh_pap_muj_ingreso_30a35, gob_rh_pap_muj_ingreso_35a40, gob_rh_pap_muj_ingreso_40a45, 
+       gob_rh_pap_muj_ingreso_45a50, gob_rh_pap_muj_ingreso_mas50, gob_rh_pap_muj_ingreso_ne" />
+		</include> 
+		<include refid="mx.org.inegi.geo.map.mapper.Common.from">
+			<property name="table" value="egob_${info.getGeographical()}" />
+			<property name="schema" value="censosgob" />
+		</include>
+		<include refid="mx.org.inegi.geo.map.mapper.Common.whereCvegeoAndYear">
+			<property name="year" value="#{info.year}" />
+			<property name="cvegeo" value="#{cvegeo}" />
+		</include>
+		<include refid="mx.org.inegi.geo.map.mapper.Common.limit">
+			<property name="limit" value="1" />
+		</include>
+	</select>
+
+	<select id="getIndicators" resultType="java.util.LinkedHashMap">
+		<include refid="mx.org.inegi.geo.map.mapper.Common.selectFields">
+			<property name="fields" value="descripcion,variable" />
+		</include>
+		<include refid="mx.org.inegi.geo.map.mapper.Common.from">
+			<property name="table" value="indicadores" />
+			<property name="schema" value="censosgob" />
+		</include>
+	</select>
+	<sql id="field">
+
+	</sql>
+</mapper>

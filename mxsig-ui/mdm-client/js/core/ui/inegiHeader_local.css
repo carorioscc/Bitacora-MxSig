@@ -1,0 +1,386 @@
+.encSima {
+	background: url('http://www.beta.inegi.org.mx/img/sitio/logsinstituto.png');
+	background-repeat: no-repeat;
+}
+#Encabezado * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+body {
+	margin: 0!important;
+	height: 100%!important
+}
+#Encabezado {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 1.42857143;
+	color: #333
+}
+#Encabezado p {
+	margin: 0 0 10px
+}
+#Encabezado a {
+	text-decoration: none
+}
+#Encabezado ul, #Encabezado ol {
+	margin-top: 0
+}
+#Encabezado header, #Encabezado .nav {
+	display: block
+}
+#Encabezado img {
+	vertical-align: middle;
+	border: 0
+}
+#Encabezado .container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px
+}
+
+@media(min-width:768px) {
+#Encabezado .container {
+	width: 750px
+}
+}
+
+@media(min-width:992px) {
+#Encabezado .container {
+	width: 970px
+}
+}
+
+@media(min-width:1200px) {
+#Encabezado .container {
+	width: 1170px
+}
+}
+#Encabezado .row {
+	margin-left: -15px;
+	margin-right: -15px
+}
+#Encabezado .col-lg-1, #Encabezado .col-lg-2, #Encabezado .col-lg-3, #Encabezado .col-lg-4, #Encabezado .col-lg-5, #Encabezado .col-lg-6, #Encabezado .col-md-7, #Encabezado .col-lg-7, #Encabezado .col-xs-8, #Encabezado .col-md-8, #Encabezado .col-lg-8, #Encabezado .col-sm-9, #Encabezado .col-lg-9, #Encabezado .col-lg-10, #Encabezado .col-lg-11, #Encabezado .col-xs-12, #Encabezado .col-lg-12 {
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px
+}
+#Encabezado .col-xs-8, #Encabezado .col-xs-12 {
+	float: left
+}
+#Encabezado .col-xs-12 {
+	width: 100%
+}
+#Encabezado .col-xs-8 {
+	width: 66.66666667%
+}
+
+@media(min-width:768px) {
+#Encabezado .col-sm-9 {
+	float: left;
+	width: 75%
+}
+}
+
+@media(min-width:992px) {
+#Encabezado .col-md-7, #Encabezado .col-md-8 {
+	float: left
+}
+#Encabezado .col-md-8 {
+	width: 66.66666667%
+}
+#Encabezado .col-md-7 {
+	width: 58.33333333%
+}
+}
+#Encabezado .nav {
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none
+}
+#Encabezado .nav>li {
+	position: relative;
+	display: block
+}
+#Encabezado .nav>li>a {
+	position: relative;
+	display: block
+}
+#Encabezado .nav>li>a:hover, #Encabezado .nav>li>a:focus {
+	text-decoration: none;
+	background-color: #eee
+}
+#Encabezado .nav>li>a>img {
+	max-width: none
+}
+#Encabezado .navbar {
+	position: relative;
+	min-height: 50px;
+	margin-bottom: 20px;
+	border: 1px solid transparent
+}
+
+@media(min-width:768px) {
+#Encabezado .navbar {
+	border-radius: 4px
+}
+}
+
+@media(min-width:768px) {
+#Encabezado .navbar-header {
+	float: right
+}
+}
+#Encabezado .navbar-collapse {
+	overflow-x: visible;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-top: 1px solid transparent;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+	-webkit-overflow-scrolling: touch
+}
+
+@media(min-width:768px) {
+#Encabezado .navbar-collapse {
+	width: auto;
+	border-top: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none
+}
+}
+#Encabezado .navbar-toggle {
+	position: relative;
+	float: right;
+	margin-right: 15px;
+	padding: 0;
+	margin: 2px;
+	background-color: transparent;
+	background-image: none;
+	border: none;
+	border-radius: 4px
+}
+#Encabezado .navbar-toggle:focus {
+	outline: 0
+}
+#Encabezado .navbar-nav {
+	margin: 7.5px -15px
+}
+
+@media(min-width:768px) {
+#Encabezado .navbar-nav {
+	float: left;
+	margin: 0
+}
+#Encabezado .navbar-nav>li {
+	float: left
+}
+}
+#Encabezado .navbar-default {
+	background-color: #f8f8f8;
+	border-color: #e7e7e7
+}
+#Encabezado .navbar-default .navbar-nav>li>a:hover, #Encabezado .navbar-default .navbar-nav>li>a:focus {
+	color: #333;
+	background-color: transparent
+}
+#Encabezado .navbar-default .navbar-toggle {
+	border-color: #ddd
+}
+#Encabezado .navbar-default .navbar-toggle:hover, #Encabezado .navbar-default .navbar-toggle:focus {
+	background-color: #ddd
+}
+#Encabezado .navbar-default .navbar-collapse, #Encabezado .navbar-default .navbar-form {
+	border-color: #e7e7e7
+}
+#Encabezado .clearfix:before, #Encabezado .clearfix:after, #Encabezado .container:before, #Encabezado .container:after, #Encabezado .container-fluid:before, #Encabezado .container-fluid:after, #Encabezado .row:before, #Encabezado .row:after, #Encabezado .form-horizontal .form-group:before, #Encabezado .form-horizontal .form-group:after, #Encabezado .nav:before, #Encabezado .nav:after, #Encabezado .navbar:before, #Encabezado .navbar:after, #Encabezado .navbar-header:before, #Encabezado .navbar-header:after, #Encabezado .navbar-collapse:before, #Encabezado .navbar-collapse:after {
+	content: ' ';
+	display: table
+}
+#Encabezado .clearfix:after, #Encabezado .container:after, #Encabezado .container-fluid:after, #Encabezado .row:after, #Encabezado .form-horizontal .form-group:after, #Encabezado .nav:after, #Encabezado .navbar:after, #Encabezado .navbar-header:after, #Encabezado .navbar-collapse:after {
+	clear: both
+}
+#Encabezado .affix {
+	position: fixed
+}
+@-ms-viewport {
+width:device-width;
+}
+#Encabezado .visible-xs-block {
+	display: none !important
+}
+
+@media(max-width:767px) {
+#Encabezado .visible-xs-block {
+	display: block !important
+}
+}
+
+@media(max-width:767px) {
+#Encabezado .hidden-xs {
+	display: none !important
+}
+}
+.navOcu {
+	position: absolute;
+	margin-top: -15%
+}
+.btnEncIn {
+	text-align: right
+}
+#enc_tematica2 {
+	display: none
+}
+#enc_men_in {
+	background: #5d6569 !important;
+	z-index: 3000;
+	min-height: 34px;
+}
+#enc_men_in .container nav, #enc_men_in2 .container nav {
+	border: none;
+	margin-bottom: 0;
+	min-height: 30px;
+	background-color: transparent !important;
+	background-image: none !important
+}
+#enc_men_in .nav.navbar-nav a.dropdown-toggle.enc_ntema:hover, #enc_men_in .nav.navbar-nav a.dropdown-toggle.enc_ntema:active, #enc_men_in .nav.navbar-nav a.dropdown-toggle.enc_ntema:focus {
+	background: #ddd;
+	color: #333;
+	padding: 7px 10px
+}
+#enc_men_in.affix, #enc_men_in2.affix {
+	position: static;
+	width: 100%
+}
+#enc_trans {
+	padding: 3.5% 0 0 0
+}
+.btnEnc {
+	color: #fff;
+	padding: 3px 6px
+}
+.btnEnc:hover {
+	color: #cdd8de
+}
+.btnEnc:active, .btnEnc:focus {
+	color: #fff !important
+}
+.encProto {
+	background: #333;
+	color: #fff;
+	padding: 3px 0
+}
+.enc_contizq {
+	float: right;
+	margin: 0
+}
+.enc_izqenl {
+	padding-right: 15px;
+	color: #333
+}
+.enc_izqenl:hover, .enc_izqenl:focus {
+	color: #2279c0
+}
+.enc_scroll img, #enc_tem_col img, #enc_tem_col .navbar-header, #enc_men_in2, .encTemaMov, #EncTrad, #mod_comp {
+	display: none
+}
+.enc_sup_logo {
+	background: #fff;
+	padding: 2px
+}
+.enclogo2 {
+	display: block;
+	padding: 4px 0 0 0;
+	width: 0
+}
+.nav.navbar-nav a.dropdown-toggle.enc_ntema {
+	color: #fff;
+	padding: 7px 10px;
+	border-right: #5d6569 1px solid
+}
+.animate {
+	-webkit-transition: all 240ms ease-in-out;
+	-moz-transition: all 240ms ease-in-out;
+	-o-transition: all 240ms ease-in-out;
+	-ms-transition: all 240ms ease-in-out;
+	transition: all 240ms ease-in-out
+}
+.encActive {
+	color: #333 !important;
+	background: #ddd
+}
+
+@media(max-width:992px) {
+.btnEncIn {
+	text-align: left
+}
+}
+
+@media(max-width:767px) {
+.btnEnc {
+	margin-bottom: 5px
+}
+#enc_tematica2 {
+	background: #fff;
+	z-index: 1000;
+	position: absolute;
+	display: block;
+	padding-bottom: 100%;
+	width: 70%;
+	min-height: 1000px !important;
+	left: -100%
+}
+.enc_ntema2:hover {
+	color: #777 !important
+}
+.enc_ntema2 span {
+	border-bottom: 1px solid #dddddc;
+	display: block;
+	margin: 10px 10% 0 -3%
+}
+.enc_ntema2 img {
+	width: 34px;
+	float: left
+}
+.enc_ntema2 b {
+	padding: 0 6px;
+	vertical-align: sub
+}
+#cont_gen_enc {
+	margin: 0 !important
+}
+.comLogoIne {
+	width: 90px;
+	padding-top: 5px
+}
+#enc_men_in .navbar-default .navbar-toggle:hover, #enc_men_in .navbar-default .navbar-toggle:focus {
+	background: transparent
+}
+.compartir-toggle {
+	margin: 4px !important;
+	padding: 3px !important;
+	border: none !important
+}
+#enc_men_in .container, #enc_tem_col, #enc_tem_col {
+	padding: 0;
+	z-index: 1
+}
+#enc_tematica2 ul {
+	margin-bottom: 0
+}
+#enc_tematica2 ul li {
+	padding-left: 15px
+}
+.enc_scroll img, #enc_tem_col img, #enc_tem_col .navbar-header, .encTemaMov, #enc_men_in2, #PiePagina li a {
+	display: block
+}
+.enc_sup_logo, #enc_logosig, #enc_logosig.in, .collapse.in.enc_movdes, .red_cont_pr {
+	display: none
+}
+.jqmobil {
+	display: none !important;
+	height: 0 !important
+}
+}

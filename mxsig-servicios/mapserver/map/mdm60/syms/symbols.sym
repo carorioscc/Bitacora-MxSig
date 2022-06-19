@@ -1,0 +1,1395 @@
+SYMBOLSET
+
+# Linea electrica
+SYMBOL
+  NAME "lineaele"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  #STYLE
+  #  100 10 100 10
+  #END
+END
+
+
+# Linea transmision (bolita)
+SYMBOL
+  NAME "cirele"
+  TYPE PIXMAP
+  IMAGE "cirele.gif"
+  # STYLE
+  #  1 1000 1 1000
+  #END
+END
+
+# Estacion Geod�sica Horizontal con Vertical y gravimetr�a
+SYMBOL
+  NAME "estacion1"
+  TYPE PIXMAP
+  IMAGE "estacion1.gif"
+END
+# Estacion Geod�sica Horizontal con Vertical
+SYMBOL
+  NAME "estacion2"
+  TYPE PIXMAP
+  IMAGE "estacion2.gif"
+END
+
+
+
+# Centros  de nformacion Inegi
+SYMBOL
+  NAME "inegi"
+  TYPE PIXMAP
+  IMAGE "logoInegi_small.png"
+END
+SYMBOL
+  NAME "humedales"
+  TYPE PIXMAP
+  IMAGE "humedad.png"
+END
+SYMBOL
+  NAME "estrella_amarilla"
+  TYPE PIXMAP
+  IMAGE "estrella_amarilla.gif"
+END
+SYMBOL
+  NAME "estrella_roja"
+  TYPE PIXMAP
+  IMAGE "estrella_roja.gif"
+END
+#CRUZ
+SYMBOL
+  NAME "cruz"
+  TYPE VECTOR
+  POINTS
+  0 1
+  2 1
+  -99-99
+  1 0
+  1 2
+  END
+END
+#7
+SYMBOL
+  NAME "linie-gestr2"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  #STYLE
+  #  10 5 10 5
+  #END
+END
+#6
+SYMBOL
+  NAME "lmpal"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  #STYLE
+  #  20 10 20 10
+  #END
+END
+#15
+SYMBOL # wie "rechteck-quer" aber mit einem STYLE fr ein Linienmuster
+  NAME "rechteck-quer-st"
+  TYPE VECTOR
+  POINTS
+    0 0
+    0 0.6
+    1 0.6
+    1 0
+    0 0
+  END
+  FILLED TRUE
+  #STYLE
+  #  12 22 12 22
+  #END
+END
+#calles
+SYMBOL
+  NAME "avenidas"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+END
+
+#Carreteras------
+#SYMBOL   
+  #NAME "cartoline_round"
+  #TYPE cartoline
+  #LINECAP round  #[butt|round|square|triangle]
+  #LINEJOIN miter #[round|miter|bevel]
+  #LINEJOINMAXSIZE 3 #
+#END
+
+#15 Linea municipal
+SYMBOL # wie "rechteck-quer" aber mit einem STYLE fr ein Linienmuster
+  NAME "municipal"
+  TYPE VECTOR
+  POINTS
+    0 0
+    0 0.6
+    1 0.6
+    1 0
+    0 0
+  END
+  FILLED TRUE
+  #STYLE
+  #  12 22 12 22
+  #END
+END
+
+#18
+SYMBOL # gleiches Zeichen wie "punkt" nur ohne Fllung und mit einem STYLE
+  NAME "circulo"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  #STYLE
+  #  1 10 1 10
+  #END
+END
+
+SYMBOL # circulo marca geodesica (banco de nivel)
+  NAME "circulo"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  #STYLE
+  #  1 20 1 20
+  #END
+END
+
+SYMBOL # triangulo marca geod�sica (vertice de posicionamiento)
+  NAME "triangulo"
+  TYPE VECTOR
+  POINTS
+    0 2
+    1 0
+    2 2
+    0 2
+  END
+  #STYLE
+  #  1 30 1 30
+  #END
+END
+
+SYMBOL # triangulo nombres geograficos (rasgo orografico)
+  NAME "triangulorelleno"
+  TYPE VECTOR
+  POINTS
+    0 2
+    1 0
+    2 2
+    0 2
+  END
+  FILLED TRUE
+END
+SYMBOL # cuadrado marca geod�sica (estacion gravimetrica)
+  NAME "cuadrado"
+  TYPE VECTOR
+  POINTS
+    0 0
+    0 1
+    1 1
+    1 0
+    0 0
+  END
+  #STYLE
+  #  1 20 1 20
+  #END
+END
+
+SYMBOL # cuadrado nombres geograficos (Obras de infraestructura)
+  NAME "cuadradorelleno"
+  TYPE VECTOR
+  POINTS
+    0 0
+    0 1
+    1 1
+    1 0
+    0 0
+  END
+  FILLED TRUE
+END
+
+# para canales
+SYMBOL
+  NAME "punto"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  FILLED TRUE
+END
+#19
+SYMBOL # gleiches Zeichen wie "punkt" nur ohne F�llung und mit einem STYLE
+  NAME "punto_sol"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  #STYLE
+  #  1 10 1 10
+  #END
+  FILLED TRUE
+END
+
+#19
+SYMBOL # gleiches Zeichen wie "punkt" nur ohne F�llung und mit einem STYLE
+  NAME "punto_sol2"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  #STYLE
+  #  1 40 1 40
+  #END
+  FILLED TRUE
+END
+
+
+SYMBOL
+  NAME "museo"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#074;"
+END
+
+
+SYMBOL
+  NAME "escuela"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#040;"
+END
+
+SYMBOL
+  NAME "cementerio"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#037;"
+END
+
+SYMBOL
+  NAME "ccomercial"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#038;"
+END
+
+SYMBOL
+  NAME "camedica"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#041;"
+END
+
+SYMBOL
+  NAME "edificacion"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#077;"
+END
+
+SYMBOL
+  NAME "emetro"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#067;"
+END
+
+SYMBOL
+  NAME "faro"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#125;"
+END
+
+SYMBOL
+  NAME "icomunicacion"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#121;"
+END
+
+SYMBOL
+  NAME "ideportiva"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#120;"
+END
+
+SYMBOL
+  NAME "idiversa"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#079;"
+END
+
+SYMBOL
+  NAME "mercado"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#066;"
+END
+
+SYMBOL
+  NAME "palaciogobierno"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#078;"
+END
+
+SYMBOL
+  NAME "plaza"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#118;"
+END
+
+SYMBOL
+  NAME "rarqueologico"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#075;"
+END
+
+SYMBOL
+  NAME "tanqueagua"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#111;"
+END
+
+SYMBOL
+  NAME "templo"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#113;"
+END
+
+SYMBOL
+  NAME "aeropuerto"
+  TYPE TRUETYPE
+  FONT "servicios"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#33;"
+END
+
+SYMBOL
+  NAME "caseta"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#73;"
+END
+
+SYMBOL
+  NAME "cbfederal"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#64;"
+END
+
+SYMBOL
+  NAME "cbestatal"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#63;"
+END
+
+SYMBOL
+  NAME "cfederal"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#122;"
+END
+
+SYMBOL
+  NAME "cestatal"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#71;"
+END
+
+SYMBOL
+  NAME "cags"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#32;"
+END
+
+SYMBOL
+  NAME "cbc"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#33;"
+END
+
+SYMBOL
+  NAME "cbcs"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#34;"
+END
+
+SYMBOL
+  NAME "ccamp"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#35;"
+END
+
+SYMBOL
+  NAME "cchih"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#36;"
+END
+
+SYMBOL
+  NAME "cchis"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#37;"
+END
+
+SYMBOL
+  NAME "ccoah"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#38;"
+END
+
+SYMBOL
+  NAME "ccol"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#39;"
+END
+
+SYMBOL
+  NAME "cdf"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#122;"
+END
+
+SYMBOL
+  NAME "cdgo"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#161;"
+END
+
+SYMBOL
+  NAME "cedomex"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#42;"
+END
+
+SYMBOL
+  NAME "cgro"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#163;"
+END
+
+SYMBOL
+  NAME "cgto"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#162;"
+END
+
+SYMBOL
+  NAME "chgo"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#40;"
+END
+
+SYMBOL
+  NAME "cjal"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#41;"
+END
+
+SYMBOL
+  NAME "cmich"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#43;"
+END
+
+SYMBOL
+  NAME "cmor"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#44;"
+END
+
+SYMBOL
+  NAME "cnl"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#46;"
+END
+
+SYMBOL
+  NAME "cnay"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#45;"
+END
+
+SYMBOL
+  NAME "coax"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#47;"
+END
+
+SYMBOL
+  NAME "cpue"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#48;"
+END
+
+SYMBOL
+  NAME "cqr"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#55;"
+END
+
+SYMBOL
+  NAME "cqro"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#56;"
+END
+
+SYMBOL
+  NAME "cslp"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#59;"
+END
+
+SYMBOL
+  NAME "csin"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#57;"
+END
+
+SYMBOL
+  NAME "cson"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#60;"
+END
+
+SYMBOL
+  NAME "ctab"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#61;"
+END
+
+SYMBOL
+  NAME "ctamps"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#113;"
+END
+
+SYMBOL
+  NAME "ctlax"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#167;"
+END
+
+SYMBOL
+  NAME "cver"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#118;"
+END
+
+SYMBOL
+  NAME "cyuc"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#119;"
+END
+
+SYMBOL
+  NAME "czac"
+  TYPE TRUETYPE
+  FONT "inegit50"
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#120;"
+END
+
+SYMBOL
+  NAME "cuadro-sol"
+  TYPE VECTOR
+  POINTS
+    0 0
+    0 1
+    1 1
+    1 0
+    0 0
+  END
+  FILLED TRUE
+  #STYLE
+  #  1 20 1 20
+  #END
+END
+#60 vias del tren
+#SYMBOL
+  #NAME "vferreas"
+  #TYPE cartoline
+  #LINECAP butt
+  #LINEJOIN miter
+  #LINEJOINMAXSIZE 3
+  #STYLE
+  #  1 20 1 20
+  #END
+#END
+
+#13 caminos
+SYMBOL # abwechselnd ein Linienst�ck und ein Punkt
+  NAME "caminos"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  #STYLE
+  #  10 5 1 5
+  #END
+  FILLED TRUE
+END
+# cuerpos de agua intermitentes
+SYMBOL
+  NAME "intermitentes"
+  TYPE vector
+  TRANSPARENT 0
+  POINTS
+    0 1
+    1 0
+  END
+END
+
+SYMBOL
+    NAME "arrow"
+    TYPE TRUETYPE
+    FONT flechas2 
+    FILLED true
+    ANTIALIAS true
+    CHARACTER 'A'
+    #GAP -50
+END                                                                                                      
+
+
+SYMBOL
+    NAME "arrow2"
+    TYPE TRUETYPE
+    FONT flechas2 
+    FILLED true
+    ANTIALIAS true
+    CHARACTER 'B'
+    #GAP -50
+END                                                                                                      
+
+Symbol
+Name 'confidencial' #cruzado patron confidencial
+TYPE vector
+ POINTS 
+  0 1
+  1 0
+ END 
+END
+
+SYMBOL
+    NAME "arrow"
+    TYPE TRUETYPE
+    FONT flechas2 
+    FILLED true
+    ANTIALIAS true
+    CHARACTER 'A'
+    #GAP -50
+END                                                                                                      
+
+
+SYMBOL
+    NAME "arrow2"
+    TYPE TRUETYPE
+    FONT flechas2 
+    FILLED true
+    ANTIALIAS true
+    CHARACTER 'B'
+    #GAP -50
+END 
+
+# Cementerio png
+SYMBOL
+  NAME "cementeriopng"
+  TYPE PIXMAP
+  IMAGE "Cementerio.png"
+END
+
+# Centro de asistencia m�dica png
+SYMBOL
+  NAME "camedicapng"
+  TYPE PIXMAP
+  IMAGE "Servicios Medicos.png"
+END
+
+# Escuela png
+SYMBOL
+  NAME "escuelapng"
+  TYPE PIXMAP
+  IMAGE "Escuela.png"
+END
+
+# Edificacion png
+SYMBOL
+  NAME "edificacionpng"
+  TYPE PIXMAP
+  IMAGE "Edificacion.png"
+END
+
+# Estaci�n del metro png
+SYMBOL
+  NAME "emetropng"
+  TYPE PIXMAP
+  IMAGE "EstacionMetro.png"
+END
+
+# Faro, radiofaro, vor png
+SYMBOL
+  NAME "faropng"
+  TYPE PIXMAP
+  IMAGE "Faro.png"
+END
+
+# Instalacion deportiva png
+SYMBOL
+  NAME "ideportivapng"
+  TYPE PIXMAP
+  IMAGE "InstalacionDeportiva.png"
+END
+
+  
+ # Instalacion diversa png
+SYMBOL
+  NAME "idiversapng"
+  TYPE PIXMAP
+  IMAGE "InstalacionDiversa.png"
+END
+
+# Instalacion comunicacion png
+SYMBOL
+  NAME "icomunicacionpng"
+  TYPE PIXMAP
+  IMAGE "Comunicacion.png"
+END
+
+# Mercado png
+SYMBOL
+  NAME "mercadopng"
+  TYPE PIXMAP
+  IMAGE "Mercado.png"
+END
+
+# Centro Comercialpng
+SYMBOL
+  NAME "ccomercialpng"
+  TYPE PIXMAP
+  IMAGE "Centro_Comercial.png"
+END
+
+# Instalacion deportiva gif
+SYMBOL
+  NAME "ideportivagif"
+  TYPE PIXMAP
+  IMAGE "ideportiva.gif"
+END
+
+# Palacio de gobierno png
+SYMBOL
+  NAME "palaciopng"
+  TYPE PIXMAP
+  IMAGE "Palacio.png"
+END
+
+# Plaza png
+SYMBOL
+  NAME "plazapng"
+  TYPE PIXMAP
+  IMAGE "Plaza.png"
+END
+
+# Tanque de agua png
+SYMBOL
+  NAME "tanqueaguapng"
+  TYPE PIXMAP
+  IMAGE "Tanque_agua.png"
+END
+
+# Templo png
+SYMBOL
+  NAME "templopng"
+  TYPE PIXMAP
+  IMAGE "Templo.png"
+END
+
+SYMBOL
+  NAME "ZonaArqueologica"
+  TYPE PIXMAP
+  IMAGE "ZonaArqueologica.gif"
+END
+SYMBOL
+  NAME "circlef"
+  TYPE ellipse
+  FILLED true
+  POINTS
+    1 1
+  END # POINTS
+END # SYMBOL
+
+SYMBOL
+  NAME "vertline"
+  TYPE vector
+  FILLED true
+  POINTS
+    0 0
+    0 10
+    1 10
+    1 0
+    0 0
+  END # POINTS
+  #ANCHORPOINT 0.5 0.5
+END # SYMBOL
+
+SYMBOL
+  NAME "col_alto"
+  TYPE PIXMAP
+  IMAGE "col_alto.png"
+END
+SYMBOL
+  NAME "enh"
+  TYPE PIXMAP
+  IMAGE "chincheta_Hogar.png"
+END
+SYMBOL
+  NAME "col_bajo"
+  TYPE PIXMAP
+  IMAGE "col_bajo.png"
+END
+SYMBOL
+  NAME "col_moderado"
+  TYPE PIXMAP
+  IMAGE "col_moderado.png"
+END
+SYMBOL
+  NAME "ecr_intensa"
+  TYPE PIXMAP
+  IMAGE "ecr_intensa.png"
+END
+SYMBOL
+  NAME "ecr_aguda"
+  TYPE PIXMAP
+  IMAGE "ecr_aguda.png"
+END
+SYMBOL
+  NAME "ecr_apreciable"
+  TYPE PIXMAP
+  IMAGE "ecr_apreciable.png"
+END
+SYMBOL
+  NAME "ecr_perceptible"
+  TYPE PIXMAP
+  IMAGE "ecr_perceptible.png"
+END
+SYMBOL
+  NAME "ecr_ninguno"
+  TYPE PIXMAP
+  IMAGE "ecr_ninguno.png"
+END
+SYMBOL
+  NAME "ind_intensa"
+  TYPE PIXMAP
+  IMAGE "ind_intensa.png"
+END
+SYMBOL
+  NAME "ind_moderada"
+  TYPE PIXMAP
+  IMAGE "ind_moderada.png"
+END
+SYMBOL
+  NAME "ind_baja"
+  TYPE PIXMAP
+  IMAGE "ind_baja.png"
+END
+SYMBOL
+  NAME "ind_ninguno"
+  TYPE PIXMAP
+  IMAGE "ind_ninguno.png"
+END
+SYMBOL
+  NAME "sub_alto"
+  TYPE PIXMAP
+  IMAGE "sub_alto.png"
+END
+SYMBOL
+  NAME "sub_moderado"
+  TYPE PIXMAP
+  IMAGE "sub_moderado.png"
+END
+SYMBOL
+  NAME "sub_bajo"
+  TYPE PIXMAP
+  IMAGE "sub_bajo.png"
+END
+SYMBOL
+  NAME "mvm_compuesto"
+  TYPE PIXMAP
+  IMAGE "mvm_compuesto.png"
+END
+SYMBOL
+  NAME "mvm_desprendimiento"
+  TYPE PIXMAP
+  IMAGE "mvm_desprendimiento.png"
+END
+SYMBOL
+  NAME "mvm_detritos"
+  TYPE PIXMAP
+  IMAGE "mvm_detritos.png"
+END
+SYMBOL
+  NAME "mvm_lodo"
+  TYPE PIXMAP
+  IMAGE "mvm_lodo.png"
+END
+SYMBOL
+  NAME "mvm_ninguno"
+  TYPE PIXMAP
+  IMAGE "mvm_ninguno.png"
+END
+SYMBOL
+  NAME "mvm_rotacional"
+  TYPE PIXMAP
+  IMAGE "mvm_rotacional.png"
+END
+SYMBOL
+  NAME "mvm_traslacional"
+  TYPE PIXMAP
+  IMAGE "mvm_traslacional.png"
+END
+SYMBOL
+  NAME "mvm_vuelco"
+  TYPE PIXMAP
+  IMAGE "mvm_vuelco.png"
+END
+SYMBOL
+  NAME "manantial"
+  TYPE PIXMAP
+  IMAGE "manantial.png"
+END
+SYMBOL
+  NAME "noria"
+  TYPE PIXMAP
+  IMAGE "noria.png"
+END
+SYMBOL
+  NAME "flujo"
+  TYPE PIXMAP
+  IMAGE "flujo.gif"
+END
+SYMBOL
+  NAME "hospital-d"
+  TYPE PIXMAP
+  IMAGE "hospital-d.png"
+END
+SYMBOL
+  NAME "banco-d"
+  TYPE PIXMAP
+  IMAGE "banco-d.png"
+END
+SYMBOL
+  NAME "farmacia-d"
+  TYPE PIXMAP
+  IMAGE "farmacia-d.png"
+END
+SYMBOL
+  NAME "restaurante-d"
+  TYPE PIXMAP
+  IMAGE "restaurante-d.png"
+END
+SYMBOL
+  NAME "hotel-d"
+  TYPE PIXMAP
+  IMAGE "hotel-d.png"
+END
+SYMBOL
+  NAME "cluster"
+  TYPE PIXMAP
+  IMAGE "cluster.png"
+END
+
+SYMBOL
+  NAME "denue_Alquiler_de_autos"
+  TYPE PIXMAP
+  IMAGE "denue_Alquiler_de_autos.png"
+END
+SYMBOL
+  NAME "denueAeropuerto"
+  TYPE PIXMAP
+  IMAGE "denueAeropuerto.png"
+END
+SYMBOL
+  NAME "denueAgencia_de_viaje"
+  TYPE PIXMAP
+  IMAGE "denueAgencia_de_viaje.png"
+END
+SYMBOL
+  NAME "denueBanco"
+  TYPE PIXMAP
+  IMAGE "denueBanco.png"
+END
+SYMBOL
+  NAME "denueCasa_de_cambio"
+  TYPE PIXMAP
+  IMAGE "denueCasa_de_cambio.png"
+END
+SYMBOL
+  NAME "denueCentral_de_autobuses"
+  TYPE PIXMAP
+  IMAGE "denueCentral_de_autobuses.png"
+END
+SYMBOL
+  NAME "denueCentro_nocturno"
+  TYPE PIXMAP
+  IMAGE "denueCentro_nocturno.png"
+END
+SYMBOL
+  NAME "denueEscuela"
+  TYPE PIXMAP
+  IMAGE "denueEscuela.png"
+END
+SYMBOL
+  NAME "denueEstacionamiento"
+  TYPE PIXMAP
+  IMAGE "denueEstacionamiento.png"
+END
+SYMBOL
+  NAME "denueFarmacia"
+  TYPE PIXMAP
+  IMAGE "denueFarmacia.png"
+END
+SYMBOL
+  NAME "denueGasolinera"
+  TYPE PIXMAP
+  IMAGE "denueGasolinera.png"
+END
+SYMBOL
+  NAME "denueHospital"
+  TYPE PIXMAP
+  IMAGE "denueHospital.png"
+END
+SYMBOL
+  NAME "denueHotel"
+  TYPE PIXMAP
+  IMAGE "denueHotel.png"
+END
+SYMBOL
+  NAME "denueIglesias"
+  TYPE PIXMAP
+  IMAGE "denueIglesias.png"
+END
+SYMBOL
+  NAME "denueMensajeria_y_paqueteria"
+  TYPE PIXMAP
+  IMAGE "denueMensajeria_y_paqueteria.png"
+END
+SYMBOL
+  NAME "denueMuseos"
+  TYPE PIXMAP
+  IMAGE "denueMuseos.png"
+END
+SYMBOL
+  NAME "denueOficinas_de_gobierno"
+  TYPE PIXMAP
+  IMAGE "denueOficinas_de_gobierno.png"
+END
+SYMBOL
+  NAME "denueRestaurante"
+  TYPE PIXMAP
+  IMAGE "denueRestaurante.png"
+END
+SYMBOL
+  NAME "denueServicios_postales"
+  TYPE PIXMAP
+  IMAGE "denueServicios_postales.png"
+END
+SYMBOL
+  NAME "denueSitios_historicos"
+  TYPE PIXMAP
+  IMAGE "denueSitios_historicos.png"
+END
+SYMBOL
+  NAME "denueSupermercado"
+  TYPE PIXMAP
+  IMAGE "denueSupermercado.png"
+END
+SYMBOL
+  NAME "denueTaller_automotriz"
+  TYPE PIXMAP
+  IMAGE "denueTaller_automotriz.png"
+END
+SYMBOL
+  NAME "denueTienda_departamental"
+  TYPE PIXMAP
+  IMAGE "denueTienda_departamental.png"
+END
+SYMBOL
+  NAME "denueZoologicos"
+  TYPE PIXMAP
+  IMAGE "denueZoologicos.png"
+END
+SYMBOL
+  NAME "denuncia_profepa"
+  TYPE PIXMAP
+  IMAGE "denuncia_profepa.png"
+END
+SYMBOL
+  NAME "zmh_"
+  TYPE PIXMAP
+  IMAGE "zmh_.png"
+END
+SYMBOL
+  NAME "zaa_rojo"
+  TYPE PIXMAP
+  IMAGE "zaa_rojo.png"
+END
+SYMBOL
+  NAME "biblioteca"
+  TYPE PIXMAP
+  IMAGE "biblioteca.png"
+END
+SYMBOL
+  NAME "inah_inmuebles"
+  TYPE PIXMAP
+  IMAGE "inah_inmuebles.png"
+END
+SYMBOL
+  NAME "patrimonio_mundial_negro"
+  TYPE PIXMAP
+  IMAGE "patrimonio_mundial_negro.png"
+END
+SYMBOL
+  NAME "rm"
+  TYPE PIXMAP
+  IMAGE "rm.png"
+END
+SYMBOL
+  NAME "mhisto"
+  TYPE PIXMAP
+  IMAGE "mhisto.png"
+END
+SYMBOL
+  NAME "etapa1"
+  TYPE PIXMAP
+  IMAGE "etapa1.png"
+END
+SYMBOL
+  NAME "etapa2"
+  TYPE PIXMAP
+  IMAGE "etapa2.png"
+END
+SYMBOL
+  NAME "etapa3"
+  TYPE PIXMAP
+  IMAGE "etapa3.png"
+END
+SYMBOL
+  NAME "sede-oficina"
+  TYPE PIXMAP
+  IMAGE "sede-oficina.png"
+END
+SYMBOL
+  NAME "pesca"
+  TYPE PIXMAP
+  IMAGE "pesca.png"
+END
+SYMBOL
+  NAME "mineria"
+  TYPE PIXMAP
+  IMAGE "mineria.png"
+END
+SYMBOL
+  NAME "tagua"
+  TYPE PIXMAP
+  IMAGE "trasporte_agua.png"
+END
+SYMBOL
+  NAME "punto_arrivo"
+  TYPE PIXMAP
+  IMAGE "punto_arrivo.png"
+END
+SYMBOL
+  NAME "rojo"
+  TYPE PIXMAP
+  IMAGE "rojo.png"
+END
+SYMBOL
+  NAME "verde"
+  TYPE PIXMAP
+  IMAGE "verde.png"
+END
+SYMBOL
+  NAME "azul"
+  TYPE PIXMAP
+  IMAGE "azul.png"
+END
+SYMBOL
+  NAME "naranja"
+  TYPE PIXMAP
+  IMAGE "naranja.png"
+END
+SYMBOL
+  NAME "amarillo"
+  TYPE PIXMAP
+  IMAGE "amarillo.png"
+END
+SYMBOL
+  NAME "morado"
+  TYPE PIXMAP
+  IMAGE "morado.png"
+END
+
+
+end

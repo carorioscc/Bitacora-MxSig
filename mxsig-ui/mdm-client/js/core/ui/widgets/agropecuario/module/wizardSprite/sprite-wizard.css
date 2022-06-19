@@ -1,0 +1,113 @@
+@charset "utf-8";
+	.wizard-actividad-01
+{
+	background-image : url(wizard-actividad-01.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-tenencia-01
+{
+	background-image : url(wizard-tenencia-01.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-seleccion-01
+{
+	background-image : url(wizard-seleccion-01.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-geografico-01
+{
+	background-image : url(wizard-geografico-01.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-tenencia-02
+{
+	background-image : url(wizard-tenencia-02.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-seleccion-02
+{
+	background-image : url(wizard-seleccion-02.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-geografico-02
+{
+	background-image : url(wizard-geografico-02.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-actividad-02
+{
+	background-image : url(wizard-actividad-02.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-seleccion-03
+{
+	background-image : url(wizard-seleccion-03.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-geografico-03
+{
+	background-image : url(wizard-geografico-03.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-actividad-03
+{
+	background-image : url(wizard-actividad-03.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-tenencia-03
+{
+	background-image : url(wizard-tenencia-03.png);
+	background-repeat : no-repeat;
+	width : 71px;
+	height : 71px;
+}
+.wizard-open-btn02
+{
+	background-image : url(wizard-open-btn02.png);
+	background-repeat : no-repeat;
+	width : 61px;
+	height : 61px;
+}
+.wizard-open-btn02:hover
+{
+	background-image : url(wizard-open-btn01.png);
+	background-repeat : no-repeat;
+	width : 61px;
+	height : 61px;
+}
+.wizard-arrow-left
+{
+	background-image : url(wizard-arrow-left.png);
+	background-repeat : no-repeat;
+	width : 23px;
+	height : 23px;
+}
+.wizard-arrow-right
+{
+	background-image : url(wizard-arrow-right.png);
+	background-repeat : no-repeat;
+	width : 23px;
+	height : 23px;
+}

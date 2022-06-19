@@ -1,0 +1,248 @@
+MAP
+	NAME "Servicio_WMS_MXSIG"
+	STATUS ON
+	SHAPEPATH "/web" #Make sure this points to the root of the data folder (where all your shape or raster files are)
+	SIZE 400 400
+	IMAGECOLOR   255 255 255 
+	IMAGETYPE png
+	#EXTENT -119.9926 9.404 -85.1237 37.8468
+	EXTENT -13345293.64051 1516510.64097 -9294742.63818 3991847.36461
+	SYMBOLSET "/opt/map/mdm60/syms/symbols.sym"
+	FONTSET "/opt/map/fonts/fonts.txt"
+	DEBUG 0
+	PROJECTION 
+	 "init=epsg:900913"
+	END
+	UNITS DD
+	#CONFIG PROJ_LIB "/ms4w/proj/nad/" 
+	CONFIG  "MS_ERRORFILE" "/logs/mapserver/mxsigvectormb.log"
+	MAXSIZE 2200
+	WEB 
+		TEMPLATE "/opt/map/mdm60/mapserv_template.html"
+		IMAGEPATH "/tmp"
+		IMAGEURL "/tmp/"
+		LOG "/tmp/mapserver.log"
+		METADATA 
+			"max_extents" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461" #ka-map - to prevent navigation out of extents
+			"ows_title" "Servicio WMS. (Mapa Digital de Mexico v5.0)"
+			"ows_keywordlist" "WMS,OGC,MapServer,GeoNetwork"
+			"ows_onlineresource" "http://gaia.inegi.org.mx/NLB/balancer.do?map=/opt/map/mdm5vector.map&amp&"
+			"ows_service_onlineresource" "http://www.inegi.org.mx/"
+			"ows_fees" "none"
+			"ows_accessconstraints" "none"
+			"ows_contactperson" "Aar&oacute;n Israel Villar Mata"
+			"ows_contactorganization" "INEGI"
+			"ows_contactposition" "Subdirector"
+			"ows_addresstype" "postal"
+			"ows_address" "Heroe de Nacozari 2301"
+			"ows_city" "Aguascalientes"
+			"ows_stateorprovince" "Aguascalientes"
+			"ows_postcode" "20276"
+			"ows_country" "M&aacute;xico"
+			"ows_contactvoicetelephone" "+52 4499105300"
+			"ows_contactfacsimiletelephone" "+52 4499105328"
+			"ows_contactelectronicmailaddress" "aaron.villar@inegi.org.mx"
+			"ows_srs" "EPSG:900913"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_enable_request" "GetMap GetCapabilities GetLegendGraphic"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_feature_info_mime_type" "text/html"
+            "wms_title" "Servicio de prueba del MXSIG"
+		END #end metadata 
+	END #end web
+	
+
+	LAYER
+		NAME 'c104'
+		GROUP 'Mares'
+            CONNECTIONTYPE postgis
+			CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+			PROCESSING "CLOSE_CONNECTION=DEFER"
+			DATA "the_geom from mdm.mar_paisextranjero using unique gid using srid=900913"             
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "Mares"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "Mares"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"ows_srs" "EPSG:900913"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			END #end metadata 
+		TYPE polygon
+		STATUS default
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+		CLASS
+			EXPRESSION ('[dis]' eq 'pe')
+			    STYLE 
+			        ANTIALIAS TRUE
+                                COLOR 220 220 220
+			    END #end style
+		END # end class
+		CLASS
+			EXPRESSION ('[dis]' eq 'mar')
+			    STYLE 
+			        ANTIALIAS TRUE
+                                COLOR 37 36 64
+			    END #end style
+		END # end class
+	END #end layer
+	
+	LAYER
+		NAME 'c100'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.ent using unique gid using srid=900913"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "L�mite Estatal / Internacional"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "MGE"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"ows_srs" "EPSG:900913"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			END #end metadata 
+		TYPE polygon
+		STATUS default
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+            CLASS
+				MINSCALEDENOM 1000000
+				NAME 'Entidad federativa'
+				STYLE
+					WIDTH 2.0					
+					COLOR  155 144 121		
+					OUTLINECOLOR 255 255 255					
+				END #end style			
+		   END # end class
+	END #end layer
+	
+	LAYER
+		NAME 'c101'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.mun using unique gid using srid=900913"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "Municipios"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "Urbana"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"ows_srs" "EPSG:900913"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			END #end metadata 
+		TYPE line
+		STATUS default
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+		   CLASS
+			NAME 'Municipios'
+			STYLE
+				WIDTH 1.0
+				COLOR 255 0 0 
+				#OUTLINECOLOR 0 0 220
+			END #end style
+		   END # end class
+	END #end layer
+	
+	LEGEND
+		STATUS ON
+		IMAGECOLOR 255 255 255 #233 236 202 # 238 238 238
+		KEYSIZE 16 10
+		KEYSPACING 10 10 
+		LABEL
+			TYPE truetype
+			FONT arial
+			SIZE 8
+			COLOR 90 90 90
+		END  # end Label
+	END # end Legend
+	
+	SCALEBAR
+		STATUS on
+		POSITION lc
+		STYLE 0
+		INTERVALS 3
+		SIZE 129 3
+		IMAGECOLOR  255 255 255
+		LABEL
+			COLOR 0 0 0
+			SIZE 1
+		END  # end label
+		OUTLINECOLOR 0 0 0
+		COLOR  0 0 0
+		BACKGROUNDCOLOR  255 255 255
+		UNITS kilometers
+	END   # end scalebar
+	
+	REFERENCE
+		EXTENT 299819.4023 -134216.153 4695934.1014 2714439.6185
+		IMAGE "../images/reference.jpg"
+		SIZE 200 100
+		COLOR -1 -1 -1
+		OUTLINECOLOR 255 0 0
+	END  # end reference
+	
+	OUTPUTFORMAT
+		NAME "png"
+		MIMETYPE "image/png"
+		DRIVER  "GD/PNG" # "AGG/PNG"  # 
+		EXTENSION "png"
+		IMAGEMODE "RGBA" #"PC256"  # "RGBA"
+		#TRANSPARENT true
+	END #end outputformat
+
+	
+END #end map
+
+

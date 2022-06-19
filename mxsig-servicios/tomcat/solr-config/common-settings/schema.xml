@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema name="example" version="1.5">
+	<types>
+		<fieldType name="string" class="solr.StrField" sortMissingLast="true" omitNorms="true"/>
+		<fieldType name="boolean" class="solr.BoolField" sortMissingLast="true" omitNorms="true"/>
+		<fieldtype name="binary" class="solr.BinaryField"/>
+		<fieldType name="int" class="solr.TrieIntField" precisionStep="0" omitNorms="true" positionIncrementGap="0"/>
+		<fieldType name="float" class="solr.TrieFloatField" precisionStep="0" omitNorms="true" positionIncrementGap="0"/>
+		<fieldType name="long" class="solr.TrieLongField" precisionStep="0" omitNorms="true" positionIncrementGap="0"/>
+		<fieldType name="double" class="solr.TrieDoubleField" precisionStep="0" omitNorms="true" positionIncrementGap="0"/>
+		<fieldType name="tint" class="solr.TrieIntField" precisionStep="8" omitNorms="true" positionIncrementGap="0"/>
+		<fieldType name="tfloat" class="solr.TrieFloatField" precisionStep="8" omitNorms="true" positionIncrementGap="0"/>
+		<fieldType name="tlong" class="solr.TrieLongField" precisionStep="8" omitNorms="true" positionIncrementGap="0"/>
+		<fieldType name="tdouble" class="solr.TrieDoubleField" precisionStep="4" omitNorms="true" positionIncrementGap="0"/>
+		<fieldType name="date" class="solr.TrieDateField" omitNorms="true" precisionStep="0" positionIncrementGap="0"/>
+		<fieldType name="tdate" class="solr.TrieDateField" omitNorms="true" precisionStep="6" positionIncrementGap="0"/>		
+		<fieldType name="location" class="solr.LatLonType" subFieldSuffix="_coordinate" />
+		<fieldType name="text_ws" class="solr.TextField" positionIncrementGap="100">
+	      <analyzer>
+	        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+	      </analyzer>
+	    </fieldType>
+    <fieldType name="text_general" clas="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">				
+		
+        <tokenizer class="solr.ClassicTokenizerFactory"/>
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="${stopwords.file}" enablePositionIncrements="true" />
+        <!-- in this example, we will only use synonyms at query time
+        <filter class="solr.SynonymFilterFactory" synonyms="index_synonyms.txt" ignoreCase="true" expand="false"/>
+        -->
+        <filter class="solr.LowerCaseFilterFactory"/>
+		<filter class="solr.PatternReplaceFilterFactory" pattern="([^\w\d\*æøåÆØÅ ])" replacement="" replace="all"/>			
+      </analyzer>
+      <analyzer type="query">					
+        <tokenizer class="solr.ClassicTokenizerFactory"/>		
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="${stopwords.file}" enablePositionIncrements="true" />
+        <filter class="solr.SynonymFilterFactory" synonyms="synonyms_combinations.txt" ignoreCase="true" expand="true"/>
+        <filter class="solr.LowerCaseFilterFactory"/>		
+		<filter class="solr.PatternReplaceFilterFactory" pattern="([^\w\d\*æøåÆØÅ ])" replacement="" replace="all"/>			
+      </analyzer>
+    </fieldType>		
+	    <fieldType name="autocomplete_ngram" class="solr.TextField"  positionIncrementGap="100">
+			<analyzer type="index">							
+				<charFilter class="solr.MappingCharFilterFactory" mapping="${accents.file}"/>
+				<tokenizer class="solr.ClassicTokenizerFactory"/>
+				<filter class="solr.StopFilterFactory" ignoreCase="true" words="${stopwords.file}"/>				
+				<filter class="solr.SynonymFilterFactory" synonyms="${synonyms.file}" ignoreCase="true" expand="true"/>
+				<filter class="solr.LowerCaseFilterFactory"/>
+				<filter class="solr.EdgeNGramFilterFactory" maxGramSize="20" minGramSize="1"/>
+				<filter class="solr.PatternReplaceFilterFactory" pattern="([^\w\d\*æøåÆØÅ ])" replacement="" replace="all"/>
+				<!--<filter class="solr.SynonymFilterFactory" synonyms="synonymsVar8.txt" ignoreCase="true" expand="true" tokenizerFactory="solr.KeywordTokenizerFactory"/>-->
+				<!--<filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1" catenateWords="0" catenateNumbers="0" catenateAll="0" splitOnCaseChange="1"/>-->				
+				<!--<filter class="solr.EdgeNGramFilterFactory" maxGramSize="20" minGramSize="1"/>-->				
+			</analyzer>
+			<analyzer type="query">
+				<charFilter class="solr.MappingCharFilterFactory" mapping="${accents.file}"/>				
+				<tokenizer class="solr.ClassicTokenizerFactory"/>
+				<filter class="solr.StopFilterFactory" ignoreCase="true" words="${stopwords.file}"/>				
+				<filter class="solr.SynonymFilterFactory" synonyms="${synonyms.file}" ignoreCase="true" expand="true"/>
+				<filter class="solr.LowerCaseFilterFactory"/>
+				<filter class="solr.PatternReplaceFilterFactory" pattern="([^\w\d\*æøåÆØÅ ])" replacement="" replace="all"/>
+			</analyzer>
+		</fieldType>
+		<fieldType name="text" class="solr.TextField" positionIncrementGap="100">
+	      <analyzer type="index">
+	      	<charFilter class="solr.MappingCharFilterFactory" mapping="../../../common-settings/mapping-ISOLatin1Accent.txt"/>			
+	      	<tokenizer class="solr.StandardTokenizerFactory"/>
+	      	<filter class="solr.LowerCaseFilterFactory"/>			
+	      	<!--<filter class="solr.ASCIIFoldingFilterFactory"/>-->
+	        <!--<tokenizer class="solr.WhitespaceTokenizerFactory"/>-->	        
+	        <!-- in this example, we will only use synonyms at query time
+	        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="false"/>
+	    	-->
+	        
+	        <filter class="solr.StopFilterFactory" ignoreCase="true" words="../../../common-settings/stop-words-common.txt"/>
+	        <!--<filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1" catenateWords="1" catenateNumbers="1" catenateAll="0" splitOnCaseChange="1"/>-->
+	        <!--
+	        <filter class="solr.KeywordMarkerFilterFactory" protected="protwords.txt"/>
+	    	-->
+	        <!--<filter class="solr.PorterStemFilterFactory"/>-->
+	        <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+	      </analyzer>
+	      <analyzer type="query">			
+			<charFilter class="solr.MappingCharFilterFactory" mapping="${accents.file}"/>
+	      	<tokenizer class="solr.StandardTokenizerFactory"/>
+			<filter class="solr.LowerCaseFilterFactory"/>
+			<filter class="solr.StopFilterFactory" ignoreCase="true" words="${stopwords.file}"/>
+	        <!--<tokenizer class="solr.WhitespaceTokenizerFactory"/>-->	        
+	        <!--<filter class="solr.ASCIIFoldingFilterFactory"/>-->
+	        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>	        
+	        <!--<filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1" catenateWords="0" catenateNumbers="0" catenateAll="0" splitOnCaseChange="1"/>-->
+	        <!-- words which we do not want to be stemmed
+	        <filter class="solr.KeywordMarkerFilterFactory" protected="protwords.txt"/>
+	    	-->
+	        <!--<filter class="solr.PorterStemFilterFactory"/>-->
+	        <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+	      </analyzer>
+    	</fieldType>
+	</types>
+	<fields>
+	   <field name="gid" type="int" indexed="true" stored="true" required="true"/>	
+	   <field name="ent" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="objetor" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="munprincipal" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="mun" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="aeropuerto" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="capital" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="urbprincipal" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="urbana" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="rurmza" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="rur" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="calle" type="autocomplete_ngram" indexed="true" stored="true"/>	   
+	   <field name="rasgos" type="autocomplete_ngram" indexed="true" stored="true"/>	   
+	   <field name="numext" type="text" indexed="true" stored="true"/>	   
+	   <field name="otros" type="autocomplete_ngram" indexed="true" stored="true"/>	   	   
+	   <field name="pobtot" type="int" indexed="true" stored="true"/>	    	
+	   <field name="prioridad" type="int" indexed="true" stored="true"/>	   	   
+	   <field name="tipo" type="string" indexed="true" stored="true"/>	   	
+	   <field name="coord_merc" type="string" indexed="true" stored="true"/>	
+	   <field name="locacion" type="location" indexed="true" stored="true"/>	   
+	   <field name="tabla" type="string" indexed="true" stored="true"/>
+	   <field name="busqueda" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="nombre" type="autocomplete_ngram" indexed="true" stored="true"/>
+	   <field name="id" type="string" indexed="true" stored="true"/>		
+	   <field name="orden" type="string" indexed="true" stored="true"/>		   
+	   <dynamicField name="*_coordinate" type="tdouble" indexed="true" stored="false" />
+ 	</fields>
+
+ 	<uniqueKey>gid</uniqueKey>
+
+ 	<solrQueryParser defaultOperator="OR"/>
+</schema>

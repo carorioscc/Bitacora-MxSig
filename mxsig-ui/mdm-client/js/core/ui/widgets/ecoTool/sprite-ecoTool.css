@@ -1,0 +1,88 @@
+.sprite-ecoTool-down{ 
+	background:url("sprite-ecoTool-down.png") top left no-repeat;
+	width:40px; 
+	height:40px; 
+}
+.sprite-ecoTool-down:hover{ 
+	background:url("sprite-ecoTool-down--hover.png") top left no-repeat;
+	width:40px; 
+	height:40px; 
+}
+
+.sprite-ecoTool-world{ 
+	width:40px;
+	height:40px;
+	background:url("sprite-ecoTool-world.png") top left no-repeat;
+}
+.sprite-ecoTool-world:hover{
+	width:40px;
+	height:40px;
+	background:url("sprite-ecoTool-world--hover.png") top left no-repeat;
+}
+.sprite-ecoTool-infobig{ 
+	width:40px; 
+	height:40px; 
+	background-position:-10px -586px; 
+	background:url("sprite-ecoTool-babout.png") top left no-repeat;
+}
+.sprite-ecoTool-infobig:hover{ 
+	width:40px; 
+	height:40px; 
+	background:url("sprite-ecoTool--hover.png") top left no-repeat;
+}
+
+
+.sprite-ecoTool{ background:url("sprite-ecoTool.png") top left no-repeat; }
+.sprite-ecoTool-ecoLogo{ width:66px; height:66px; background-position:-10px -10px; }
+.sprite-ecoTool-csv{ width:40px; height:40px; background-position:-10px -86px; }
+.sprite-ecoTool-graph:hover{ width:40px; height:40px; background-position:-10px -136px; }
+.sprite-ecoTool-pdf:hover{ width:40px; height:40px; background-position:-10px -186px; }
+.sprite-ecoTool-cancel:hover{ width:40px; height:40px; background-position:-10px -236px; }
+.sprite-ecoTool-csv:hover{ width:40px; height:40px; background-position:-10px -286px; }
+.sprite-ecoTool-ok:hover{ width:40px; height:40px; background-position:-10px -336px; }
+.sprite-ecoTool-xls:hover{ width:40px; height:40px; background-position:-10px -386px; }
+/*.sprite-ecoTool-infobig{ width:40px; height:40px; background-position:-10px -586px; }
+.sprite-ecoTool-infobig:hover{ width:40px; height:40px; background-position:-10px -436px; }
+*/.sprite-ecoTool-xls{ width:40px; height:40px; background-position:-10px -486px; }
+.sprite-ecoTool-cancel{ width:40px; height:40px; background-position:-10px -536px; }
+.sprite-ecoTool-pdf{ width:40px; height:40px; background-position:-10px -636px; }
+.sprite-ecoTool-graph{ width:40px; height:40px; background-position:-10px -686px; }
+.sprite-ecoTool-back:hover{ width:40px; height:40px; background-position:-10px -736px; }
+.sprite-ecoTool-detail:hover{ width:40px; height:40px; background-position:-10px -786px; }
+.sprite-ecoTool-minimize:hover{ width:40px; height:40px; background-position:-10px -836px; }
+.sprite-ecoTool-okActive:hover{ width:40px; height:40px; background-position:-10px -886px; }
+.sprite-ecoTool-back{ width:40px; height:40px; background-position:-10px -936px; }
+.sprite-ecoTool-detail{ width:40px; height:40px; background-position:-10px -986px; }
+.sprite-ecoTool-minimize{ width:40px; height:40px; background-position:-10px -1036px; }
+.sprite-ecoTool-okActive{ width:40px; height:40px; background-position:-10px -1086px; }
+.sprite-ecoTool-ok{ width:40px; height:40px; background-position:-10px -1136px; }
+.sprite-ecoTool-building{ width:40px; height:40px; background-position:-10px -1186px; }
+.sprite-ecoTool-pencil:hover{ width:40px; height:40px; background-position:-10px -1236px; }
+.sprite-ecoTool-pencil{ width:40px; height:40px; background-position:-10px -1286px; }
+/*.sprite-ecoTool-world:hover{ width:40px; height:40px; background-position:-10px -1336px; }
+.sprite-ecoTool-world{ width:40px; height:40px; background-position:-10px -1386px; }*/
+.sprite-ecoTool-building:hover{ width:40px; height:40px; background-position:-10px -1436px; }
+.sprite-ecoTool-mexMap{ width:32px; height:32px; background-position:-10px -1486px; }
+.sprite-ecoTool-itemUnselected:hover{ width:27px; height:27px; background-position:-10px -1528px; }
+.sprite-ecoTool-system:hover{ width:27px; height:27px; background-position:-47px -1528px; }
+.sprite-ecoTool-info{ width:27px; height:27px; background-position:-10px -1565px; }
+.sprite-ecoTool-itemUnselected{ width:27px; height:27px; background-position:-47px -1565px; }
+.sprite-ecoTool-system{ width:27px; height:27px; background-position:-10px -1602px; }
+.sprite-ecoTool-itemSelected:hover{ width:27px; height:27px; background-position:-47px -1602px; }
+.sprite-ecoTool-fisher:hover{ width:27px; height:27px; background-position:-10px -1639px; }
+.sprite-ecoTool-itemSelected{ width:27px; height:27px; background-position:-47px -1639px; }
+.sprite-ecoTool-miner:hover{ width:27px; height:27px; background-position:-10px -1676px; }
+.sprite-ecoTool-miner{ width:27px; height:27px; background-position:-47px -1676px; }
+.sprite-ecoTool-factory:hover{ width:27px; height:27px; background-position:-10px -1713px; }
+.sprite-ecoTool-fisher{ width:27px; height:27px; background-position:-47px -1713px; }
+.sprite-ecoTool-factory{ width:27px; height:27px; background-position:-10px -1750px; }
+.sprite-ecoTool-cart:hover{ width:27px; height:27px; background-position:-47px -1750px; }
+.sprite-ecoTool-seemore{ width:27px; height:27px; background-position:-10px -1787px; }
+.sprite-ecoTool-seemore:hover{ width:27px; height:27px; background-position:-47px -1787px; }
+.sprite-ecoTool-cart{ width:27px; height:27px; background-position:-10px -1824px; }
+.sprite-ecoTool-info:hover{ width:27px; height:27px; background-position:-47px -1824px; }
+.sprite-ecoTool-close{ width:18px; height:18px; background-position:-52px -1486px; }
+.sprite-ecoTool-expand{ width:18px; height:18px; background-position:-10px -1861px; }
+.sprite-ecoTool-close:hover{ width:18px; height:18px; background-position:-38px -1861px; }
+.sprite-ecoTool-expand:hover{ width:18px; height:18px; background-position:-10px -1889px; }
+

@@ -1,0 +1,10 @@
+arial   				arial.ttf
+verdana					verdana.ttf
+Webdings 				webdings.ttf
+Symbol  				symbol.ttf
+INEGI_T50 				INEGI_T50.ttf
+AtlasTuristicoMexico 	AtlasTuristicoMexico.ttf
+AtlasTuristicoMexico2011 AtlasTuristicoMexico2011.ttf
+ServiciosCCGs 			ServiciosCCGs.ttf
+ServiciosINEGI 			ServiciosINEGI.ttf
+ATM2					ATM2.ttf

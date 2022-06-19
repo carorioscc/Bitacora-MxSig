@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Build-Number: 
+Build-Timestamp: 2020-11-11T17:18:31Z
+Archiver-Version: Plexus Archiver
+Built-By: abraham.murillo
+Specification-Title: map
+Build-Url: 
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_211
+Specification-Version: 0.0.1-SNAPSHOT
+

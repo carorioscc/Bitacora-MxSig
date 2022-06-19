@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.map.mapper.IndicadoresCGMapper">
+
+	<select id="findDad" resultType="IndicadoresCG">
+		SELECT id_tipo AS id, descripcion, variable, tematico
+		AS theme, subcat, metadata FROM
+		censosgob.indicadores WHERE
+		id_tipo =1;
+	</select>
+	<select id="findChilds" resultType="IndicadoresCG">
+		SELECT id_tipo AS id, descripcion, variable, tematico
+		AS theme, subcat, metadata FROM censosgob.indicadores WHERE
+		superior=#{0};
+	</select>
+</mapper>

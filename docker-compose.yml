@@ -1,0 +1,114 @@
+version: '3'
+
+services:
+### Backend
+  ### Apache
+    mxsig-ui:
+      build:
+        mxsig-ui
+      ports:
+      - "81:80"
+      restart: unless-stopped
+      networks:
+      - frontend
+      depends_on:
+      - tomcat
+      links:
+      - tomcat
+      container_name: 'mxsig-ui'
+     ## security_opt:
+      ##- seccomp="default.json"
+
+### Fronted
+  ### mxsig-servicios
+### HAproxy
+    haproxy:
+      build:
+        mxsig-servicios/haproxy
+      networks:
+        - backend
+        - frontend
+      ports:
+        - "80:80"
+        - "70:70"
+      restart: always
+      links:
+        - mapserver
+        - tomcat
+        - mxsig-ui
+      container_name: 'mxsig-haproxy'
+### Tomcat
+    tomcat:
+      build:
+        mxsig-servicios/tomcat
+      ports:
+      - 8080:8080
+   ##   security_opt:
+     ##   - seccomp="default.json"
+      networks:
+      - backend
+      container_name: 'mxsig-tomcat'
+### MapServer
+    mapserver:
+      build:
+        mxsig-servicios/mapserver
+      networks:
+      - backend
+      links:
+      - tomcat
+      ports:
+      - "8081:80"
+      restart: unless-stopped
+   ##   security_opt:
+     ## - seccomp="default.json"
+      container_name: 'mxsig-mapserver'
+
+### DB
+### postgres
+    mxsig-db:
+      build:
+        mxsig-db
+      environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      volumes:
+      -  data:/var/lib/postgresql/data
+      restart: always
+      ports:
+      - 5432:5432
+      networks:
+      - backend
+      links:
+      - tomcat
+    ##  security_opt:
+      ##- seccomp="default.json"
+      container_name: 'mxsig-db'
+
+
+  ### pgAmdin
+    pgadmin:
+      container_name: pgadmin_container
+      image: dpage/pgadmin4
+      environment:
+        PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
+        PGADMIN_DEFAULT_PASSWORD: admin
+      volumes:
+      - pgadmin:/root/.pgadmin
+      ports:
+      - 5050:80
+      networks:
+      - backend
+      links:
+      - mxsig-db
+      restart: unless-stopped
+
+volumes:
+    data:
+    pgadmin:
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge

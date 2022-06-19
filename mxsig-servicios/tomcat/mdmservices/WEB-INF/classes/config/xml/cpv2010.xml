@@ -1,0 +1,145 @@
+<tables>
+	<!-- Levels -->
+	<table identify="true" user_alias="levels" projects="mdm6,mxsig">
+		<server>servidorsote</server>
+		<database>mdm6data</database>
+		<schema>cpv2010</schema>
+		<name>levels</name>
+		<alias>cpv2010levels</alias>
+		<geometry>the_geom</geometry>
+		<projection>900913</projection>
+		<fields>
+			<field>
+				<name>level</name>
+				<alias>level</alias>
+			</field>
+			<field>
+				<name>alias</name>
+				<alias>alias</alias>
+			</field>
+			<field>
+				<name>field_where</name>
+				<alias>field_where</alias>
+			</field>
+			<field>
+				<name>label</name>
+				<alias>label</alias>
+			</field>
+			<field>
+				<name>level_theme</name>
+				<alias>level_theme</alias>
+			</field>
+		</fields>
+	</table>
+
+
+	<!--Indicadores -->
+	<table identify="true" user_alias="Indicadores MxSigTheme"
+		projects="mdm6,mxsig">
+		<server>servidorsote</server>
+		<database>mdm6data</database>
+		<schema>cpv2010</schema>
+		<name>indicadores</name>
+		<alias>indicadorescpv2010</alias>
+		<geometry>the_geom</geometry>
+		<projection>900913</projection>
+		<fields>
+			<field>
+				<name>id</name>
+				<alias>id</alias>
+			</field>
+			<field>
+				<name>descripcion</name>
+				<alias>descripcion</alias>
+			</field>
+			<field>
+				<name>variable</name>
+				<alias>variable</alias>
+			</field>
+			<field>
+				<name>tematico</name>
+				<alias>theme</alias>
+			</field>
+			<field>
+				<name>subcat</name>
+				<alias>subcat</alias>
+			</field>
+			<field>
+				<name>metadata</name>
+				<alias>metadata</alias>
+			</field>
+		</fields>
+	</table>
+	
+	<!--Nota Indicador -->
+	<table identify="true" user_alias="Indicadores MxSigTheme"
+		projects="mdm6,mxsig">
+		<server>servidorsote</server>
+		<database>mdm6data</database>
+		<schema>cpv2010</schema>
+		<name>indicadores</name>
+		<alias>indicadorescpv2010_nota</alias>
+		<geometry>the_geom</geometry>
+		<projection>900913</projection>
+		<fields>
+			<field>
+				<name>nota</name>
+				<alias>Nota</alias>
+			</field>
+		</fields>
+	</table>
+
+	<!--Entidad -->
+
+	<table identify="true" user_alias="Entidad" projects="mdm6,mxsig">
+		<server>servidorsote</server>
+		<database>mdm6data</database>
+		<schema>cpv2010</schema>
+		<name>ent</name>
+		<alias>cpv2010entidad</alias>
+		<geometry>the_geom</geometry>
+		<projection>900913</projection>
+		<fields>
+			<field identify="true">
+				<name>cvegeo</name>
+				<alias>cvegeo</alias>
+			</field>
+			<field identify="true">
+				<name>nom_ent</name>
+				<alias>Nombre</alias>
+			</field>
+			<field>
+				<name>subnivel</name>
+				<alias>childs</alias>
+			</field>
+		</fields>
+	</table>
+
+	<!--Municipio -->
+
+	<table identify="true" user_alias="Municipio" projects="mdm6,mxsig">
+		<server>servidorsote</server>
+		<database>mdm6data</database>
+		<schema>cpv2010</schema>
+		<name>mun</name>
+		<alias>cpv2010municipio</alias>
+		<geometry>the_geom</geometry>
+		<projection>900913</projection>
+		<fields>
+			<field identify="true">
+				<name>cvegeo</name>
+				<alias>cvegeo</alias>
+			</field>
+			<field identify="true">
+				<name>nom_mun</name>
+				<alias>Nombre</alias>
+			</field>
+			<field>
+				<name>subnivel</name>
+				<alias>childs</alias>
+			</field>
+		</fields>
+	</table>
+
+
+</tables>

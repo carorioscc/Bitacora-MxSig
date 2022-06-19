@@ -1,0 +1,1206 @@
+@import url('sprite/sprite-geoelectorales.css');
+/* CSS Document */
+.custom-geoelectorales{
+	font-family:Arial, Helvetica, sans-serif;
+	width:387px;
+	height: auto;
+	border: 1px solid #EEE;
+	z-index: 1900;
+	
+	position:absolute;
+	bottom:55px;
+	left:11px;
+	
+	overflow: hidden;
+	
+	display:block;
+	background-color:#FFF;
+	
+	-webkit-box-shadow: 1px 1px 2px 0px #555;
+	box-shadow: 1px 1px 2px 0px #555;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#geoelectorales_header_click_collapsed{
+	display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 106px;
+    width: 345px;
+}
+
+.custom-geoelectorales[collapsed=false][seltab=info][infopanel=graph]{
+	width:630px;
+}
+.custom-geoelectorales[collapsed=true] #geoelectorales_header_click_collapsed{
+	display: block;
+}
+.geoelectorales-animated{
+    -webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+/* Spinner  ---------------------*/
+.geoelectorales-logo-left{ 
+	background:url("logo.png") top left no-repeat; 
+	float: left;
+    width: 70px;
+    height: 60px;
+}
+.geoelectorales-spinner-panel{
+	position: absolute;
+	z-index: 100;
+}
+.geoelectorales-spinner-image{
+	background-image:url(spinner_points.GIF);
+	background-repeat: no-repeat;
+	width: 99px;
+	height: 9px;
+}
+.geoelectorales-block-overlay{
+	position: absolute;
+}
+.geoelectorales-spinner-image-container{
+	position: absolute;
+	top:50%;
+	left: 50%;
+}
+.geoelectorales-spinner-image{
+    float: left;
+    margin-left: -50%;
+}
+
+/*----------------------*/
+
+
+.geoelectorales-header{
+	float:left;	
+	float: left;
+    padding-bottom: 3px;
+	min-height: 108px;
+	width:100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.custom-geoelectorales[collapsed=true] .geoelectorales-header{
+	cursor: pointer;
+}
+.geoelectorales-info-content{
+	display: none;
+}
+.geoelectorales-info-graph{
+	display: none;
+}
+
+.custom-geoelectorales[infopanel=data] .geoelectorales-info-content{
+	display: block;
+}
+.custom-geoelectorales[infopanel=graph] .geoelectorales-info-graph{
+	display: block;
+}
+
+
+
+#geoelectorales_header_title{
+	float: left;
+	padding: 4px 55px 4px 75px;
+	width: 100%;
+	height: 66px;
+	overflow: hidden;
+	margin-left: -70px;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#geoelectorales_var_title{
+	font-size: 14px;
+    font-weight: bold;
+}
+#geoelectorales_subvar_title{
+	font-size: 11px;
+	max-height: 30px;
+}
+.geoelectorales-truncate-text{
+	padding:4px;
+	font-size:13px;	
+}
+.geoelectorales-header-btn{
+	float:right;
+	cursor:pointer;	
+}
+.geoelectorales-header-btns{
+	width: 55px;
+	float: right;
+    cursor: pointer;
+    margin-left: -55px;
+}
+.geoelectorales-header-colors{
+	float:right;
+    width: 100%;
+    height: 25px;
+	padding:4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.geoelectorales-header-colors div{
+	float:left;
+	height:20px;
+}
+
+#geoelectorales_header_btnRight_modify{	display: none;}
+#geoelectorales_header_btnRight_ok_nm{display: none;}
+#geoelectorales_header_btnRight_ok_n{display: none;}
+.geoelectorales-header-btnRight-close{float: right}
+
+.custom-geoelectorales[collapsed=true] #geoelectorales_header_btnRight_modify{
+	display: block;	
+}
+.custom-geoelectorales[collapsed=false][changed=false] #geoelectorales_header_btnRight_ok_nm{
+	display: block;	
+}
+.custom-geoelectorales[collapsed=false][changed=true] #geoelectorales_header_btnRight_ok_n{
+	display: block;	
+}
+.custom-geoelectorales[collapsed=false][changed=true] .geoelectorales-header-btnRight-close{
+	display: block;
+	float: right;
+	cursor: pointer;
+}
+
+
+geoelectorales_header_btnRight_modify
+
+
+.geoelectorales-container{
+    float:right;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-geo-container{
+	float:right;
+	width:100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.geoelectorales-info-content{
+	float:right;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-info-graph{
+	float:right;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-info-graph-container{
+	width: 100%;
+    height: 325px;
+}
+.geoelectorales-bk-btn{
+	width:0px;
+	height:349px;
+	background:#DFDFDF;		
+	float:left;
+	cursor:pointer;
+	
+	overflow:hidden;
+}
+.geoelectorales-bk-btn-icon{
+	float: left;
+    margin-top: 146px;
+	cursor:pointer;
+}
+.geoelectorales-content{
+	width: 325px;
+	height:330px;	
+	padding:4px;
+	float:right;
+	overflow-y: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-panels-container{
+	float: right;
+    width: 100%;
+    margin-left: -60px;
+    padding-left: 60px;
+	
+	height: 350px;
+    overflow: hidden;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-toolbar-container{
+	float: left;
+	width: 60px;
+	height: 350px;
+	background-color: #EFEFEF;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-list-item{
+	width:100%;
+	padding:5px;
+	float:left;
+	font-size: 13px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	border-bottom:1px solid #999;
+}
+.geoelectorales-list-item label{
+	width:100%;
+	padding-right:56px;	
+	float:left;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-item-check{
+	float:left;	
+	margin-left: -54px;
+	cursor:pointer;
+}
+
+/*Geo ----------------------*/
+.geoelectorales-geo-content{
+	width: 100%;
+    height: 320px;
+    padding: 4px;
+    float: right;
+	overflow-y: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-geo-type{
+	float: left;
+	width: 100%;
+	height: 25px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-geo-bk-btn{
+	    width: 0px;
+		height: 349px;
+		background: #DFDFDF;
+		float: left;
+		cursor: pointer;
+		overflow: hidden;
+}
+.geoelectorales-geo-bk-btn{
+	width: 0px;
+    height: 349px;
+    background: #DFDFDF;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+.geoelectorales-geoEdo-item{
+	width:100%;
+	float:left;
+  	padding: 3px;
+	font-size: 14px;
+	border-bottom: 1px solid #eee;
+	cursor:pointer;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+
+.geoelectorales-geoEdo-icon{
+	width: auto;
+	height: auto;
+	float: right;
+	margin-left: -60px;
+	
+}
+.geoelectorales-geoEdo-icon-sel{
+	display:block;	
+}
+.geoelectorales-geoEdo-icon-unsel{
+	display:none;	
+}
+
+.geoelectorales-geoEdo-item[selected=selected] .geoelectorales-geoEdo-icon-unsel{
+	display: block;
+}
+.geoelectorales-geoEdo-item[selected=selected] .geoelectorales-geoEdo-icon-sel{
+	display: none;
+}
+
+
+.geoelectorales-geoEdo-item-label{
+	float: left;
+    width: 100%;
+    padding: 6px 60px 6px 4px;
+    /*margin-left: -29px;*/
+    box-sizing: border-box;
+}
+.geoelectorales-geo-seemore{
+	float: right;
+    padding-right: 5px;
+    margin-left: -35px;
+}
+.geoelectorales-geo-bk-btn-icon {
+    float: left;
+    margin-top: 146px;
+    cursor: pointer;
+}
+
+.geoelectorales-geo-container[parent=true] .geoelectorales-geo-bk-btn {
+    width: 25px;
+}
+.geoelectorales-geo-container[parent=true] .geoelectorales-geo-content {
+    margin-left: -27px;
+    padding-left: 34px;
+}
+
+/* Fin Geo list */
+
+
+.geoelectorales-item-forward{
+	float:left;	
+	margin-left: -30px;
+	cursor:pointer;
+}
+.geoelectorales-strat-method{
+	float:left;
+	width:100%;
+	height:38px;
+	padding:5px;
+	font-size:12px;
+	overflow: hidden;
+	
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-strat-method .geoelectorales-strat-item{
+	float:left;
+	text-align:center;
+	background:#F0F0F0;
+	padding:4px;
+	margin: 2px 2px 2px 2px;
+	cursor:pointer;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.geoelectorales-strat-item:hover{
+	background:#efbad8;
+}
+.geoelectorales-strat-item.selected{
+	background:#efbad8;
+}
+
+.geoelectorales-years{
+	float:left;
+	width:100%;
+	height:37px;
+	padding:5px;
+	font-size:12px;
+	overflow: hidden;
+	
+	border-bottom:1px solid #999;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.geoelectorales-years div{
+	float:left;
+	width:24%;
+	text-align:center;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.geoelectorales-years-item{
+	text-align:center;
+	background:#F0F0F0;
+	padding:4px;
+	margin: 2px 2px 2px 2px;
+	cursor:pointer;	
+}
+.geoelectorales-years-item:hover{
+	background:##EFD5E4;	
+}
+.geoelectorales-years-item.selected{
+	background:#C6DFD1;	
+}
+
+/* Control de visualización de paneles -------------------------*/
+.custom-geoelectorales[collapsed=true] .geoelectorales-panels-container{
+	height:0px;
+	overflow: hidden;
+}
+.custom-geoelectorales[collapsed=true] .geoelectorales-toolbar-container{
+	height:0px;
+	overflow: hidden;
+}
+
+
+.custom-geoelectorales[collapsed=true] .geoelectorales-container{
+	height:0px;
+	overflow: hidden;
+}
+/*.custom-geoelectorales[collapsed=true] .geoelectorales-strat-method{
+	height:0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+}
+.custom-geoelectorales[collapsed=true] .geoelectorales-years{
+	height:0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+}
+*/
+
+.custom-geoelectorales[collapsed=false] .geoelectorales-header-colors{
+	display:none;
+}
+
+
+/* animacion de boton back  -----------------------------------*/
+.geoelectorales-container[parent=true] .geoelectorales-bk-btn{
+	width:25px;
+}
+.geoelectorales-container[parent=true] .geoelectorales-content{
+	margin-left: 0px;
+    padding-left: 0px;
+	width: 298px;
+}
+
+/*Logo --------------------------------------------------------*/
+
+/* Tabs    */
+.geoelectorales-tab{
+	cursor: pointer;
+    background-position: 9px 0px;
+	margin: 4px 0px 4px 0px;
+    width: 100% !important;
+	text-align: center;
+}
+.geoelectorales-tab:hover{
+	background-color: #EFD5E4;
+}
+.geoelectorales-tab div:first-of-type{
+	margin-left: 9px;
+}
+
+.custom-geoelectorales[seltab=var] #geoelectorales_tab_vars{
+	background-color: #efbad8;
+}
+.custom-geoelectorales[seltab=geo] #geoelectorales_tab_geo{
+	background-color: #efbad8;
+}
+.custom-geoelectorales[seltab=graph] #geoelectorales_tab_graph{
+	background-color: #efbad8;
+}
+
+.custom-geoelectorales[seltab=info] #geoelectorales_tab_info{
+	background-color: #efbad8;
+}
+
+.geoelectorales-geoelectorales_card_values{
+	display: none;
+	float: right;
+}
+
+.geoelectorales-tab-container{
+	display: none;
+}
+
+.custom-geoelectorales[seltab=var] .geoelectorales-container{
+	display: block;
+}
+.custom-geoelectorales[seltab=geo] .geoelectorales-geo-container{
+	display: block;
+}
+.custom-geoelectorales[seltab=graph] .geoelectorales-conf-container{
+	display: block;
+}
+.custom-geoelectorales[seltab=info] .geoelectorales-info-container{
+	display: block;
+}
+
+
+.custom-geoelectorales[cantheme=false] .geoelectorales-tab-container{
+	display: none;
+}
+.custom-geoelectorales[cantheme=false] .geoelectorales-geo-container{
+	display: block;
+}
+
+
+.geoelectorales-disable-toolbars{
+	position: absolute;
+	left: 0px;
+    top: 121px;
+    width: 60px;
+    height: 250px;
+    background-color: rgba(255,255,255,0.4);
+	display: none;
+}
+.custom-geoelectorales[cantheme=false] .geoelectorales-disable-toolbars{
+	display: block;
+}
+
+.geoelectorales-geo-type .geoelectorales-geoType-item.selected{
+	background:#efbad8;
+	border: 2px solid #57867B;
+}
+.geoelectorales-strat-item-selector{
+	float: left;
+	height:auto;
+	padding: 2px 2px 2px 2px;
+	margin-right: 2px;
+	border:1px solid #CFCFCF;
+	cursor: pointer;
+	text-align: center;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.geoelectorales-strat-item-selector.selected{
+	background: #F4D5E7;
+	border:1px solid #CFCFCF;
+	border-bottom: 2px solid #4E4E4E;
+}
+.geoelectorales-strat-item-selector label{
+	width: 100%;
+	text-align: center;
+	float: left;
+}
+.geoelectorales-strat-selector-color{
+	width: 100%;
+	height: 5px;
+	float: left;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+#geoelectorales_strat_table{
+	width: 100%;
+    height: 298px;
+	overflow-y: auto;
+}
+
+.geoelectorales-strat-table{
+	width: 100%;
+	font-size: 11px;
+}
+.geoelectorales-strat-table tr:nth-child(even) {
+	background: #E4E4E4;
+}
+#geoelectorales_strat_table .geoelectorales-strat-table{
+	display: none;
+	width: 100%;
+}
+
+.geoelectorales-strat-table .geoelectorales-table-head{
+	font-size: 12px;
+    font-weight: bold;
+    background-color: #efbad9;
+}
+
+#geoelectorales_strat_table[strat=e1] .geoelectorales-strat-table[idstrat=e1]{
+	display: table;
+	width: 100%;
+}
+#geoelectorales_strat_table[strat=e2] .geoelectorales-strat-table[idstrat=e2]{
+	display: table;
+	width: 100%;
+}
+#geoelectorales_strat_table[strat=e3] .geoelectorales-strat-table[idstrat=e3]{
+	display: table;
+	width: 100%;
+}
+#geoelectorales_strat_table[strat=e4] .geoelectorales-strat-table[idstrat=e4]{
+	display: table;
+	width: 100%;
+}
+#geoelectorales_strat_table[strat=e5] .geoelectorales-strat-table[idstrat=e5]{
+	display: table;
+	width: 100%;
+}
+.geoelectorales-strat-table td{
+	padding: 5px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+
+
+
+
+.geoelectorales-strat-table-container{
+	width: 100%;
+	height: 326px;
+	overflow-y: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.geoelectorales-info-var-icon{
+	float:left;
+	cursor: pointer;
+}
+.geoelectorales-geotype-item{
+	padding: 2px 4px 2px 4px;
+	margin: 3px 2px 0px 4px;
+	width: auto;
+	float: left;
+	font-size: 14px;
+	
+	cursor: pointer;
+}
+.geoelectorales-geotype-item:hover{
+	background:#EFD5E4;
+}
+
+.geoelectorales-geotype-item.selected{
+	background:#efbad8;	
+}
+.geoelectorales-header-colors-years-label{
+	width: 100%;
+	float: left;
+	height: 16px !important;
+	
+}
+.geoelectorales-header-year-label-left{
+	float: left;
+	padding-left: 2px;
+	height: 13px !important;
+	border-left: 1px solid;
+}
+
+.geoelectorales-header-year-label-right{
+	float: right !important;
+	height: 13px !important;
+	padding-right: 2px;
+	border-right: 1px solid;
+}
+
+.geoelectorales-strats-currentRamps-container{
+	float: left;
+	width: 100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.geoelectorales_strats_currentRamp{
+	float:left;
+	width:100%;
+}
+.geoelectorales-strats-colorRamp{
+	float: left;
+    width: 16%;
+    padding: 1px 1px 1px 1px;
+	border: 2px solid #FFF;
+	cursor:pointer;
+	margin-top: 2px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-strats-colorRamp:hover{
+	border: 3px solid #BBB;
+}
+
+.geoelectorales-strats-currentRamps-container .geoelectorales-strats-colorRamp[selected=selected]{
+	border: 3px solid #efbad8}
+
+.geoelectorales-strats-ramp-color{
+	height:16px;
+	float:left;	
+}
+
+.geoelectorales-theme-normalInfo{
+	float:left;
+	width:48%;
+	padding:0px 3px 10px 6px;
+	font-size:12px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-theme-mainInfo{
+	float:right;
+	width:48%;
+	padding:0px 3px 10px 6px;
+	font-size:12px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.geoelectorales-theme-info label{
+	float: right;
+}
+.geoelectorales-strats-transparency-container{
+	float:left;
+	width:97%;
+	padding:4px;
+	background-color:#FFF;	
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-export-type-item{
+	float: left;
+	cursor: pointer;
+}
+.geoelectorales-metadata-frame{
+	border: none;
+	
+}
+.geoelectorales-graph-strat{
+	width: 323px;
+	height: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* estrato infomacion detalle */
+.geoelectorales-stratum-detail-item{
+	width: 49%;
+    height: 29px;
+    float: left;
+	font-size: 12px;
+    
+	padding: 2px;
+	border: 1px solid #EEE;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-stratum-detail-item-color{
+	width: 30px;
+	height: 23px;
+	float: left;
+	
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-stratum-detail-item-info{
+	width: 100%;
+	height: 30px;
+    float: left;
+    padding-left: 35px;
+    margin-left: -30px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-stratum-detail-item-info-vals{
+	float: left;
+	width: 100%;
+	height: 13px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-stratum-detail-item-info-label{
+	float: left;
+}
+.geoelectorales-stratum-detail-item-info-value{
+	float: right;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-geo-content-options{
+	float: left;
+	height: 20px;
+	font-size: 13px;
+	display: none;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.geoelectorales-geo-content-options div{
+	cursor: pointer;
+	padding: 2px 4px 2px 4px;
+	float: left;
+	margin: 0px 2px 0px 2px;
+	
+	border-right: 1px solid #DDD;
+}
+.geoelectorales-geo-content-options div:last-child{
+	border-right: 0px solid #DDD;
+}
+.geoelectorales-geo-content-options div:hover{
+	background-color: #EFD5E4;	
+}
+.geoelectorales-tool-option{
+	background-color: #ECECEC;
+}
+.custom-geoelectorales[geotype="edo"] .geoelectorales-geo-content-options{
+	display: block;
+}
+.geoelectorales-container[typeselection=edomun] div[idref=edomun]{
+	background-color: #efbad8;
+}
+.geoelectorales-container[typeselection=edo] div[idref=edo]{
+	background-color: #efbad8;
+}
+.geoelectorales-container[typeselection=mun] div[idref=mun]{
+	background-color: #efbad8;
+}
+
+/*.custom-geoelectorales[geotype="edo"] .geoelectorales-geo-content{
+	height: 320px;
+}*/
+.geoelectorales-tab-bottom-container{
+	position: absolute;
+    bottom: 0px;
+    width: 60px;
+	display: none;
+	opacity: 0;
+	
+}
+.geoelectorales-tab-bottom-container div{
+	cursor: pointer;
+    background-position: 9px 0px;
+    margin: 4px 0px 4px 0px;
+    width: 100% !important;
+}
+.custom-geoelectorales[collapsed="false"] .geoelectorales-tab-bottom-container{
+	display: block;
+	opacity: 1;
+}
+.geoelectorales-confiden-bg{
+	background-image: url(d_reservados.jpg);
+}
+
+.geoelectorales-strats-strat-title{
+	width:25%;
+	float:left;
+	padding:0px 0px 0px 4px;
+}
+.geoelectorales-column-title{
+	width:100%;
+	float:left;
+	padding:0px 0px 0px 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.geoelectorales-strats-data-config-strats{
+	width:100%;
+	float:left;
+	padding:4px;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-strats-strat-item{
+	width:18%;
+	height:22px;
+	margin:1%;
+	text-align:center;
+	float:left;
+	padding:3px 4px 3px 4px;
+	font-size: 13px;
+	border:1px solid #AAA;
+	cursor:pointer;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-strats-strat-item:hover{
+	background-color:#EEE;
+}
+.geoelectorales-strats-strat-item.selected{
+	background-color:#efbad8;
+}
+
+.geoelectorales-strats-data-container{
+	float:left;
+	width:100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#geoelectorales_card_header .geoelectorales-table-color tr:first-child {
+    background: #EB98C7;
+	font-weight: bold;
+}
+#geoelectorales_card_header .geoelectorales-table-color td {
+    width: 40%;
+}
+/* Card -------------------------------------------------------------------------------------------------------*/
+.geoelectorales-table-color thead{
+	background: #EB98C7;
+}
+.geoelectorales-table-color{
+	width: 100%;
+	font-size: 11.5px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-table-color td{
+	padding: 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-table-color tr:nth-child(even) {
+	background: #F4E0EB;
+}
+##geoelectorales_card_indicators{
+	overflow-y: auto;
+}
+
+#geoelectorales_card_indicators ul{
+	padding-left: 23px;
+}
+#geoelectorales_card_indicators li{
+	list-style: decimal outside;
+	padding: 2px 0px 2px 4px;
+	cursor: pointer;
+	border-left: 4px solid #FFF;
+}
+#geoelectorales_card_indicators li *{
+	cursor: pointer;
+}
+#geoelectorales_card_indicators li:hover{
+	background: #F9CBE4;
+}
+#geoelectorales_card_indicators li.active{
+	border-left: 4px solid #F00;
+}
+#geoelectorales_card_indicators li label{
+	
+}
+
+
+#geoelectorales_card_header{
+	width: 100%;
+    height: 122px;
+    float: left;
+	overflow-y: auto;
+}
+#geoelectorales_card_indicators_container{
+	height: 282px;
+    width: 269px;
+    background-color: #F4F0F0;
+	float:left;
+	overflow: hidden;
+	
+	padding: 10px;
+    font-size: 13px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#geoelectorales_card_indicators_closebtn{
+	float: right;
+	clear: both;
+	
+}
+#geoelectorales_card_indicators_closebtn *{
+	float:left;	
+}
+#geoelectorales_card_indicators{
+	height: 290px;
+    width: 259px;
+    background-color: #F4F0F0;
+	float:left;
+	
+	padding: 10px;
+    font-size: 13px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#geoelectorales_card_values{
+	width: 495px;
+    float: right;
+    height: 282px;
+    overflow-y: auto;
+	padding: 0px 4px 0px 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#geoelectorales_card_toolbar{
+	float: left;
+    clear: left;
+    padding-top: 6px;
+}
+#geoelectorales_card_toolbar div{
+	float: left;
+}
+
+.geoelectorales-card-title-indicators{
+	font-size: 14px;
+	font-weight: bold;
+	width: 100%;
+	float: left;
+}
+
+.geoelectorales-card-blockcontent{
+	float: left;
+}
+.geoelectorales-card-title{
+	font-size: 12px;
+    font-weight: bold;
+    padding: 6px 3px 3px 3px;
+	float: left;
+	clear: both;
+	width: 100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.geoelectorales-switchtograph-btn{
+	float: left;
+	cursor: pointer;
+}
+.geoelectorales-switchtodata-btn{
+	float: left;
+	cursor: pointer;
+}
+
+.geoelectorales-card-varid{
+	display: inline-block;
+	margin-top: 0px;
+    float: left;
+}
+.geoelectorales-card-blockcontent{
+	width: 100%;
+}
+.geoelectorales-card-blockcontent table{
+	width: 100%;
+}
+
+#toolGeoelectorales_info_content[status=collapsed] #geoelectorales_card_indicators_container{
+	width: 48px;
+}
+#toolGeoelectorales_info_content[status=collapsed] #geoelectorales_card_values{
+	width: 708px;
+}
+.sprite-geoelectorales-sright, .sprite-geoelectorales-sleft{
+	cursor: pointer;
+}
+
+#toolGeoelectorales_info_content .sprite-geoelectorales-sright{
+	display: none;
+}
+#toolGeoelectorales_info_content[status=collapsed] .sprite-geoelectorales-sright{
+	display: block;
+}
+#toolGeoelectorales_info_content[status=collapsed] .sprite-geoelectorales-sleft{
+	display: none;
+}
+
+.geolectoral-card-table-labelcolumn{
+	min-width: 265px;
+}
+.geoelectorales-card-export-link-item{
+	float: left;
+	padding: 0px 2px 0px 5px;
+	margin-left: 3px;
+	background-color: #EEE;
+}
+.geoelectorales-card-export-link-item *{
+	float: left;
+}
+.geoelectorales-card-export-link-item label{
+	margin-top: 6px;
+}
+
+
+
+
+
+
+
+
+
+

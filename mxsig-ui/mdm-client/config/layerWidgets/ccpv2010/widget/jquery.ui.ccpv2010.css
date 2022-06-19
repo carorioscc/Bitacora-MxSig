@@ -1,0 +1,1238 @@
+@import url('sprite/sprite-ccpv2010.css');
+/* CSS Document */
+.custom-ccpv2010{
+	font-family:Arial, Helvetica, sans-serif;
+	width:387px;
+	height: auto;
+	border: 1px solid #EEE;
+	z-index: 1900;
+	
+	position:absolute;
+	bottom:55px;
+	left:11px;
+	
+	overflow: hidden;
+	
+	display:block;
+	background-color:#FFF;
+	
+	-webkit-box-shadow: 1px 1px 2px 0px #555;
+	box-shadow: 1px 1px 2px 0px #555;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#ccpv2010_header_click_collapsed{
+	display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 106px;
+    width: 345px;
+}
+
+.custom-ccpv2010[collapsed=false][seltab=info][infopanel=graph],.custom-ccpv2010[collapsed=false][seltab=info][infopanel=tab]{
+	width:630px;
+}
+.custom-ccpv2010[collapsed=true] #ccpv2010_header_click_collapsed{
+	display: block;
+}
+.ccpv2010-animated{
+    -webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+/* Spinner  ---------------------*/
+.ccpv2010-logo-left{ 
+	background:url("logo.png") top left no-repeat; 
+	float: left;
+    width: 70px;
+    height: 60px;
+}
+.ccpv2010-spinner-panel{
+	position: absolute;
+	z-index: 100;
+}
+.ccpv2010-spinner-image{
+	background-image:url(spinner_points.GIF);
+	background-repeat: no-repeat;
+	width: 99px;
+	height: 9px;
+}
+.ccpv2010-block-overlay{
+	position: absolute;
+}
+.ccpv2010-spinner-image-container{
+	position: absolute;
+	top:50%;
+	left: 50%;
+}
+.ccpv2010-spinner-image{
+    float: left;
+    margin-left: -50%;
+}
+
+/*----------------------*/
+
+
+.ccpv2010-header{
+	float:left;	
+	float: left;
+    padding-bottom: 3px;
+	min-height: 108px;
+	width:100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.custom-ccpv2010[collapsed=true] .ccpv2010-header{
+	cursor: pointer;
+}
+.ccpv2010-info-content{
+	display: none;
+}
+.ccpv2010-info-graph{
+	display: none;
+}
+.ccpv2010-info-tabulated{
+	display: none;
+}
+
+.custom-ccpv2010[infopanel=data] .ccpv2010-info-content{
+	display: block;
+}
+.custom-ccpv2010[infopanel=graph] .ccpv2010-info-graph{
+	display: block;
+}
+
+.custom-ccpv2010[infopanel=tab] .ccpv2010-info-tabulated{
+	display: block;
+}
+
+
+#ccpv2010_header_title{
+	float: left;
+	padding: 4px 55px 4px 75px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-left: -70px;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#ccpv2010_var_title{
+    font-weight: bold;
+}
+#ccpv2010_subvar_title{
+	font-size: 11px;
+	max-height: 60px;
+}
+.ccpv2010-truncate-text{
+	padding:4px;
+	font-size:12px;	
+}
+.ccpv2010-header-btn{
+	float:right;
+	cursor:pointer;	
+}
+.ccpv2010-header-btns{
+	width: 55px;
+	float: right;
+    cursor: pointer;
+    margin-left: -55px;
+}
+.ccpv2010-header-colors{
+	float:right;
+    width: 100%;
+    height: 25px;
+	padding:4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.ccpv2010-header-colors div{
+	float:left;
+	height:20px;
+}
+
+#ccpv2010_header_btnRight_modify{	display: none;}
+#ccpv2010_header_btnRight_ok_nm{display: none;}
+#ccpv2010_header_btnRight_ok_n{display: none;}
+.ccpv2010-header-btnRight-close{float: right}
+
+.custom-ccpv2010[collapsed=true] #ccpv2010_header_btnRight_modify{
+	display: block;	
+}
+.custom-ccpv2010[collapsed=false][changed=false] #ccpv2010_header_btnRight_ok_nm{
+	display: block;	
+}
+.custom-ccpv2010[collapsed=false][changed=true] #ccpv2010_header_btnRight_ok_n{
+	display: block;	
+}
+.custom-ccpv2010[collapsed=false][changed=true] .ccpv2010-header-btnRight-close{
+	display: block;
+	float: right;
+	cursor: pointer;
+}
+
+.ccpv2010-container{
+    float:right;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-geo-container{
+	float:right;
+	width:100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.ccpv2010-info-content{
+	float:right;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-info-tabulated{
+	float:right;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.ccpv2010-info-tab{
+	float:right;
+	width:100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.ccpv2010-info-graph-container{
+	width: 100%;
+    height: 325px;
+	overflow-y: auto;
+    overflow-x: hidden;
+}
+.ccpv2010-info-tabulador-container{
+	width: 100%;
+    height: 325px;
+}
+.ccpv2010-bk-btn{
+	width:0px;
+	height:349px;
+	background:#DFDFDF;		
+	float:left;
+	cursor:pointer;
+	
+	overflow:hidden;
+}
+.ccpv2010-bk-btn-icon{
+	float: left;
+    margin-top: 146px;
+	cursor:pointer;
+}
+.ccpv2010-content{
+	width: 325px;
+	height:330px;	
+	padding:4px;
+	float:right;
+	overflow-y: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-panels-container{
+	float: right;
+    width: 100%;
+    margin-left: -60px;
+    padding-left: 60px;
+	
+	height: 350px;
+    overflow: hidden;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-toolbar-container{
+	float: left;
+	width: 60px;
+	height: 350px;
+	background-color: #EFEFEF;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-list-item{
+	width:100%;
+	padding:5px;
+	float:left;
+	font-size: 12px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	border-bottom:1px solid #999;
+}
+.ccpv2010-list-item label{
+	width:100%;
+	padding-right:56px;	
+	float:left;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-item-check{
+	float:left;	
+	margin-left: -54px;
+	cursor:pointer;
+}
+
+/*Geo ----------------------*/
+.ccpv2010-geo-content{
+	width: 100%;
+    height: 353px;
+    padding: 4px;
+    float: right;
+	overflow-y: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-geo-type{
+	float: left;
+	width: 295px;
+	height: 25px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-geo-bk-btn{
+	    width: 0px;
+		height: 349px;
+		background: #DFDFDF;
+		float: left;
+		cursor: pointer;
+		overflow: hidden;
+}
+.ccpv2010-geo-bk-btn{
+	width: 0px;
+    height: 349px;
+    background: #DFDFDF;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+.ccpv2010-geoEdo-item{
+	width:100%;
+	float:left;
+  	padding: 3px;
+	font-size: 14px;
+	border-bottom: 1px solid #eee;
+	cursor:pointer;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+
+.ccpv2010-geoEdo-icon{
+	width: auto;
+	height: auto;
+	float: left;
+	margin-left: -60px;
+	
+}
+.ccpv2010-geoEdo-icon-sel{
+	display:block;	
+}
+.ccpv2010-geoEdo-icon-unsel{
+	display:none;	
+}
+
+.ccpv2010-geoEdo-item[selected=selected] .ccpv2010-geoEdo-icon-unsel{
+	display: block;
+}
+.ccpv2010-geoEdo-item[selected=selected] .ccpv2010-geoEdo-icon-sel{
+	display: none;
+}
+
+
+.ccpv2010-geoEdo-item-label{
+	float: left;
+    width: 100%;
+    padding: 6px 60px 6px 4px;
+    /*margin-left: -29px;*/
+    box-sizing: border-box;
+}
+.ccpv2010-geo-seemore{
+	float: left;
+    padding-right: 5px;
+    margin-left: -35px;
+}
+.ccpv2010-geo-bk-btn-icon {
+    float: left;
+    margin-top: 146px;
+    cursor: pointer;
+}
+
+.ccpv2010-geo-container[parent=true] .ccpv2010-geo-bk-btn {
+    width: 25px;
+	position: relative;
+}
+.ccpv2010-geo-container[parent=true] .ccpv2010-geo-content {
+    margin-left: -27px;
+    padding-left: 34px;
+}
+
+/* Fin Geo list */
+
+
+.ccpv2010-item-forward{
+	float:left;	
+	margin-left: -30px;
+	cursor:pointer;
+}
+.ccpv2010-strat-method{
+	float:left;
+	width:100%;
+	height:38px;
+	padding:5px;
+	font-size:12px;
+	overflow: hidden;
+	
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-strat-method .ccpv2010-strat-item{
+	float:left;
+	width:99%;
+	text-align:center;
+	background:#e4aca0;
+	padding:4px;
+	margin: 2px 2px 2px 2px;
+	/*cursor:pointer;*/
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.ccpv2010-strat-item:hover{
+	background:#B19C9C;
+}
+.ccpv2010-strat-item.selected{
+	background:#e4aca0;
+}
+
+.ccpv2010-years{
+	float:left;
+	width:100%;
+	height:37px;
+	padding:5px;
+	font-size:12px;
+	overflow: hidden;
+	
+	border-bottom:1px solid #999;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.ccpv2010-years div{
+	float:left;
+	width:24%;
+	text-align:center;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.ccpv2010-years-item{
+	text-align:center;
+	background:#F0F0F0;
+	padding:4px;
+	margin: 2px 2px 2px 2px;
+	/*cursor:pointer;*/	
+}
+.ccpv2010-years-item.selected{
+	background:#C6DFD1;	
+}
+
+/* Control de visualización de paneles -------------------------*/
+.custom-ccpv2010[collapsed=true] .ccpv2010-panels-container{
+	height:0px;
+	overflow: hidden;
+}
+.custom-ccpv2010[collapsed=true] .ccpv2010-toolbar-container{
+	height:0px;
+	overflow: hidden;
+}
+
+
+.custom-ccpv2010[collapsed=true] .ccpv2010-container{
+	height:0px;
+	overflow: hidden;
+}
+/*.custom-ccpv2010[collapsed=true] .ccpv2010-strat-method{
+	height:0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+}
+.custom-ccpv2010[collapsed=true] .ccpv2010-years{
+	height:0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+}
+*/
+
+.custom-ccpv2010[collapsed=false] .ccpv2010-header-colors{
+	display:none;
+}
+
+
+/* animacion de boton back  -----------------------------------*/
+.ccpv2010-container[parent=true] .ccpv2010-bk-btn{
+	width:25px;
+}
+.ccpv2010-container[parent=true] .ccpv2010-content{
+	margin-left: 0px;
+    padding-left: 0px;
+	width: 298px;
+}
+
+/*Logo --------------------------------------------------------*/
+
+/* Tabs    */
+.ccpv2010-tab{
+	cursor: pointer;
+    background-position: 9px 0px;
+	margin: 4px 0px 4px 0px;
+    width: 100% !important;
+	text-align: center;
+	padding: 2px 0px 2px 0px;
+	
+}
+.ccpv2010-tab:hover{
+	background-color: #e8d2d6;
+}
+.ccpv2010-tab div:first-of-type{
+	margin-left: 9px;
+}
+
+.custom-ccpv2010[seltab=var] #ccpv2010_tab_vars{
+	background-color: #deb9b9;
+}
+.custom-ccpv2010[seltab=geo] #ccpv2010_tab_geo{
+	background-color: #deb9b9;
+}
+.custom-ccpv2010[seltab=graph] #ccpv2010_tab_graph{
+	background-color: #deb9b9;
+}
+
+.custom-ccpv2010[seltab=info] #ccpv2010_tab_info{
+	background-color: #deb9b9;
+}
+
+.ccpv2010-ccpv2010_card_values{
+	display: none;
+	float: right;
+}
+
+.ccpv2010-tab-container{
+	display: none;
+}
+
+.custom-ccpv2010[seltab=var] .ccpv2010-container{
+	display: block;
+}
+.custom-ccpv2010[seltab=geo] .ccpv2010-geo-container{
+	display: block;
+}
+.custom-ccpv2010[seltab=graph] .ccpv2010-conf-container{
+	display: block;
+}
+.custom-ccpv2010[seltab=info] .ccpv2010-info-container{
+	display: block;
+}
+.custom-ccpv2010[seltab=tab] .ccpv2010-info-tabulated{
+	display: block;
+}
+
+
+.custom-ccpv2010[cantheme=false] .ccpv2010-tab-container{
+	display: none;
+}
+.custom-ccpv2010[cantheme=false] .ccpv2010-geo-container{
+	display: block;
+}
+
+
+.ccpv2010-disable-toolbars{
+	position: absolute;
+	left: 0px;
+    top: 125px;
+    width: 60px;
+    height: 250px;
+    background-color: rgba(255,255,255,0.4);
+	display: none;
+}
+.custom-ccpv2010[cantheme=false] .ccpv2010-disable-toolbars{
+	display: block;
+}
+
+.ccpv2010-geo-type .ccpv2010-geoType-item.selected{
+	background:#deb9b9;
+	border: 2px solid #57867B;
+}
+.ccpv2010-strat-item-selector{
+	float: left;
+	height:auto;
+	padding: 2px 2px 2px 2px;
+	margin-right: 2px;
+	border:1px solid #CFCFCF;
+	cursor: pointer;
+	text-align: center;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.ccpv2010-strat-item-selector.selected{
+	background: #d8a48b;
+	border:1px solid #CFCFCF;
+	border-bottom: 2px solid #4E4E4E;
+}
+.ccpv2010-strat-item-selector label{
+	width: 100%;
+	text-align: center;
+	float: left;
+}
+.ccpv2010-strat-selector-color{
+	width: 100%;
+	height: 5px;
+	float: left;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+
+.ccpv2010-strat-table{
+	width: 100%;
+	font-size: 11px;
+}
+.ccpv2010-strat-table tr:nth-child(even) {
+	background: #E4E4E4;
+}
+.ccpv2010-strat-table tr{
+	display: none;
+}
+.ccpv2010-strat-table[strat=e1] tr[idstrat=e1]{
+	display: table-row;
+	width: 100%;
+}
+.ccpv2010-strat-table[strat=e2] tr[idstrat=e2]{
+	display: table-row;
+	width: 100%;
+}
+.ccpv2010-strat-table[strat=e3] tr[idstrat=e3]{
+	display: table-row;
+	width: 100%;
+}
+.ccpv2010-strat-table[strat=e4] tr[idstrat=e4]{
+	display: table-row;
+	width: 100%;
+}
+.ccpv2010-strat-table[strat=e5] tr[idstrat=e5]{
+	display: table-row;
+	width: 100%;
+}
+.ccpv2010-strat-table td{
+	padding: 5px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+
+
+.ccpv2010-strat-table .ccpv2010-table-head{
+	display: table-row;
+	font-size: 12px;
+    font-weight: bold;
+    background-color: #e4aca0;
+}
+
+.ccpv2010-strat-table-container{
+	width: 100%;
+	height: 298px;
+	overflow-y: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.ccpv2010-info-var-icon{
+	float:left;
+	cursor: pointer;
+}
+.ccpv2010-geotype-item{
+	padding: 2px 4px 2px 4px;
+	margin: 3px 2px 0px 4px;
+	width: auto;
+	float: left;
+	font-size: 14px;
+	
+	cursor: pointer;
+}
+.ccpv2010-geotype-item:hover{
+	background:#DDDDDD;
+}
+
+.ccpv2010-geotype-item.selected{
+	background:#deb9b9;	
+}
+.ccpv2010-header-colors-years-label{
+	width: 100%;
+	float: left;
+	height: 16px !important;
+	
+}
+.ccpv2010-header-year-label-left{
+	float: left;
+	padding-left: 2px;
+	height: 13px !important;
+	border-left: 1px solid;
+}
+
+.ccpv2010-header-year-label-right{
+	float: right !important;
+	height: 13px !important;
+	padding-right: 2px;
+	border-right: 1px solid;
+}
+
+.ccpv2010-strats-currentRamps-container{
+	float: left;
+	width: 100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.ccpv2010_strats_currentRamp{
+	float:left;
+	width:100%;
+}
+.ccpv2010-strats-colorRamp{
+	float: left;
+    width: 16%;
+    padding: 1px 1px 1px 1px;
+	border: 2px solid #FFF;
+	cursor:pointer;
+	margin-top: 2px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-strats-colorRamp:hover{
+	border: 3px solid #BBB;
+}
+
+.ccpv2010-strats-currentRamps-container .ccpv2010-strats-colorRamp[selected=selected]{
+	border: 3px solid #deb9b9}
+
+.ccpv2010-strats-ramp-color{
+	height:16px;
+	float:left;	
+}
+
+.ccpv2010-theme-normalInfo{
+	float:left;
+	width:48%;
+	padding:0px 3px 10px 6px;
+	font-size:12px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-theme-mainInfo{
+	float:right;
+	width:48%;
+	padding:0px 3px 10px 6px;
+	font-size:12px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.ccpv2010-theme-info label{
+	float: right;
+}
+.ccpv2010-strats-transparency-container{
+	float:left;
+	width:97%;
+	padding:4px;
+	background-color:#FFF;	
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-export-type-item{
+	float: left;
+	cursor: pointer;
+}
+.ccpv2010-metadata-frame{
+	border: none;
+	
+}
+.ccpv2010-graph-strat{
+	width: 323px;
+	height: auto;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* estrato infomacion detalle */
+.ccpv2010-stratum-detail-item{
+	width: 49%;
+    height: 29px;
+    float: left;
+	font-size: 12px;
+    
+	padding: 2px;
+	border: 1px solid #EEE;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-stratum-detail-item-color{
+	width: 30px;
+	height: 23px;
+	float: left;
+	
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-stratum-detail-item-info{
+	width: 100%;
+	height: 30px;
+    float: left;
+    padding-left: 35px;
+    margin-left: -30px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-stratum-detail-item-info-vals{
+	float: left;
+	width: 100%;
+	height: 13px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-stratum-detail-item-info-label{
+	float: left;
+}
+.ccpv2010-stratum-detail-item-info-value{
+	float: right;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-geo-content-options{
+	float: left;
+	height: 20px;
+	font-size: 13px;
+	display: none;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+.ccpv2010-geo-content-options div{
+	cursor: pointer;
+	padding: 2px 4px 2px 4px;
+	float: left;
+	margin: 0px 2px 0px 2px;
+	
+	border-right: 1px solid #DDD;
+}
+.ccpv2010-geo-content-options div:last-child{
+	border-right: 0px solid #DDD;
+}
+.ccpv2010-geo-content-options div:hover{
+	background-color: #e8d2d6;	
+}
+.ccpv2010-tool-option{
+	background-color: #ECECEC;
+}
+.custom-ccpv2010[geotype="edo"] .ccpv2010-geo-content-options{
+	display: block;
+}
+.ccpv2010-container[typeselection=edomun] div[idref=edomun]{
+	background-color: #deb9b9;
+}
+.ccpv2010-container[typeselection=edo] div[idref=edo]{
+	background-color: #deb9b9;
+}
+.ccpv2010-container[typeselection=mun] div[idref=mun]{
+	background-color: #deb9b9;
+}
+
+/*.custom-ccpv2010[geotype="edo"] .ccpv2010-geo-content{
+	height: 320px;
+}*/
+.ccpv2010-tab-bottom-container{
+	position: absolute;
+    bottom: 0px;
+    width: 60px;
+	display: none;
+	opacity: 0;
+	
+}
+.ccpv2010-tab-bottom-container div{
+	cursor: pointer;
+    background-position: 9px 0px;
+    margin: 4px 0px 4px 0px;
+    width: 100% !important;
+}
+.custom-ccpv2010[collapsed="false"] .ccpv2010-tab-bottom-container{
+	display: block;
+	opacity: 1;
+}
+.ccpv2010-confiden-bg{
+	background-image: url(d_reservados.jpg);
+}
+.ccpv2010-confiden-bg-no{
+	background-image: url(d_reservados_no.png);
+}
+
+.ccpv2010-strats-strat-title{
+	width:25%;
+	float:left;
+	padding:0px 0px 0px 4px;
+}
+
+
+.ccpv2010-strats-data-config-strats{
+	width:100%;
+	float:left;
+	padding:4px;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-strats-strat-item{
+	width:18%;
+	height:22px;
+	margin:1%;
+	text-align:center;
+	float:left;
+	padding:3px 4px 3px 4px;
+	font-size: 13px;
+	border:1px solid #AAA;
+	cursor:pointer;
+		
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-strats-strat-item:hover{
+	background-color:#EEE;
+}
+.ccpv2010-strats-strat-item.selected{
+	background-color:#deb9b9;
+}
+
+.ccpv2010-strats-data-container{
+	float:left;
+	width:100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* Card -------------------------------------------------------------------------------------------------------*/
+.ccpv2010-table-color thead{
+	background: #ad8268;
+}
+.ccpv2010-table-color{
+	width: 100%;
+	font-size: 11.5px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-table-color td{
+	padding: 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-table-color tr:nth-child(even) {
+	background: #d4bcb4;
+}
+#ccpv2010_card_indicators{
+	overflow-y: auto;
+}
+
+#ccpv2010_card_indicators ul{
+	padding-left: 23px;
+}
+#ccpv2010_card_indicators li{
+	list-style: decimal outside;
+	padding: 2px 0px 2px 4px;
+	cursor: pointer;
+	border-left: 4px solid #FFF;
+}
+#ccpv2010_card_indicators li *{
+	cursor: pointer;
+}
+#ccpv2010_card_indicators li:hover{
+	background: #dfbf9f;
+}
+#ccpv2010_card_indicators li.active{
+	border-left: 4px solid #F00;
+}
+
+#ccpv2010_card_header{
+	width: 100%;
+    height: 84px;
+    float: left;
+	overflow-y: auto;
+}
+#ccpv2010_card_indicators_container{
+	height: 319px;
+    width: 269px;
+    background-color: #F4F0F0;
+	float:left;
+	overflow: hidden;
+	
+	padding: 10px;
+    font-size: 13px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	overflow-y: auto;
+}
+#ccpv2010_card_indicators_closebtn{
+	float: right;
+	clear: both;
+	
+}
+#ccpv2010_card_indicators_closebtn *{
+	float:left;	
+}
+#ccpv2010_card_indicators{
+	height: 290px;
+    width: 259px;
+    background-color: #F4F0F0;
+	float:left;
+	
+	padding: 10px;
+    font-size: 13px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#ccpv2010_card_values{
+	width: 495px;
+    float: right;
+    height: 318px;
+    overflow-y: auto;
+	padding: 0px 4px 0px 4px;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#ccpv2010_card_toolbar{
+	float: left;
+    clear: left;
+    padding-top: 6px;
+}
+#ccpv2010_card_toolbar div{
+	float: left;
+}
+
+.ccpv2010-card-title-indicators{
+	font-size: 14px;
+	font-weight: bold;
+	width: 100%;
+	float: left;
+}
+
+.ccpv2010-card-blockcontent{
+	float: left;
+}
+.ccpv2010-card-title{
+	font-size: 12px;
+    font-weight: bold;
+    padding: 6px 3px 3px 3px;
+	float: left;
+	clear: both;
+	width: 100%;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ccpv2010-switchtograph-btn{
+	float: left;
+	cursor: pointer;
+}
+.ccpv2010-switchtodata-btn{
+	float: left;
+	cursor: pointer;
+}
+
+.ccpv2010-card-varid{
+	display: inline-block;
+	margin-top: 0px;
+    float: left;
+}
+.ccpv2010-card-blockcontent{
+	width: 100%;
+}
+.ccpv2010-card-blockcontent table{
+	width: 100%;
+}
+
+#toolccpv2010_info_content[status=collapsed] #ccpv2010_card_indicators_container{
+	width: 57px;
+}
+#toolccpv2010_info_content[status=collapsed] #ccpv2010_card_values{
+	width: 708px;
+}
+.sprite-ccpv2010-sright, .sprite-ccpv2010-sleft{
+	cursor: pointer;
+}
+
+#toolccpv2010_info_content .sprite-ccpv2010-sright{
+	display: none;
+}
+#toolccpv2010_info_content[status=collapsed] .sprite-ccpv2010-sright{
+	display: block;
+}
+#toolccpv2010_info_content[status=collapsed] .sprite-ccpv2010-sleft{
+	display: none;
+}
+
+.geolectoral-card-table-labelcolumn{
+	min-width: 265px;
+}
+.ccpv2010-card-export-link-item{
+	float: left;
+	padding: 0px 2px 0px 5px;
+	margin-left: 3px;
+	background-color: #EEE;
+}
+.ccpv2010-card-export-link-item *{
+	float: left;
+}
+.ccpv2010-card-export-link-item label{
+	margin-top: 6px;
+}
+#ccpv2010_geo_type{
+	display: none;
+}
+.ccpv2010-info-content-tabulate{
+	width: 570px;
+	height: 323px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+.ccpv2010-tabulated-table-content{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+.ccpv2010-detail-data-row{
+    cursor: pointer;
+}
+#ccpv2010_tabulador_table td, #ccpv2010_tabulador_table th {
+    border: 0.5px;
+}
+
+#ccpv2010_tabulador_table tr:nth-child(even){background-color: #f2f2f2;}
+
+#ccpv2010_tabulador_table tr:hover {background-color: #ddd;}
+
+#ccpv2010_tabulador_table th {
+    padding-top: 12px;
+    text-align: center;
+    background-color:#e4aca0;
+    color: white;
+    min-width:80px;
+}
+
+.ccpv2010-info-grid-container-icons {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.ccpv2010-info-grid-container-note {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  font-style: oblique;
+  padding: 10px;
+  background-color:#ffffff;
+  text-align: justify;
+}

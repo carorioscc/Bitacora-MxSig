@@ -1,0 +1,11 @@
+<dataConfig>
+  <dataSource driver="org.postgresql.Driver"
+     url="jdbc:postgresql://mxsig-db:5432/mdm6data"
+     user="postgres"
+     password="postgres" />
+  <document>
+    <entity name="centrosinfinegi" query="SELECT gid,  OID_1, CENTRO_ID, REGIONAL_I, NOMBRE, CVE_EDO, CVE_BIBLIO, NOMBRE1, DOMICILIO, NUM_EXT, COLONIA, CP, CALLES, TELEFONO, EXTENSION, FAX, SERVICIO, HOR_OLV, HOR_OLVF, HOR_OS, HOR_OSF, HORARIOD, HORARIODF, ENTIDAD, MUNICIPIO, LOCALIDAD, OID_REL, SPVECTOR, SPVECTORRE, OID_0, the_geom, tipo
+	from mdm.centrosinfinegi">
+   </entity>
+  </document>
+</dataConfig>

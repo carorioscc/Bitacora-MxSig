@@ -1,0 +1,1202 @@
+MAP
+	NAME "Servicio_WMS_MXSIG"
+	STATUS ON
+	SHAPEPATH "/web" #Make sure this points to the root of the data folder (where all your shape or raster files are)
+	SIZE 400 400
+	IMAGECOLOR   255 255 255 
+	IMAGETYPE png
+	#EXTENT -119.9926 9.404 -85.1237 37.8468
+	EXTENT -13345293.64051 1516510.64097 -9294742.63818 3991847.36461
+	SYMBOLSET "/opt/map/mdm60/syms/symbols.sym"
+	FONTSET "/opt/map/fonts/fonts.txt"
+	DEBUG 0
+	PROJECTION 
+	"init=epsg:900913"
+	END
+	UNITS DD
+	CONFIG  "MS_ERRORFILE" "/logs/mapserver/mxsigvector.log"
+	MAXSIZE 2200
+	WEB 
+		TEMPLATE "/opt/map/mdm60/mapserv_template.html"
+		IMAGEPATH "/tmp"
+		IMAGEURL "/tmp/"
+		LOG "/tmp/mapserver.log"
+		METADATA 
+			"max_extents" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461" #ka-map - to prevent navigation out of extents
+			"ows_title" "Servicio WMS. (Mapa Digital de Mexico v5.0)"
+			"ows_keywordlist" "WMS,OGC,MapServer,GeoNetwork"
+			"ows_onlineresource" "http://gaia.inegi.org.mx/NLB/balancer.do?map=/opt/map/mdm5vector.map&amp&"
+			"ows_service_onlineresource" "http://www.inegi.org.mx/"
+			"ows_fees" "none"
+			"ows_accessconstraints" "none"
+			"ows_contactperson" "Aar&oacute;n Israel Villar Mata"
+			"ows_contactorganization" "INEGI"
+			"ows_contactposition" "Subdirector"
+			"ows_addresstype" "postal"
+			"ows_address" "Heroe de Nacozari 2301"
+			"ows_city" "Aguascalientes"
+			"ows_stateorprovince" "Aguascalientes"
+			"ows_postcode" "20276"
+			"ows_country" "M&aacute;xico"
+			"ows_contactvoicetelephone" "+52 4499105300"
+			"ows_contactfacsimiletelephone" "+52 4499105328"
+			"ows_contactelectronicmailaddress" "aaron.villar@inegi.org.mx"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_enable_request" "GetMap GetCapabilities GetLegendGraphic"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_feature_info_mime_type" "text/html"
+            "wms_title" "Servicio de prueba del MXSIG"
+            "wms_srs" "EPSG:900913"
+		END #end metadata 
+	END #end web
+	
+	
+	LAYER
+		NAME 'c100'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.ent using unique gid using srid=3857"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "L�mite Estatal / Internacional"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "MGE"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE polygon
+		STATUS on
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+            CLASS
+				MINSCALEDENOM 1000000
+				NAME 'Entidad federativa'
+				STYLE
+					WIDTH 2.0					
+					COLOR  133 231 93		
+					OUTLINECOLOR 178 100 147					
+				END #end style			
+		   END # end class
+	END #end layer
+	
+	LAYER
+		NAME 'c101'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.mun using unique gid using srid=3857"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "Municipios"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "Urbana"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE line
+		STATUS on
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+		   CLASS
+			NAME 'Municipios'
+			STYLE
+				WIDTH 1.0
+				COLOR 255 0 0 
+				#OUTLINECOLOR 220 220 220
+			END #end style
+		   END # end class
+	END #end layer	
+	
+	LAYER
+		NAME 'c102'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+                CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"		
+		DATA "the_geom from mdm.l using unique gid using srid=3857"
+		MAXSCALE 6000000
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "Localidad"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "MGE"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE polygon
+		STATUS ON
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector 
+		TEMPLATE "query.html"
+		   CLASS 
+			NAME 'Localidad urbana'
+			STYLE
+				COLOR 237 229 211
+				OUTLINECOLOR 220 220 220
+				ANTIALIAS FALSE
+			END #end style
+		   END # end classCLASS 
+	END	   	
+
+	LAYER
+		NAME 'c431'
+		GROUP 'INEGI'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"		
+		DATA "the_geom from mdm.centrosinfinegi using unique gid using srid=3857"  
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "Centros de Informaci�n Inegi"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "INEGI"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE point
+		STATUS on
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+		   CLASS
+              NAME 'Centros de Informaci�n INEGI'
+              STYLE
+			        symbol inegi
+			        size 30
+              END #end style
+           END # end class   
+	END #end layer
+
+	LAYER
+		NAME 'c110'
+		GROUP 'MGU'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.ugas using unique gid using srid=3857"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "Unidad de Gestion Ambiental"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "Urbana"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE polygon
+		STATUS on
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+		   CLASS
+			NAME 'Unidad de Gestion Ambiental'
+			STYLE
+				WIDTH 1.0
+				COLOR 255 0 0 
+				#OUTLINECOLOR 220 220 220
+			END #end style
+		   END # end class
+	END #end layer
+
+	LAYER
+		NAME 'c111'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.cuga using unique gid using srid=3857"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "UGA"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "MGE"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE polygon
+		STATUS on
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+            CLASS
+				#EXPRESSION ('[politica]' = 'Aprovechamiento Sustentable')
+				#MINSCALEDENOM 1000000
+				EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR  133 231 93		
+					OUTLINECOLOR 178 100 147					
+				END #end style			
+		   END # end class
+	END #end layer
+
+	LAYER
+		NAME 'c112'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.poerteo using unique gid using srid=3857"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "POERTEO"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "MGE"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE polygon
+		STATUS on
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+            CLASS
+				EXPRESSION ('[politica]' = 'Aprovechamiento Sustentable')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'POERTEO'
+				STYLE
+					WIDTH 2.0					
+					COLOR  255 215 0	
+					OUTLINECOLOR 218 165 32					
+				END #end style			
+		   END # end class
+
+		   
+	END #end layer
+
+	LAYER
+		NAME 'c113'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.riosoax using unique gid using srid=3857"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "Rios"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "Urbana"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE line
+		STATUS on
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+		   CLASS
+			NAME 'Rios'
+			STYLE
+				WIDTH 1.0
+				COLOR 51 202 255
+				#OUTLINECOLOR 220 220 220
+			END #end style
+		   END # end class
+	END #end layer	
+	LAYER
+		NAME 'c114'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.poerteo using unique gid using srid=3857"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "UGAS"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "MGE"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE polygon
+		STATUS on
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+            CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 001')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 37 60 113 
+					#OUTLINECOLOR 178 100 147					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 002')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 114 170 66	
+					#OUTLINECOLOR 178 100 147					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 003')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 139 29 39	
+					#OUTLINECOLOR 178 100 147					
+				END #end style			
+		   END # end class
+			CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 004')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 168 55 181	
+					#OUTLINECOLOR 178 100 147					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 005')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 66 195 207
+					#OUTLINECOLOR 178 100 147					
+				END #end style			
+		   END # end class
+			CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 006')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 66 195 207
+					#OUTLINECOLOR 179 132 34					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 007')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 54 159 223
+					#OUTLINECOLOR 179 132 34					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 008')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 147 237 226
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 009')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 6 179 54
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 010')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 32 119 143
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 011')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 191 191 65
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 012')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 67 170 100
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 013')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 67 170 100
+					#OUTLINECOLOR 121 88 191					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 014')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 132 82 62
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 015')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 165 100 134
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 016')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 104 47 77
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 017')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 148 172 65
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 018')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 140 70 171
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 019')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 76 38 93
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 020')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 16 123 57
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 021')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 180 94 26
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 022')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 181 32 100
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 023')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 126 173 9
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 024')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 0 0 0
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 025')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 196 235 238
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 026')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 85 42 135
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 027')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 1.0					
+					COLOR 78 176 93
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 028')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 1.0					
+					COLOR 182 50 137
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 029')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 1.0					
+					COLOR 151 71 94
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 030')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 1.0					
+					COLOR 137 115 78
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 031')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH .0					
+					COLOR 65 98 158
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 032')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 171 24 143
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 033')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 109 195 42
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 034')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 26 141 105
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 035')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 189 140 78
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 036')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 106 159 26
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 037')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR  41 128 118
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 038')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 184 70 160
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 039')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 44 151 21
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 040')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 170 91 40
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 041')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 59 41 176
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 042')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR  64 137 35
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 043')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 164 135 54
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 044')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 50 155 74
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 045')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 26 96 29
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 046')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 80 22 90
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 047')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 108 78 29
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 048')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 179 10 87
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 049')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 111 39 167
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 050')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 180 85 47
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 051')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR  120 14 14
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class	
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 052')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 139 110 24
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 053')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 98 155 91
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 054')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 74 236 17
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class	
+		   CLASS
+				EXPRESSION ('[clv_uga]' = 'UGA 055')
+				#MINSCALEDENOM 1000000
+				#EXPRESSION ('[recomendad]' = 'Ecoturismo')
+				NAME 'UGA'
+				STYLE
+					WIDTH 2.0					
+					COLOR 21 93 13
+					#OUTLINECOLOR 					
+				END #end style			
+		   END # end class					
+	END #end layer
+
+
+	LAYER
+		NAME 'c115'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.tututepec using unique gid using srid=3857"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "Ordenamiento tututepec"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "Urbana"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE line
+		STATUS on
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+		   CLASS
+			NAME 'Ordenamiento tututepec'
+			STYLE
+				WIDTH 1.0
+				COLOR 51 202 255
+				#OUTLINECOLOR 220 220 220
+			END #end style
+		   END # end class
+	END #end layer
+
+	LAYER
+		NAME 'c116'
+		GROUP 'MGE'
+		CONNECTIONTYPE postgis
+		CONNECTION "user=postgres password=postgres dbname=mdm6data host=mxsig-db  port=5432"
+		PROCESSING "CLOSE_CONNECTION=DEFER"
+		DATA "the_geom from mdm.tonameca using unique gid using srid=3857"
+		PROJECTION
+			"init=epsg:900913"
+		END #end projection
+		METADATA 
+			"queryable" "true"
+			"ows_title" "Ordenamiento tonameca"
+			"ows_abstract" ""
+			"ows_keywordlist" ""
+			"wms_extent" "-13345293.64051 1516510.64097 -9294742.63818 3991847.36461"
+			"wms_group_title" "Urbana"
+			"wms_dataurl_format" "text/html"
+			"wms_dataurl_href" "http://mapserver.inegi.org.mx/geografia/espanol/normatividad/metadatos/gateway.cfm?id="
+			"wms_style_default_title" "default"
+			"wms_format" "image/png"
+			"wms_attribution_onlineresource" "http://www.inegi.org.mx/"
+			"wms_attribution_title" "INEGI"
+			"wms_attribution_logourl_width" "20"
+			"wms_attribution_logourl_height" "20"
+			"wms_attribution_logourl_format" "image/jpg"
+			"wms_attribution_logourl_href" "http://mapserver.inegi.org.mx/images/logoINEGI.JPG"
+			"wms_srs" "EPSG:900913"
+			END #end metadata 
+		TYPE polygon
+		STATUS on
+		DEBUG 0
+		TOLERANCE 8 #default is 3 for raster, 0 for vector
+		TEMPLATE "query.html"
+		   CLASS
+			NAME 'Ordenamiento tonameca'
+			STYLE
+				WIDTH 1.0
+				COLOR 51 202 255
+				#OUTLINECOLOR 220 220 220
+			END #end style
+		   END # end class
+	END #end layer	
+	
+
+	
+
+
+	LEGEND
+		STATUS ON
+		IMAGECOLOR 255 255 255 #233 236 202 # 238 238 238
+		KEYSIZE 16 10
+		KEYSPACING 10 10 
+		LABEL
+			TYPE truetype
+			FONT arial
+			SIZE 8
+			COLOR 90 90 90
+		END  # end Label
+	END # end Legend
+	
+	SCALEBAR
+		STATUS on
+		POSITION lc
+		STYLE 0
+		INTERVALS 3
+		SIZE 129 3
+		IMAGECOLOR  255 255 255
+		LABEL
+			COLOR 0 0 0
+			SIZE 1
+		END  # end label
+		OUTLINECOLOR 0 0 0
+		COLOR  0 0 0
+		BACKGROUNDCOLOR  255 255 255
+		UNITS kilometers
+	END   # end scalebar
+	
+	REFERENCE
+		EXTENT 299819.4023 -134216.153 4695934.1014 2714439.6185
+		IMAGE "../images/reference.jpg"
+		SIZE 200 100
+		COLOR -1 -1 -1
+		OUTLINECOLOR 255 0 0
+	END  # end reference
+	
+	OUTPUTFORMAT
+		NAME "png"
+		MIMETYPE "image/png"
+		DRIVER  "GD/PNG" # "AGG/PNG"  # 
+		EXTENSION "png"
+		IMAGEMODE "RGBA" #"PC256"  # "RGBA"
+		TRANSPARENT true
+	END #end outputformat
+
+	
+END #end map
+
+

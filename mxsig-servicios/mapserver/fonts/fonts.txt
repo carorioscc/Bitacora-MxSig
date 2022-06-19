@@ -1,0 +1,12 @@
+arial arial.ttf
+verdana verdana.ttf
+times times.ttf
+timesi timesi.ttf
+timesbi timesbi.ttf
+servicios ServiciosINEGI.ttf
+inegit50 INEGIT50.ttf
+ERASBD ERASBD.ttf
+GEOMETRI GEOMETRI.TTF
+flechas ARROWS.TTF
+flechas2 flechas2.TTF
+arialbk arialbk.TTF

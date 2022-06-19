@@ -1,0 +1,365 @@
+@charset "utf-8";
+@import url('wizardSprite/sprite-wizard.css');
+/* CSS Document */
+.wizard-imgMenu{
+	float:left;
+	cursor:pointer;
+	
+}
+
+.wizard-bar{
+	float:left;
+	width:51px;
+	height:6px;
+	margin-top:28px;
+	background-color: grey;
+}
+	
+#wizard-header{
+	height: 90px;
+	background: #EDEDED;
+	padding: 10px;
+	border-bottom: 7px solid #3597A8;
+}
+#wizard-btnArea{
+	float: left;
+	width: 100%;
+	height: 30px;
+}
+.wizard-btn-wrap{
+	width: 50%;
+	height: 25px;
+	float: left;
+	margin-top: 6px;
+}
+	
+.wizard-btn-txt{
+    float: left;
+    margin-top: 3px;
+    margin-left: 5px;
+    color: #3597A8;
+	font-family: arial;
+    font-size: 13px;
+    font-weight: bold;
+}
+<strong></strong>
+#wizard-dialog{
+	width: auto !important;
+	height: 500px !important;
+}
+
+.wizard-section-container{
+	float:left;
+	width:100%;
+    height:383px;
+}
+.wizard-section-container-geo{
+	float:left;
+	width:100%;
+    height:361px;
+}
+/*geográfico*/
+.wizard-geoEdo-item {
+	width: 100%;
+	float: left;
+	padding: 3px;
+	font-size: 14px;
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wizard-geoEdo-icon-sel {
+	display: block;
+}
+.wizard-geoEdo-icon-unsel {
+	display: none;
+}
+
+.wizard-geoEdo-item[selected=selected] .wizard-geoEdo-icon-unsel {
+	display: block;
+}
+.wizard-geoEdo-item[selected=selected] .wizard-geoEdo-icon-sel {
+	display: none;
+}
+.wizard-geoEdo-item-label {
+	float: left;
+	width: 100%;
+	padding: 6px 60px 6px 4px;
+	/*margin-left: -29px;*/
+	box-sizing: border-box;
+}
+
+.wizard-geoEdo-icon {
+	width: auto;
+	height: auto;
+	float: right;
+	margin-left: -60px;
+}
+
+.wizard-geo-seemore {
+	float: right;
+	padding-right: 5px;
+	margin-left: -35px;
+}
+
+/*Actividades*/
+.wizard-activity-item {
+	cursor: pointer;
+	float: left;
+	/*margin: 9px 7px 3px 4px;*/
+	margin:35px 20px 10px 13px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+/*.wizard-item:hover {
+	background-color: #A9CDB9;
+}*/
+.wizard-products-content {
+	width: 450px;
+	height: 312px;
+	padding: 4px;
+	float: right;
+	overflow-y: auto;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-top:10px;
+}
+.wizard-products-item {
+	width: 100%;
+	float: left;
+	padding: 3px;
+	font-size: 14px;
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wizard-products-item-label {
+	float: left;
+	width: 190px;
+	line-height: 26px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wizard-truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.wizard-products-item-check {
+	float: right;
+}
+.wizard-products-item-check-icon {
+	display: none;
+}
+.wizard-products-item-check[active=true] .active {
+	display: block;
+}
+.wizard-products-item-check[active=false] .inactive {
+	display: block;
+}
+.wizard-products-type {
+	float: right;
+	width: 200px;
+}
+.wizard-products-type div {
+	float: right;
+	margin-left: 3px;
+	cursor: pointer;
+}
+.wizard-products-type div.active {
+	background-color: #A9CDB9;
+}
+.wizard-products-item-disable-mask{
+	position: relative;
+    width: 100%;
+    height: 25px;
+    background-color: transparent;
+    cursor:default;
+	display: none;
+}
+.wizard-products-item[disabled=disabled]{
+	cursor: default;
+}
+.wizard-products-item[disabled=disabled] .wizard-products-item-disable-mask{
+	display: block;
+}
+.wizard-products-item[disabled=disabled] .wizard-products-item-check{
+	opacity: 0.3;
+}
+.wizard-products-item[disabled=disabled] .wizard-products-item-label{
+	color:#929292;
+}
+.wizard-products-item-info{
+	float: right;
+    margin-top: 6px;
+	cursor: pointer;
+}
+.wizard-truncate-text {
+	padding: 4px;
+	font-size: 13px;
+}
+.wizard-truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
+.wizard-animated {
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.wizard-products-bk-btn {
+	width: 24px;
+	height: 311px;
+	background: #DFDFDF;
+	float: left;
+	cursor: pointer;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.wizard-products-bk-btn div {
+	float: left;
+	margin-top: 146px;
+	cursor: pointer;
+}
+.wizard-products-container[specialtools=true] .wizard-products-bk-btn {
+	height: 311px;
+}
+.wizard-activity-content[content=list] .wizard-products-bk-btn {
+	width: 25px;
+}
+/*tenencia*/
+.wizard-tenencia-item {
+	width: 100%;
+	float: left;
+	padding: 8px;
+	font-size: 14px;
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wizard-tenencia-item-check {
+	float: right;
+}
+.wizard-tenencia-item-label {
+	float: left;
+	width: 100%;
+	padding-left: 30px;
+	margin-left: -30px;
+	line-height: 26px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wizard-tenencia-item-check-icon {
+	display: none;
+}
+.wizard-tenencia-item-check[active=true] .active {
+	display: block;
+}
+.wizard-tenencia-item-check[active=false] .inactive {
+	display: block;
+}
+.wizar-tnencias{
+margin-top:25px;
+}
+
+/* Spinner  ---------------------*/
+
+.wizard-spinner-panel {
+	position: static;
+	z-index: 100;
+	
+}
+.wizard-spinner-image {
+	background-image: url(spinner_points.GIF);
+	background-repeat: no-repeat;
+	width: 99px;
+	height: 9px;
+}
+.wizard-block-overlay {
+	position: absolute;
+}
+.wizard-spinner-image-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+.wizard-spinner-image {
+	float: left;
+	margin-left: -50%;
+}
+
+#agro-wizard-dialog{
+	overflow: hidden;
+}
+
+/*sección selección resumen*/
+.wizard_seleccion_title{
+	font-family: arial;
+    font-size: 140%;
+    font-weight: bold;
+    color: #3696a8;
+	list-style-type: square;
+	margin-top: 10px;
+}
+
+#titleSeleccionResume{
+	padding-left: 9%;
+    font-family: arial;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #3696a8;
+}
+
+.wizard-seleccion-txt{
+	color: grey;
+    font-weight: 500;
+}
+
+.wizardAcceptSelection{
+	width: 91px;
+    height: 26px;
+    background-color: #3696a8;
+    color: white;
+    border: none;
+}
+.wizardAcceptbtn_wrap{
+	position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 280px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/*Menu*/
+#geografico .active{
+	display:block;
+}
+
+#actividad .active{
+	display:block;
+}
+
+#tenencia .active{
+	display:block;
+}
+
+#seleccion .active{
+	display:block;
+}

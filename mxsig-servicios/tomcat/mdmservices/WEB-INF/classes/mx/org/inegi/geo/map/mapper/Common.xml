@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.map.mapper.Common">
+	<sql id="selectFields">	
+		SELECT ${fields}				
+	</sql>
+	
+	<sql id="selectFieldsByLevel">
+	SELECT 
+		<choose>
+				<when test="info.level  == 'edo'"> cvegeo AS "Clave",nombre AS "Nombre entidad"	</when>				
+				<when test="info.level  == 'mun'"> cvegeo AS "Clave",nom_ent AS "Nombre entidad",nombre AS "Municipio/Demarcación territorial" </when>
+				<when test="info.level  == 'loc'"> cvegeo AS "Clave",nomloc AS "Localidad",cve_mun AS "Cve_mun",nom_mun AS "Municipio",cve_ent AS "Cve_ent",nom_ent AS "Entidad",cvegeo  </when>
+				<when test="info.level  == 'ageb'"> cvegeo AS "Clave",cvegeo AS "Ageb",cve_loc AS "Cve_loc",nom_loc AS "Localidad",cve_mun AS "Cve_mun",nom_mun AS "Municipio",cve_ent AS "Cve_ent",nom_ent AS "Entidad",cvegeo </when>
+				<when test="info.level  == 'egob_edo_tot'"> cvegeo AS "Clave",nombre_entidad AS "Nombre entidad"</when>
+			</choose>
+	</sql>
+
+	<sql id="from">
+		FROM ${schema}.${table}
+	</sql>
+	
+	<sql id="wherePointAndBuffer">
+		WHERE the_geom &amp;&amp;
+		ST_Buffer(ST_GeomFromText(${point},900913),${buffer})
+		AND
+		ST_Intersects(the_geom, ST_Buffer(ST_GeomFromText(${point},900913),${buffer}))
+	</sql>
+	
+	<sql id="whereCvegeos">				
+		<if test="info.level != 'edo'"> 		
+			<choose>
+				<when test="info.cvegeoLength()  == 2"> AND cve_ent</when>
+				<when test="info.cvegeoLength()  == 5"> AND clavemun</when>
+				<when test="info.cvegeoLength()  == 9"> AND claveloc</when>
+			</choose>
+			in
+			<foreach collection="info.getCvegeos()" item="cvegeo" index="index"
+				open="(" separator="," close=")">
+				#{cvegeo}
+			</foreach>
+		</if>		
+	</sql>
+	
+	<sql id="whereCvegeoAndYear">
+		WHERE anio=${year} 
+		AND cvegeo=${cvegeo}
+	</sql>
+	
+	<sql id="limit">
+		limit ${limit}
+	</sql>
+</mapper>

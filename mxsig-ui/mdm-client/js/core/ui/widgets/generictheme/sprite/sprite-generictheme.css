@@ -1,0 +1,365 @@
+@charset "utf-8";
+	.sprite-generictheme-geo:hover
+{
+	background-image : url(sprite-generictheme-geo--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-globe
+{
+	background-image : url(sprite-generictheme-globe.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-sclose
+{
+	background-image : url(sprite-generictheme-sclose.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-generictheme-sdown
+{
+	background-image : url(sprite-generictheme-sdown.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-generictheme-sleft
+{
+	background-image : url(sprite-generictheme-sleft.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-generictheme-sright
+{
+	background-image : url(sprite-generictheme-sright.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-generictheme-ok
+{
+	background-image : url(sprite-generictheme-ok.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-circle
+{
+	background-image : url(sprite-generictheme-circle.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-ok:hover
+{
+	background-image : url(sprite-generictheme-ok--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-info
+{
+	background-image : url(sprite-generictheme-info.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-bback
+{
+	background-image : url(sprite-generictheme-bback.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-info:hover
+{
+	background-image : url(sprite-generictheme-info--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-forward
+{
+	background-image : url(sprite-generictheme-forward.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-bdown
+{
+	background-image : url(sprite-generictheme-bdown.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-bup
+{
+	background-image : url(sprite-generictheme-bup.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-bup:hover
+{
+	background-image : url(sprite-generictheme-bup--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-ok-nm
+{
+	background-image : url(sprite-generictheme-ok-nm.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-down
+{
+	background-image : url(sprite-generictheme-down.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-down:hover
+{
+	background-image : url(sprite-generictheme-down--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-ok-m
+{
+	background-image : url(sprite-generictheme-ok-m.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-ok-m:hover
+{
+	background-image : url(sprite-generictheme-ok-m--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-modify
+{
+	background-image : url(sprite-generictheme-modify.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-graph
+{
+	background-image : url(sprite-generictheme-graph.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-geo
+{
+	background-image : url(sprite-generictheme-geo.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-binfo
+{
+	background-image : url(sprite-generictheme-binfo.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-vars
+{
+	background-image : url(sprite-generictheme-vars.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-vars:hover
+{
+	background-image : url(sprite-generictheme-vars--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-grid:hover
+{
+	background-image : url(sprite-generictheme-grid--hover.png);
+	background-repeat : no-repeat;
+	width : 28px;
+	height : 27px;
+}
+.sprite-generictheme-doc-csv
+{
+	background-image : url(sprite-generictheme-doc-csv.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-doc-xls
+{
+	background-image : url(sprite-generictheme-doc-xls.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-graph-mini
+{
+	background-image : url(sprite-generictheme-graph-mini.png);
+	background-repeat : no-repeat;
+	width : 28px;
+	height : 27px;
+}
+.sprite-generictheme-doc-pdf
+{
+	background-image : url(sprite-generictheme-doc-pdf.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-grid
+{
+	background-image : url(sprite-generictheme-grid.png);
+	background-repeat : no-repeat;
+	width : 28px;
+	height : 27px;
+}
+.sprite-generictheme-sclose:hover
+{
+	background-image : url(sprite-generictheme-sclose--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-generictheme-sright:hover
+{
+	background-image : url(sprite-generictheme-sright--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-generictheme-circle:hover
+{
+	background-image : url(sprite-generictheme-circle--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-globe:hover
+{
+	background-image : url(sprite-generictheme-globe--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-sdown:hover
+{
+	background-image : url(sprite-generictheme-sdown--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-generictheme-sleft:hover
+{
+	background-image : url(sprite-generictheme-sleft--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-generictheme-doc-xls:hover
+{
+	background-image : url(sprite-generictheme-doc-xls--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-doc-csv:hover
+{
+	background-image : url(sprite-generictheme-doc-csv--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-doc-pdf:hover
+{
+	background-image : url(sprite-generictheme-doc-pdf--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-doc-pdf-mini
+{
+	background-image : url(sprite-generictheme-doc-pdf-mini.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-doc-pdf-mini:hover
+{
+	background-image : url(sprite-generictheme-doc-pdf-mini--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-graph-mini:hover
+{
+	background-image : url(sprite-generictheme-graph-mini--hover.png);
+	background-repeat : no-repeat;
+	width : 28px;
+	height : 27px;
+}
+.sprite-generictheme-bback:hover
+{
+	background-image : url(sprite-generictheme-bback--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-forward:hover
+{
+	background-image : url(sprite-generictheme-forward--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-generictheme-bdown:hover
+{
+	background-image : url(sprite-generictheme-bdown--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-ok-nm:hover
+{
+	background-image : url(sprite-generictheme-ok-nm--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-modify:hover
+{
+	background-image : url(sprite-generictheme-modify--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-graph:hover
+{
+	background-image : url(sprite-generictheme-graph--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-generictheme-binfo:hover
+{
+	background-image : url(sprite-generictheme-binfo--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}

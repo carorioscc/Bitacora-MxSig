@@ -1,0 +1,10 @@
+<dataConfig>
+  <dataSource driver="org.postgresql.Driver"
+     url="jdbc:postgresql://mxsig-db:5432/mdm6data"
+     user="postgres"
+     password="postgres" />
+  <document>
+    <entity name="entidades" query="SELECT gid, gid as id, busqueda, tipo, coord_merc, locacion, tabla, nombre from mdm.ent">
+   </entity>
+  </document>
+</dataConfig>

@@ -1,0 +1,365 @@
+@charset "utf-8";
+	.sprite-ccpv2010-grid:hover
+{
+	background-image : url(sprite-cwidgetbase-grid--hover.png);
+	background-repeat : no-repeat;
+	width : 28px;
+	height : 27px;
+}
+.sprite-ccpv2010-globe
+{
+	background-image : url(sprite-cwidgetbase-globe.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-globe:hover
+{
+	background-image : url(sprite-cwidgetbase-globe--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-grid
+{
+	background-image : url(sprite-cwidgetbase-grid.png);
+	background-repeat : no-repeat;
+	width : 28px;
+	height : 27px;
+}
+.sprite-ccpv2010-doc-csv:hover
+{
+	background-image : url(sprite-cwidgetbase-doc-csv--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-doc-pdf:hover
+{
+	background-image : url(sprite-cwidgetbase-doc-pdf--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-doc-pdf-mini:hover
+{
+	background-image : url(sprite-cwidgetbase-doc-pdf-mini--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-graph-mini:hover
+{
+	background-image : url(sprite-cwidgetbase-graph-mini--hover.png);
+	background-repeat : no-repeat;
+	width : 28px;
+	height : 27px;
+}
+.sprite-ccpv2010-doc-xls:hover
+{
+	background-image : url(sprite-cwidgetbase-doc-xls--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-modify:hover
+{
+	background-image : url(sprite-cwidgetbase-modify--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-sclose
+{
+	background-image : url(sprite-cwidgetbase-sclose.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-ccpv2010-sdown
+{
+	background-image : url(sprite-cwidgetbase-sdown.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-ccpv2010-sdown:hover
+{
+	background-image : url(sprite-cwidgetbase-sdown--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-ccpv2010-sleft
+{
+	background-image : url(sprite-cwidgetbase-sleft.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-ccpv2010-sleft:hover
+{
+	background-image : url(sprite-cwidgetbase-sleft--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-ccpv2010-info
+{
+	background-image : url(sprite-cwidgetbase-info.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-ok:hover
+{
+	background-image : url(sprite-cwidgetbase-ok--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-circle
+{
+	background-image : url(sprite-cwidgetbase-circle.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-ok
+{
+	background-image : url(sprite-cwidgetbase-ok.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-sright
+{
+	background-image : url(sprite-cwidgetbase-sright.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-ccpv2010-bback
+{
+	background-image : url(sprite-cwidgetbase-bback.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-info:hover
+{
+	background-image : url(sprite-cwidgetbase-info--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-doc-csv
+{
+	background-image : url(sprite-cwidgetbase-doc-csv.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-doc-pdf
+{
+	background-image : url(sprite-cwidgetbase-doc-pdf.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-graph-mini
+{
+	background-image : url(sprite-cwidgetbase-graph-mini.png);
+	background-repeat : no-repeat;
+	width : 28px;
+	height : 27px;
+}
+.sprite-ccpv2010-ok-nm:hover
+{
+	background-image : url(sprite-cwidgetbase-ok-nm--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-ok-nm
+{
+	background-image : url(sprite-cwidgetbase-ok-nm.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-bback:hover
+{
+	background-image : url(sprite-cwidgetbase-bback--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-forward
+{
+	background-image : url(sprite-cwidgetbase-forward.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-geo
+{
+	background-image : url(sprite-cwidgetbase-geo.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-doc-pdf-mini
+{
+	background-image : url(sprite-cwidgetbase-doc-pdf-mini.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-graph
+{
+	background-image : url(sprite-cwidgetbase-graph.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-vars:hover
+{
+	background-image : url(sprite-cwidgetbase-vars--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-binfo
+{
+	background-image : url(sprite-cwidgetbase-binfo.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-modify
+{
+	background-image : url(sprite-cwidgetbase-modify.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-vars
+{
+	background-image : url(sprite-cwidgetbase-vars.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-ok-m
+{
+	background-image : url(sprite-cwidgetbase-ok-m.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-doc-xls
+{
+	background-image : url(sprite-cwidgetbase-doc-xls.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-bdown
+{
+	background-image : url(sprite-cwidgetbase-bdown.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-ok-m:hover
+{
+	background-image : url(sprite-cwidgetbase-ok-m--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-down:hover
+{
+	background-image : url(sprite-cwidgetbase-down--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-graph:hover
+{
+	background-image : url(sprite-cwidgetbase-graph--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-down
+{
+	background-image : url(sprite-cwidgetbase-down.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-geo:hover
+{
+	background-image : url(sprite-cwidgetbase-geo--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-bup:hover
+{
+	background-image : url(sprite-cwidgetbase-bup--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-binfo:hover
+{
+	background-image : url(sprite-cwidgetbase-binfo--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-bdown:hover
+{
+	background-image : url(sprite-cwidgetbase-bdown--hover.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-bup
+{
+	background-image : url(sprite-cwidgetbase-bup.png);
+	background-repeat : no-repeat;
+	width : 40px;
+	height : 40px;
+}
+.sprite-ccpv2010-sclose:hover
+{
+	background-image : url(sprite-cwidgetbase-sclose--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-ccpv2010-sright:hover
+{
+	background-image : url(sprite-cwidgetbase-sright--hover.png);
+	background-repeat : no-repeat;
+	width : 18px;
+	height : 18px;
+}
+.sprite-ccpv2010-circle:hover
+{
+	background-image : url(sprite-cwidgetbase-circle--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}
+.sprite-ccpv2010-forward:hover
+{
+	background-image : url(sprite-cwidgetbase-forward--hover.png);
+	background-repeat : no-repeat;
+	width : 27px;
+	height : 27px;
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.map.mapper.WktMapper">
+
+    <select id="select" resultType="WKT">
+        ${value}
+    </select>
+    
+    <select id="findGeometryByCvegeo" parameterType="java.lang.String" resultType="java.util.LinkedHashMap">
+        select ST_AsText(ST_Extent(the_geom)) as extent,
+        ST_AsText(ST_Union(the_geom)) as geometry        
+        <choose>
+            <when test="cvegeo.length() == 2">from ce2014.ent</when>
+            <when test="cvegeo.length() == 5">from ce2014.mun</when>
+            <when test="cvegeo.length() == 9">from ce2014.loc_urb</when>
+            <when test="cvegeo.length() == 13">from ce2014.ageb</when>
+            <otherwise>from ce2014.zm</otherwise>
+        </choose>
+        where cvegeo = #{cvegeo}
+    </select>
+    
+    <select id="findFeaturePolygon" parameterType="mx.org.inegi.geo.map.model.PointResolution" resultType="java.util.LinkedHashMap">
+        <if test='resolutionLevel == 6 or resolutionLevel == 7'>
+            select ST_AsText(ST_Simplify(the_geom, 150)) AS geometry, cvegeo AS cvegeo, nombre AS nombre from mgn.ent
+            where ST_Intersects(the_geom, ST_GeomFromText(#{point}, 900913))
+        </if>
+        <if test='resolutionLevel == 5'>
+            select ST_AsText(ST_Simplify(the_geom, 100)) AS geometry, cvegeo AS cvegeo, nombre AS nombre from mgn.mun
+            where ST_Intersects(the_geom, ST_GeomFromText(#{point}, 900913))
+        </if>
+        <if test='resolutionLevel == 4'>
+            select ST_AsText(ST_Simplify(the_geom, 20)) AS geometry, cvegeo AS cvegeo, nombre AS nombre from mgn.l 
+            where ST_Intersects(the_geom, ST_GeomFromText(#{point}, 900913))
+        </if>
+        <if test='resolutionLevel == 3'>
+            select ST_AsText(ST_Simplify(the_geom, 5)) AS geometry, cvegeo AS cvegeo, nombre AS nombre from mgn.a
+            where ST_Intersects(the_geom, ST_GeomFromText(#{point}, 900913))
+        </if>
+        <if test='resolutionLevel == 2'>
+            select ST_AsText(the_geom) AS geometry, cvegeo AS cvegeo, nombre AS nombre from mgn.manzanas
+            where ST_Intersects(the_geom, ST_GeomFromText(#{point}, 900913))
+        </if>
+    </select>
+
+</mapper>

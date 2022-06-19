@@ -1,0 +1,401 @@
+/*@import url('sprite/sprite-cenago.css');*/
+/* CSS Document */
+.custom_tabulateCenago{
+	font-family:Arial, Helvetica, sans-serif;
+	width:387px;
+	height: 550px;
+	border: 1px solid #EEE;
+	position:absolute;
+	overflow: hidden;
+	display:block;
+	background-color:#FFF;
+	-webkit-box-shadow: 1px 1px 2px 0px #555;
+	box-shadow: 1px 1px 2px 0px #555;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 2002;
+	bottom: 55px;
+    left: 11px;
+	
+}
+.custom_tabulateCenago .toolBar{
+	position: absolute;
+    width: 50px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: #F2F2F2;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.custom_tabulateCenago .content{
+	position: absolute;
+    top: 0px;
+    left: 52px;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    padding: 3px;
+}
+.custom_tabulateCenago .content .header{
+	float: left;
+    padding-bottom: 3px;
+    min-height: 50px;
+	border-bottom: 2px solid #E5E5E5;
+}
+.custom_tabulateCenago .tabulate{
+	width:100%;
+}
+.custom_tabulateCenago .tabulate th{
+	text-align: left;
+    font-size: 120%;
+    background: #808080;
+    color: white;
+    padding: 5px;
+    font-weight: inherit;
+}
+.custom_tabulateCenago .tabulate .trCenago:hover{
+	background:#F5F5F5;
+}
+.custom_tabulateCenago .tabulate .rowCenago{
+	border-bottom:1px solid #DDD;
+	padding:5px;
+	font-size:120%;
+	color: #464648;
+}
+.custom_tabulateCenago.none{
+	width: auto !important;
+	height: auto !important;
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+}
+
+.custom_tabulateCenago .blocker {
+	position: absolute;
+    top: 56px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #fff;
+    border-top: 2px solid #f2f2f2;
+	
+	
+	
+}
+.custom_tabulateCenago .blocker .spinner{
+	position: absolute;
+	top: 45%;
+	left: 40%;
+}
+.custom_tabulateCenago .blocker .containerBlocker{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+.custom_tabulateCenago .blocker .containerBlocker .etiquetaBlock{
+	margin-top: 45%;
+    font-size: 150%;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #808080;
+}
+
+.custom_tabulateCenago .container{
+	position: absolute;
+    bottom: 3px;
+    left: 3px;
+    right: 4px;
+    top: 58px;
+    overflow: hidden;
+}
+.custom_tabulateCenago .title{
+	color: #333;
+    font-size: 12px;
+    font-weight: bold;
+	margin-top:5px;
+    width: 202px;
+    float: left;
+}
+.custom_tabulateCenago .table{
+	float: left;
+    width: 75%;
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.custom_tabulateCenago .line{
+	width: 100%;
+    height: 3px;
+    margin-top: 5px;
+    background: #cccccc;
+}
+.custom_tabulateCenago .line2{
+	width: 100%;
+    height: 2px;
+    margin-top: 4px;
+    background: #00695e;
+    margin-bottom: 10px;
+}
+.custom_tabulateCenago .recordCount{
+	width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: right;
+    font-size: 110%;
+    font-weight: bold;
+    color: #464648;
+    background: #F2F2F2;
+    height: 20px;
+}
+.custom_tabulateCenago .recordCount .labelCounter{
+	padding-right:10px;
+	line-height: 20px;
+}
+.custom_tabulateCenago .searcher{
+	position: absolute;
+    top: 5px;
+    left: 0px;
+    right: 0px;
+    height: 25px;
+	/*display: none;*/
+}
+.custom_tabulateCenago .searcher .items{
+	position: absolute;
+	top: 3px;
+	right: 3px;
+}
+.custom_tabulateCenago .searcher .items div{
+	float: right;
+	margin-left: 5px;
+}
+.custom_tabulateCenago .searcher input{
+	background-color: transparent;
+    border: 1px solid #DDDDDD;
+    color: #555;
+    font-size: 120%;
+    height: 23px;
+    overflow: hidden;
+    width: 92%;
+    padding-left: 3px;
+    padding-right: 25px;
+}
+.custom_tabulateCenago .pagination{
+	position: absolute;
+    top: /*3px;*/35px;
+    left: 0px;
+    right: 0px;
+    height: 25px;
+    background: #F2F2F2;
+	text-align:center;
+	border:1px solid #DDDDDD;
+}
+.custom_tabulateCenago .pagination .itemPage{
+	margin-right: 4px;
+    margin-left: 4px;
+    width: 15px;
+    display: inline-block;
+    font-size: 110%;
+    padding: 2px;
+    text-align: center;
+    margin-top: 8px;
+    color: grey;
+    cursor: pointer;
+	position: relative;
+    top: -3px;
+}
+
+.custom_tabulateCenago .pagination .itemPage:hover{
+	color:#464648;
+}
+.custom_tabulateCenago .pagination .itemPage.active{
+	background: #464648;
+    color: white !important;
+    font-weight: bold;
+}
+.custom_tabulateCenago .info{
+	position: absolute;
+	top:/*32px;*/ 65px;
+	left: 0px;
+	right: 0px;
+	bottom: 20px;
+	overflow: auto;
+}
+.custom_tabulateCenago .label{
+	color: #808080;
+    font-size: 125%;
+    margin-top: 10px;
+    margin-bottom: 2px;
+	display: inline-block;
+	
+}
+.custom_tabulateCenago .headerCard{
+	    background: #00695e;
+    padding: 10px;
+    font-size: 130%;
+    color: white;
+	font-weight: bold;
+}
+.custom_tabulateCenago .headerCardSub{
+	background: #258278;
+    padding: 10px;
+    font-size: 130%;
+    color: white;
+	font-weight: bold;
+}
+.custom_tabulateCenago .text{
+	width: 94%;
+    text-align: justify;
+    font-size: 115%;
+	display: inline-block;
+	border-bottom: 1px solid #DDD;
+    padding-bottom: 10px;
+	    padding-left: 2%;
+    padding-right: 2%;
+	
+    /*margin-left: 23px;*/
+}
+.custom_tabulateCenago .trCenago.selected{
+	background: #464648 !important;
+}
+.custom_tabulateCenago .trCenago.selected .rowCenago{
+	color: white !important;
+}
+.custom_tabulateCenago .valueText{
+	display: inline-block;
+    font-size: 115%;
+}
+.custom_tabulateCenago .text2{
+	    width: 92%;
+    text-align: justify;
+    font-size: 115%;
+    display: inline-block;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 10px;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.custom_tabulateCenago .selected{
+	background: #efefef;
+}
+
+.custom_tabulateCenago .tools{
+	position: absolute;
+    width: 100%;
+    bottom: 20px;
+}
+.custom_tabulateCenago .itemTool{
+	position: relative;
+	cursor: pointer;
+    padding: 5px 0px 5px 0px;
+	transition: background 500ms ease;
+}
+.custom_tabulateCenago .itemTool .labelItem{
+	width:100%;
+	text-align:center;
+}
+.custom_tabulateCenago .itemTool:hover{
+	background:#D0D0D0;
+}
+.custom_tabulateCenago .rowPag{
+	display: inline-block;
+    position: relative;
+    top: 2px;
+}
+.custom_tabulateCenago .close{
+	position:absolute;
+	top:2px;
+	right:47px;
+}
+.custom_tabulateCenago .plegTable{
+	background:#b7b7b7;
+	position:absolute;
+	top:2px;
+	right:2px;
+	padding: 5px;
+}
+.custom_tabulateCenago .plegTable:hover{
+	background:#535454;
+}
+
+.custom_tabulateCenago .iconTabulate{
+	    margin-top: 4px;
+		margin-bottom: 6px;
+}
+.template_tabulateCenago{ background:url("img/tabulateCenago.png") top left no-repeat; }
+.tt_shp{
+	width: 30px;
+    height: 33px;
+    background-position: -119px -53px;
+	margin-left: 11px;
+	
+}
+.tt_csv{
+	width: 30px;
+    height: 33px;
+    background-position: -92px -53px;
+	margin-left: 11px;
+	
+}
+.tt_xls{
+	width: 30px;
+    height: 33px;
+    background-position: -65px -53px;
+	margin-left: 11px;
+}
+
+.tt_xls:hover{
+    background-position: -146px -53px;	
+}
+.tt_csv:hover{
+	background-position: -173px -53px;
+}
+.tt_shp:hover{
+	background-position:-200px -53px;
+}
+.custom_tabulateCenago .itemTool:hover .tt_xls{
+	background-position: -146px -53px;	
+}
+.custom_tabulateCenago .itemTool:hover .tt_csv{
+	background-position: -173px -53px;;
+}
+
+.custom_tabulateCenago .itemTool:hover .tt_shp{
+	background-position: -200px -53px;
+}
+
+
+.rowLeft{ width:20px; height:20px; background-position:-120px -22px; }
+.rowRight{ width:20px; height:20px; background-position:-141px -23px; }
+.rowLeft:hover{background-position:-120px -1px; }
+.rowRight:hover{background-position:-141px -1px;  }
+.rowdown{width:20px; height:20px; background-position:-97px -28px;}
+.rowdown:hover{width:20px;height:20px;background-position:-97px -3px}
+.rowup{width:20px; height:20px; background-position:-72px -30px;}
+.rowup:hover{background-position:-72px -30px}
+.tt_close{
+	width:20px;height:20px;
+	background-position:-171px -26px;
+}
+.tt_close:hover{
+	background-position:-171px -2px;
+}
+.tt_search{
+	width:20px;height:20px;
+	background-position:-245px -27px;
+}
+.tt_search:hover{
+	background-position:-245px -3px;
+}
+.tableIcon{
+	width: 45px;
+    height: 45px;
+    background-position: -194px -4px;
+}

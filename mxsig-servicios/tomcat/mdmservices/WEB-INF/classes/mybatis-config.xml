@@ -1,0 +1,31 @@
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<package name="mx.org.inegi.geo.map.domain" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="mx/org/inegi/geo/map/mapper/BufferMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/CensoLabelMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/Common.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/DenueLabelMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/DenueMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/ExportMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/GenericMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/IndicadoresCGMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/LayerStatsMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/NameMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/RasterElevationMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/ReverseGeocodingMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/ScianMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/SectorMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/ShareMapMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/ThemeMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/TrackingMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/WktMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/ThemeCGLabelMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/ThemeCGMapper.xml" />
+		<mapper resource="mx/org/inegi/geo/map/mapper/AmcaCacheMapper.xml" />
+	</mappers>
+</configuration>

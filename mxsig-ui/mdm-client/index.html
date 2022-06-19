@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" href="mdm6ico.png"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" href="mdm6ico.png">
+<link rel="apple-touch-icon-precomposed" href="mdm6ico.png">
+<script>
+if (location.protocol == 'https:'){ 
+	location.href = 'http:' + window.location.href.substring(window.location.protocol.length);
+}	
+</script>
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+<meta property="og:title" content="Mapa Digital de M&eacute;xico en l&iacute;nea" /> 
+<meta property="og:image" content="img/logoMini.png" /> 
+<meta property="og:description" content="Realic&eacute; una consulta en el Mapa Digital de M&eacute;xico en l&iacute;nea, atrav&eacute;z del portal de INEGI y deseo compartirla" /> 
+
+
+<META HTTP-EQUIV="expires" CONTENT="Mon, 19 jan 2015 08:00:00 GMT">
+
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable="no" name='viewport' />
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="js/frameworks/jquery/css/custom-theme/jquery-ui-1.10.3.custom.css" />
+    <title>Mapa Digital de M&eacute;xico V6</title>
+</head>
+
+<body>
+
+<div id="main">
+    <div id="header" style="display:none" class="no-print">
+    	<div class="headerBackground">
+    		<img id="headerLogoINEGI" src="img/headerINEGI.png"/>
+    		<img id="headerLogoMDM" src="img/headerMDM.png"/>
+    	</div>
+    </div>
+    <div id="content">
+		<!--<div id="area" style="position:absolute;border: 1px solid red;"></div>-->
+        <div id="panel-left"></div>
+        <div id="middle">
+            <div id="panel-center">
+				<div id="mapping">
+					<canvas id="windyMap" class="fill"></canvas>
+					<div id="mapLimits"></div>
+					<div id="pelicula"></div>
+					<div id="map"></div>
+				</div>
+            </div>
+            <div id="panel-bottom"></div>
+        </div>
+        <div id="panel-right"></div>
+    </div>
+	<div id="contentCompare"></div>
+</div>
+
+<div id="item_popup"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBemVJ_EjNYiMfbztEJzoRWG187gCPAcSM"></script><!--v=3.12&-->
+
+<script rel="preload" src="js/frameworks/jquery/js/jquery-1.9.1.js" as="script" ></script>
+<script rel="preload" src="js/frameworks/jquery/js/jquery-ui-1.10.3.custom.js" as="script"></script>
+<script rel="preload" src="js/frameworks/jquery/js/jquery.mousewheel-3.0.6.pack.js" as="script"></script>
+<script rel="preload" src="js/frameworks/amplify/amplify.js" as="script"></script>
+<script rel="preload" src="js/frameworks/lz-string/lz-string.min.js" as="script"></script>
+<script rel="preload" src="js/frameworks/base64/base64.js" as="script"></script>
+<script rel="preload" src="js/frameworks/history/history.js" as="script"></script>
+<script rel="preload" src="js/frameworks/chroma/chroma.min.js" as="script"></script>
+<script rel="preload" src="js/frameworks/upload/js/jquery.iframe-transport.js" as="script"></script>
+<script rel="preload" src="js/frameworks/upload/js/jquery.fileupload.js" as="script"></script>
+<script rel="preload" src="js/frameworks/upload/js/jquery.ui.widget.js" as="script"></script>
+<script rel="preload" src="js/frameworks/cookie/jquery.cookie.js" as="script"></script>
+
+<script rel="preload" type="text/javascript" src="js/frameworks/d3/d3.js" as="script"></script>
+<script rel="preload" type="text/javascript" src="js/frameworks/d3/d3.geom.js" as="script"></script>
+<script rel="preload" type="text/javascript" src="js/frameworks/d3/d3.layout.js" as="script"></script>
+<script rel="preload" type="text/javascript" src="js/frameworks/d3/CodeFlower.js" as="script"></script>
+<script rel="preload" type="text/javascript" src="js/frameworks/d3/dataConverter.js" as="script"></script>
+<script rel="preload" type="text/javascript" src="js/frameworks/html2canvas/dist/html2canvas.js" as="script"></script>
+<script rel="preload" type="text/javascript" src="js/frameworks/html2canvas/dist/canvg.js" as="script"></script>
+<script rel="preload" type="text/javascript" src="js/frameworks/jsPdf/jsPdf.js" as="script"></script>
+<script rel="preload" src="http://esri.github.io/wind-js/windy.js" type="text/javascript" as="script"></script>
+<!--
+<script type="text/javascript" src="FileSaver.js"></script>
+<script type="text/javascript" src="Blob.js"></script>
+<script type="text/javascript" src="BlobBuilder.js"></script>-->
+<script rel="preload" type="text/javascript" src="json2.js" as="script"></script>
+<script rel="preload" type="text/javascript" src="proj4js-combined.js" as="script"></script>
+<script rel="preload" src="http://js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js" type="text/javascript" as="script"></script>
+<script rel="preload" data-main="js/main.js" src="js/frameworks/require/require.js" as="script"></script>
+</body>
+</html>

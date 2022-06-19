@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<ResourceLink name="jdbc/servidorsote/bdgeoestadistico"
+		global="jdbc/servidorsote/bdgeoestadistico" type="javax.sql.DataSource" />
+		
+	<ResourceLink name="jdbc/servidorsote/bdt250" global="jdbc/servidorsote/bdt250"
+		type="javax.sql.DataSource" />
+		
+	<ResourceLink name="jdbc/servidorsote/bdt1m" global="jdbc/servidorsote/bdt1m"
+		type="javax.sql.DataSource" />
+		
+	<ResourceLink name="jdbc/servidorsote/bdt50" global="jdbc/servidorsote/bdt50"
+		type="javax.sql.DataSource" />
+		
+</Context>
